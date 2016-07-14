@@ -11,10 +11,10 @@ jobs:
       - GET: tri-sn
       - GET: trigger-dv-man
 
-  - name: tri-deploy
+  - name: tri-deploy-1
     type: tripubDeploy
     options:
-      deployMethod: upgrade
+      deployMethod: blueGreen
     steps:
       - GET: tri-man
       - GET: tri-man-2
