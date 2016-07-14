@@ -1,14 +1,14 @@
 jobs:
-  - name: ecs-man
+  - name: gke-man
     type: manifest
     steps:
-      - GET: ecs-nginx
+      - GET: gke-nginx
       - GET: trigger-dv-man
 
-  - name: ecs-upgrade-deploy
-    type: ecsDeploy
+  - name: gke-deploy
+    type: gkeDeploy
     options:
       deployMethod: upgrade
     steps:
-      - GET: ecs-man
-      - GET: ecs-cluster
+      - GET: gke-man
+      - GET: gke-cluster
