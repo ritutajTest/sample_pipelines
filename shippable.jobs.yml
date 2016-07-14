@@ -5,10 +5,17 @@ jobs:
       - GET: tri-sn
       - GET: trigger-dv-man
 
+  - name: tri-man-2
+    type: manifest
+    steps:
+      - GET: tri-nginx
+      - GET: trigger-dv-man
+
   - name: tri-deploy
     type: tripubDeploy
     options:
       deployMethod: upgrade
     steps:
       - GET: tri-man
+      - GET: tri-man-2
       - GET: tri-cluster
