@@ -2,7 +2,7 @@ jobs:
   - name: tri-man
     type: manifest
     steps:
-      - GET: tri-nginx
+      - GET: tri-sn
       - GET: trigger-dv-man
 
   - name: tri-deploy
