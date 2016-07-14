@@ -19,7 +19,7 @@ resources:
 
   - name: ecs-cluster
     type: ecsCluster
-    integration: jatin-aws
+    integration: jatin-gke
     pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
+      sourceName : "micro-cluster"
+      region: "us-east1-d"
