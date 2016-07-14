@@ -1,5 +1,5 @@
 resources:
-  - name: gke-nginx
+  - name: tri-nginx
     type: image
     integration: jatin-docker
     pointer:
@@ -7,8 +7,8 @@ resources:
       isPull: false
     initialVersion:
       versionName: latest
-      
-  - name: gke-sn
+
+  - name: tri-sn
     type: image
     integration: jatin-docker
     pointer:
@@ -17,9 +17,8 @@ resources:
     initialVersion:
       versionName: "dc.pipeline.3"
 
-  - name: gke-cluster
-    type: gkeCluster
-    integration: jatin-gke
+  - name: tri-cluster
+    type: tripubCluster
+    integration: jatin-triton
     pointer:
-      sourceName : "micro-cluster"
-      region: "us-east1-d"
+      region: "us-east-1"

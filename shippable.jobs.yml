@@ -1,14 +1,14 @@
 jobs:
-  - name: gke-man
+  - name: tri-man
     type: manifest
     steps:
-      - GET: gke-nginx
+      - GET: tri-nginx
       - GET: trigger-dv-man
 
-  - name: gke-deploy
-    type: gkeDeploy
+  - name: tri-deploy
+    type: tripubDeploy
     options:
       deployMethod: upgrade
     steps:
-      - GET: gke-man
-      - GET: gke-cluster
+      - GET: tri-man
+      - GET: tri-cluster
