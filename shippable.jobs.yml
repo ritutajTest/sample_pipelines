@@ -11,14 +11,14 @@ jobs:
       - GET: box-nginx
       - GET: trigger-dv-man
 
-  - name: ecs-deploy
-    type: ecsDeploy
-    options:
-      deployMethod: blueGreen
-    steps:
-      - GET: jatin-1
-      - GET: jatin-2
-      - GET: ecs-cluster
+  # - name: ecs-deploy
+  #   type: ecsDeploy
+  #   options:
+  #     deployMethod: blueGreen
+  #   steps:
+  #     - GET: jatin-1
+  #     - GET: jatin-2
+  #     - GET: ecs-cluster
 
   # - name: tri-deploy
   #   type: tripubDeploy
@@ -28,13 +28,13 @@ jobs:
   #     - GET: box-man-1
   #     - GET: tri-cluster
 
-  # - name: gke-deploy
-  #   type: gkeDeploy
-  #   options:
-  #     deployMethod: blueGreen
-  #   steps:
-  #     - GET: box-man-1
-  #     - GET: gke-cluster
+  - name: gke-deploy
+    type: gkeDeploy
+    options:
+      deployMethod: blueGreen
+    steps:
+      - GET: jatin-1
+      - GET: gke-cluster
 
   # - name: ddc-deploy
   #   type: ddcDeploy
