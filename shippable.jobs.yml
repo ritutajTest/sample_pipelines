@@ -1,5 +1,5 @@
 jobs:
-  - name: jatin-1
+  - name: jd-1
     type: manifest
     steps:
       - GET: box-sn
@@ -33,7 +33,7 @@ jobs:
     options:
       deployMethod: blueGreen
     steps:
-      - GET: jatin-1
+      - GET: jd-1
       - GET: gke-cluster
 
   # - name: ddc-deploy
