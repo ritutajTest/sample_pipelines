@@ -2,7 +2,7 @@ jobs:
   - name: jatin-1
     type: manifest
     steps:
-      - GET: box-nginx
+      - GET: box-sn
       - GET: trigger-dv-man
 
   # - name: jatin-2
