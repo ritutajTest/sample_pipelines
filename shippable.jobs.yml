@@ -16,8 +16,8 @@ jobs:
     options:
       deployMethod: blueGreen
     steps:
-      - GET: box-man-1
-      - GET: box-man-2
+      - GET: jatin-1
+      - GET: jatin-2
       - GET: ecs-cluster
 
   # - name: tri-deploy
