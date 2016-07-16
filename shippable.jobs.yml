@@ -32,7 +32,7 @@ jobs:
   - name: gkeDeploy
     type: gkeDeploy
     steps:
-      - GET: jd-1
+      - GET: jD-1
       - GET: gke-cluster
       - TASK: managed
         deployMethod: upgrade
