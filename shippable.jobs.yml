@@ -6,11 +6,11 @@ jobs:
       - GET: trigger-dv-man
       - TASK: managed
 
-  # - name: jatin-2
-  #   type: manifest
-  #   steps:
-  #     - GET: box-sn
-  #     - GET: trigger-dv-man
+  - name: jatin-2
+    type: manifest
+    steps:
+      - GET: box-nginx
+      - GET: trigger-dv-man
 
   # - name: ecs-deploy
   #   type: ecsDeploy
@@ -25,6 +25,7 @@ jobs:
     type: tripubDeploy
     steps:
       - GET: jD-1
+      - GET: jatin-2
       - GET: tri-cluster
       - TASK: managed
         deployMethod: upgrade
