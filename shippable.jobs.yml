@@ -11,6 +11,7 @@ jobs:
     steps:
       - GET: box-nginx
       - GET: trigger-dv-man
+      - TASK: managed
 
   # - name: ecs-deploy
   #   type: ecsDeploy
