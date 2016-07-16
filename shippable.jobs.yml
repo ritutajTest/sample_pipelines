@@ -22,14 +22,23 @@ jobs:
   #     - GET: jatin-2
   #     - GET: ecs-cluster
 
-  - name: tri-deploy
+  # - name: tri-deploy
+  #   type: tripubDeploy
+  #   steps:
+  #     - GET: jD-1
+  #     - GET: jatin-2
+  #     - GET: tri-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  - name: tri-deploy-1
     type: tripubDeploy
     steps:
       - GET: jD-1
       - GET: jatin-2
       - GET: tri-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
   # - name: gkeDeploy
   #   type: gkeDeploy
