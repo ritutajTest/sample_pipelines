@@ -4,6 +4,7 @@ jobs:
     steps:
       - GET: box-nginx
       - GET: trigger-dv-man
+      - TASK: managed
 
   # - name: jatin-2
   #   type: manifest
@@ -30,11 +31,11 @@ jobs:
 
   - name: gke-deploy
     type: gkeDeploy
-    options:
-      deployMethod: blueGreen
     steps:
       - GET: jd-1
       - GET: gke-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: ddc-deploy
   #   type: ddcDeploy
