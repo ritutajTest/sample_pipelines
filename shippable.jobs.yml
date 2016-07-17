@@ -2,14 +2,14 @@ jobs:
   - name: jD-1
     type: manifest
     steps:
-      - GET: box-sn
+      - GET: box-nginx
       - GET: trigger-dv-man
       - TASK: managed
 
   - name: jatin-2
     type: manifest
     steps:
-      - GET: box-nginx
+      - GET: box-sn
       - GET: trigger-dv-man
       - TASK: managed
 
