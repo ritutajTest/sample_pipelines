@@ -49,3 +49,9 @@ resources:
     integration: jatin-dcl
     pointer:
       sourceName: "cluster-dcl"
+
+  - name: jatin-cluster
+    type: cluster
+    integration: jatin-dcl
+    pointer:
+      sourceName: "cluster-dcl"
