@@ -2,15 +2,15 @@ jobs:
   - name: jD-1
     type: manifest
     steps:
-      - GET: box-nginx
-      - GET: trigger-dv-man
+      - IN: box-nginx
+      - IN: trigger-dv-man
       - TASK: managed
 
   - name: jatin-2
     type: manifest
     steps:
-      - GET: box-sn
-      - GET: trigger-dv-man
+      - IN: box-sn
+      - IN: trigger-dv-man
       - TASK: managed
 
   # - name: ecs-deploy
