@@ -31,14 +31,14 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: tri-deploy-1
-    type: tripubDeploy
-    steps:
-      - GET: jD-1
-      - GET: jatin-2
-      - GET: tri-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: tri-deploy-1
+  #   type: tripubDeploy
+  #   steps:
+  #     - GET: jD-1
+  #     - GET: jatin-2
+  #     - GET: tri-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: gkeDeploy
   #   type: gkeDeploy
@@ -54,8 +54,10 @@ jobs:
   #     - GET: box-man-1
   #     - GET: ddc-cluster
 
-  # - name: dcl-deploy
-  #   type: dclDeploy
-  #   steps:
-  #     - GET: box-man-1
-  #     - GET: dcl-cluster
+  - name: dcl-deploy
+    type: dclDeploy
+    steps:
+      - IN: jD-1
+      - IN: jatin-2
+      - IN: dcl-cluster
+      - TASK: managed
