@@ -43,7 +43,7 @@ jobs:
   - name: gkeDeploy
     type: gkeDeploy
     steps:
-      - IN: jatin-2
+      - IN: jD-1
       - IN: gke-cluster-1
       - TASK: managed
         deployMethod: blueGreen
