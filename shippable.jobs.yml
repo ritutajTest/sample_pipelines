@@ -3,8 +3,15 @@ jobs:
     type: manifest
     steps:
       - IN: box-nginx
-      - IN: trigger-dv-man
+        pull: false
+          applyTo:
+            - box-nginx
       - TASK: managed
+      - IN: trigger-dv-man
+    on_success:
+      - echo 'this is on_success step of dv-man of type manifest'
+    on_failure:
+      - echo 'this is on_failure step of dv-man of type manifest'
 
   - name: jatin-2
     type: manifest
@@ -43,7 +50,7 @@ jobs:
     type: gkeDeploy
     steps:
       - IN: jD-1
-      - IN: tri-cluster
+      - IN: gke-cluster-1
       - TASK: managed
         deployMethod: blueGreen
 
