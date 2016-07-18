@@ -15,11 +15,11 @@ jobs:
 
   - name: ecs-deploy
     type: ecsDeploy
-    options:
-      deployMethod: upgrade
     steps:
       - IN: jatin-2
       - IN: ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: tri-deploy
   #   type: tripubDeploy
