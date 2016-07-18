@@ -31,12 +31,12 @@ resources:
   #   version:
   #     region: "us-west-2"
 
-  # - name: gke-cluster
-  #   type: gkeCluster
-  #   integration: jatin-gke
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "us-east1-d"
+  - name: gke-cluster
+    type: gkeCluster
+    integration: jatin-gke
+    pointer:
+      sourceName: "small-cluster"
+      region: "us-east1-d"
 
   # - name: ddc-cluster
   #   type: ddcCluster
@@ -44,14 +44,14 @@ resources:
   #   pointer:
   #     sourceName: "ddc-cluster"
 
-  - name: dcl-cluster
-    type: dclCluster
-    integration: jatin-dcl
-    pointer:
-      sourceName: "cluster-dcl"
+  # - name: dcl-cluster
+  #   type: dclCluster
+  #   integration: jatin-dcl
+  #   pointer:
+  #     sourceName: "cluster-dcl"
 
-  - name: jatin-cluster
-    type: cluster
-    integration: jatin-dcl
-    pointer:
-      sourceName: "cluster-dcl"
+  # - name: jatin-cluster
+  #   type: cluster
+  #   integration: jatin-dcl
+  #   pointer:
+  #     sourceName: "cluster-dcl"
