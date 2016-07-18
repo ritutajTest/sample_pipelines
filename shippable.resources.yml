@@ -12,7 +12,7 @@ resources:
     type: image
     integration: jatin-docker
     pointer:
-      sourceName: "scriptnull/sample_node"
+      sourceName: "library/nginx"
       isPull: false
     seed:
       versionName: "dc.pipeline.3"
