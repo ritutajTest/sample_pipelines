@@ -13,13 +13,21 @@ jobs:
       - IN: trigger-dv-man
       - TASK: managed
 
-  - name: ecs-deploy
+  # - name: ecs-deploy
+  #   type: ecsDeploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  - name: ecs-deploy-bg
     type: ecsDeploy
     steps:
       - IN: jatin-2
       - IN: ecs-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
   # - name: tri-deploy
   #   type: tripubDeploy
