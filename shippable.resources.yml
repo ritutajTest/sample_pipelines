@@ -31,7 +31,7 @@ resources:
   #   version:
   #     region: "us-west-2"
 
-  - name: gke-cluster
+  - name: gke-cluster-1
     type: cluster
     integration: jatin-gke
     pointer:
