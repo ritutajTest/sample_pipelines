@@ -2,14 +2,14 @@ jobs:
   - name: jD-1
     type: manifest
     steps:
-      - IN: box-nginx
+      - IN: box-sn
       - IN: trigger-dv-man
       - TASK: managed
 
   - name: jatin-2
     type: manifest
     steps:
-      - IN: box-sn
+      - IN: box-nginx
       - IN: trigger-dv-man
       - TASK: managed
 
@@ -26,7 +26,7 @@ jobs:
     type: tripubDeploy
     steps:
       - IN: jatin-2
-      - IN: tri-cluster
+      - IN: gke-cluster-1
       - TASK: managed
         deployMethod: blueGreen
 
@@ -43,7 +43,7 @@ jobs:
     type: gkeDeploy
     steps:
       - IN: jD-1
-      - IN: gke-cluster-1
+      - IN: tri-cluster
       - TASK: managed
         deployMethod: blueGreen
 
