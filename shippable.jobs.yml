@@ -2,10 +2,10 @@ jobs:
   - name: jD-1
     type: manifest
     steps:
-      - IN: box-sn
+      - IN: box-nginx
         pull: false
-          applyTo:
-            - box-sn
+        applyTo:
+          - box-nginx
       - TASK: managed
       - IN: trigger-dv-man
     on_success:
