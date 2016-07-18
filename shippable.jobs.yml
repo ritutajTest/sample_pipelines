@@ -3,15 +3,8 @@ jobs:
     type: manifest
     steps:
       - IN: box-nginx
-        pull: false
-        applyTo:
-          - box-nginx
-      - TASK: managed
       - IN: trigger-dv-man
-    on_success:
-      - echo 'this is on_success step of dv-man of type manifest'
-    on_failure:
-      - echo 'this is on_failure step of dv-man of type manifest'
+      - TASK: managed
 
   - name: jatin-2
     type: manifest
@@ -20,22 +13,21 @@ jobs:
       - IN: trigger-dv-man
       - TASK: managed
 
-  # - name: ecs-deploy
-  #   type: ecsDeploy
-  #   options:
-  #     deployMethod: blueGreen
-  #   steps:
-  #     - IN: jatin-1
-  #     - IN: jatin-2
-  #     - IN: ecs-cluster
-
-  - name: tri-deploy
-    type: tripubDeploy
+  - name: ecs-deploy
+    type: ecsDeploy
+    options:
+      deployMethod: upgrade
     steps:
       - IN: jatin-2
-      - IN: gke-cluster-1
-      - TASK: managed
-        deployMethod: blueGreen
+      - IN: ecs-cluster
+
+  # - name: tri-deploy
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: gke-cluster-1
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: tri-deploy-1
   #   type: tripubDeploy
@@ -46,13 +38,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: gkeDeploy
-    type: gkeDeploy
-    steps:
-      - IN: jD-1
-      - IN: gke-cluster-1
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: gkeDeploy
+  #   type: gkeDeploy
+  #   steps:
+  #     - IN: jD-1
+  #     - IN: gke-cluster-1
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: ddc-deploy
   #   type: ddcDeploy
