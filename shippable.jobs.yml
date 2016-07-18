@@ -18,25 +18,24 @@ jobs:
   #   options:
   #     deployMethod: blueGreen
   #   steps:
-  #     - GET: jatin-1
-  #     - GET: jatin-2
-  #     - GET: ecs-cluster
+  #     - IN: jatin-1
+  #     - IN: jatin-2
+  #     - IN: ecs-cluster
 
-  # - name: tri-deploy
-  #   type: tripubDeploy
-  #   steps:
-  #     - GET: jD-1
-  #     - GET: jatin-2
-  #     - GET: tri-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: tri-deploy
+    type: tripubDeploy
+    steps:
+      - IN: jatin-2
+      - IN: tri-cluster
+      - TASK: managed
+        deployMethod: blueGreen
 
   # - name: tri-deploy-1
   #   type: tripubDeploy
   #   steps:
-  #     - GET: jD-1
-  #     - GET: jatin-2
-  #     - GET: tri-cluster
+  #     - IN: jD-1
+  #     - IN: jatin-2
+  #     - IN: tri-cluster
   #     - TASK: managed
   #       deployMethod: blueGreen
 
@@ -44,15 +43,15 @@ jobs:
     type: gkeDeploy
     steps:
       - IN: jD-1
-      - IN: tri-cluster
+      - IN: gke-cluster-1
       - TASK: managed
         deployMethod: blueGreen
 
   # - name: ddc-deploy
   #   type: ddcDeploy
   #   steps:
-  #     - GET: box-man-1
-  #     - GET: ddc-cluster
+  #     - IN: box-man-1
+  #     - IN: ddc-cluster
 
   # - name: dcl-deploy
   #   type: dclDeploy
