@@ -40,13 +40,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: gkeDeploy
-  #   type: gkeDeploy
-  #   steps:
-  #     - GET: jD-1
-  #     - GET: gke-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: gkeDeploy
+    type: gkeDeploy
+    steps:
+      - GET: jD-1
+      - GET: gke-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: ddc-deploy
   #   type: ddcDeploy
@@ -54,10 +54,10 @@ jobs:
   #     - GET: box-man-1
   #     - GET: ddc-cluster
 
-  - name: dcl-deploy
-    type: dclDeploy
-    steps:
-      - IN: jD-1
-      - IN: jatin-2
-      - IN: dcl-cluster
-      - TASK: managed
+  # - name: dcl-deploy
+  #   type: dclDeploy
+  #   steps:
+  #     - IN: jD-1
+  #     - IN: jatin-2
+  #     - IN: dcl-cluster
+  #     - TASK: managed
