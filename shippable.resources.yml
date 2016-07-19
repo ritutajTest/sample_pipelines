@@ -21,7 +21,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: jatindogra/jatin
+      sourceName: jatindogra/jatin1
       branch: master
 
   # - name: tri-cluster
