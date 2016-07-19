@@ -17,6 +17,13 @@ resources:
     seed:
       versionName: "dc.pipeline.3"
 
+  - name: box-git
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: jatindogra/jatin
+      branch: master
+
   # - name: tri-cluster
   #   type: cluster
   #   integration: jatin-triton
