@@ -1,21 +1,21 @@
 resources:
-  - name: box-nginx
-    type: image
-    integration: jatin-docker
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: latest
+  # - name: box-nginx
+  #   type: image
+  #   integration: jatin-docker
+  #   pointer:
+  #     sourceName: "library/nginx"
+  #     isPull: false
+  #   seed:
+  #     versionName: latest
 
-  - name: box-sn
-    type: image
-    integration: jatin-docker
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: "dc.pipeline.3"
+  # - name: box-sn
+  #   type: image
+  #   integration: jatin-docker
+  #   pointer:
+  #     sourceName: "library/nginx"
+  #     isPull: false
+  #   seed:
+  #     versionName: "dc.pipeline.3"
 
   - name: box-git
     type: gitRepo
@@ -30,12 +30,12 @@ resources:
   #   pointer:
   #     region: "us-east-1"
 
-  - name: ecs-cluster
-    type: cluster
-    integration: jatin-ecs
-    pointer:
-      sourceName: "testCL"
-      region: "us-west-2"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: jatin-ecs
+  #   pointer:
+  #     sourceName: "testCL"
+  #     region: "us-west-2"
 
   # - name: gke-cluster-1
   #   type: cluster
