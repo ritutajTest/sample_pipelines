@@ -22,6 +22,11 @@ resources:
     seed:
       interval: "* 20 * * *"
 
+  - name: daily
+    type: time
+    seed:
+      interval: "2 * * * *"
+
   # - name: tri-cluster
   #   type: cluster
   #   integration: jatin-triton
