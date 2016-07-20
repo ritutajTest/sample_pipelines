@@ -1,28 +1,26 @@
 resources:
-  # - name: box-nginx
-  #   type: image
-  #   integration: jatin-docker
-  #   pointer:
-  #     sourceName: "library/nginx"
-  #     isPull: false
-  #   seed:
-  #     versionName: latest
-
-  # - name: box-sn
-  #   type: image
-  #   integration: jatin-docker
-  #   pointer:
-  #     sourceName: "library/nginx"
-  #     isPull: false
-  #   seed:
-  #     versionName: "dc.pipeline.3"
-
-  - name: box-git
-    type: gitRepo
-    integration: github
+  - name: box-nginx
+    type: image
+    integration: jatin-docker
     pointer:
-      sourceName: jatindogra/jatin1
-      branch: master
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
+
+  - name: box-sn
+    type: image
+    integration: jatin-docker
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: "dc.pipeline.3"
+
+  - name: nightly
+    type: time
+    seed:
+      interval: "* 20 * * *"
 
   # - name: tri-cluster
   #   type: cluster
