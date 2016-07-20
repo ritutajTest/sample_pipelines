@@ -27,6 +27,11 @@ resources:
     seed:
       interval: "2 * * * *"
 
+  - name: minutes
+    type: time
+    seed
+      interval: "*/5 * * * *"
+
   # - name: tri-cluster
   #   type: cluster
   #   integration: jatin-triton
