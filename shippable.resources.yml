@@ -17,20 +17,20 @@ resources:
     seed:
       versionName: "dc.pipeline.3"
 
-  - name: nightly-4
-    type: time
-    seed:
-      interval: "* 20 * * *"
+  # - name: nightly-4
+  #   type: time
+  #   seed:
+  #     interval: "* 20 * * *"
 
-  - name: daily
-    type: time
-    seed:
-      interval: "2 * * * *"
+  # - name: daily
+  #   type: time
+  #   seed:
+  #     interval: "2 * * * *"
 
-  - name: minutes
-    type: time
-    seed:
-      interval: "*/5 * * * *"
+  # - name: minutes
+  #   type: time
+  #   seed:
+  #     interval: "*/5 * * * *"
 
   # - name: tri-cluster
   #   type: cluster
