@@ -17,7 +17,7 @@ resources:
     seed:
       versionName: "dc.pipeline.3"
 
-  - name: nightly
+  - name: nightly-1
     type: time
     seed:
       interval: "* 20 * * *"
