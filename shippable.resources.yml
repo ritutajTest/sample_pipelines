@@ -29,7 +29,7 @@ resources:
 
   - name: minutes
     type: time
-    seed
+    seed:
       interval: "*/5 * * * *"
 
   # - name: tri-cluster
