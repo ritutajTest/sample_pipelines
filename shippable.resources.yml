@@ -27,10 +27,10 @@ resources:
   #   seed:
   #     interval: "2 * * * *"
 
-  - name: minutes
-    type: time
-    seed:
-      interval: "*/3 * * * *"
+  # - name: minutes
+  #   type: time
+  #   seed:
+  #     interval: "*/3 * * * *"
 
   # - name: tri-cluster
   #   type: cluster
