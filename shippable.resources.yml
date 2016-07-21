@@ -25,8 +25,8 @@ resources:
         jatin : triton
         vishnu : tripub
         joyent : badServer
-      # links:
-      #   - "sampletest-trideploy2cef72c3-9d76-410b-861d-c2a8d4cb2886"
+      links:
+        - "conName:con"
 
   # - name: nightly-4
   #   type: time
