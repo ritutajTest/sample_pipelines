@@ -2,4 +2,4 @@ triggers:
    - name: trigger-dv-man
      type: trigger
      pointer:
-       counter: 67
+       counter: 68
