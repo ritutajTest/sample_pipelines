@@ -3,10 +3,10 @@ resources:
     type: image
     integration: jatin-docker
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "scriptnull/sample_node"
       isPull: false
     seed:
-      versionName: latest
+      versionName: "dc.pipeline.3"
 
   - name: box-sn
     type: image
@@ -15,7 +15,7 @@ resources:
       sourceName: "library/nginx"
       isPull: false
     seed:
-      versionName: "dc.pipeline.3"
+      versionName: latest
 
   - name: box-opts
     type: dockerOptions
