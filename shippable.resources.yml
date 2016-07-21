@@ -25,8 +25,10 @@ resources:
         jatin : triton
         vishnu : tripub
         joyent : badServer
-      links:
-        - "l-th-manifest_0_0_06c8294f-a1be-4c28-98bc-18695e024eb3:vishnu"
+      dnsServers:
+        - "127.0.0.1"
+      dnsSearch:
+        - "127.0.0.1"
 
   # - name: nightly-4
   #   type: time
