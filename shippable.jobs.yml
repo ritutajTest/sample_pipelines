@@ -34,10 +34,10 @@ jobs:
   - name: tri-deploy
     type: tripubDeploy
     steps:
-      - IN: jatin-1
+      - IN: jatin-2
       - IN: tri-cluster
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
 
   # - name: tri-deploy-1
   #   type: tripubDeploy
