@@ -23,6 +23,7 @@ resources:
       labels:
         jatin : triton
         vishnu : tripub
+        joyent : badServer
 
   # - name: nightly-4
   #   type: time
