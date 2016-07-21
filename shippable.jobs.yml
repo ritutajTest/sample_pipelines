@@ -18,7 +18,7 @@ jobs:
   - name: ecs-deploy
     type: ecsDeploy
     steps:
-      - IN: jatin-2
+      - IN: jatin-1
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
