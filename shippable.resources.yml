@@ -55,7 +55,7 @@ resources:
     type: cluster
     integration: jatin-ecs
     pointer:
-      sourceName: "testCL"
+      sourceName: "testCL1"
       region: "us-west-2"
 
   # - name: gke-cluster-1
