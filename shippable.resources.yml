@@ -26,7 +26,7 @@ resources:
         vishnu : tripub
         joyent : badServer
       links:
-        - "conName:con"
+        - "l-th-manifest_0_0_06c8294f-a1be-4c28-98bc-18695e024eb3:vishnu"
 
   # - name: nightly-4
   #   type: time
