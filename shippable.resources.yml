@@ -20,6 +20,7 @@ resources:
   - name: box-opts
     type: dockerOptions
     version:
+      publishAllPorts : true
       labels:
         jatin : triton
         vishnu : tripub
