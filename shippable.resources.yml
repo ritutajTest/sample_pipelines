@@ -24,6 +24,13 @@ resources:
         jatin : triton
         vishnu : tripub
         joyent : badServer
+      ulimits:
+        - name: cpu
+          hard: 5
+          soft: 3
+        - name: core
+          hard: 10
+          soft: 5
 
   # - name: nightly-4
   #   type: time
