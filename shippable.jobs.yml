@@ -29,21 +29,22 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: tri-deploy-1
-  #   type: tripubDeploy
-  #   steps:
-  #     - IN: jatin-1
-  #     - IN: tri-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: tri-deploy-1
+    type: tripubDeploy
+    steps:
+      - IN: jatin-1
+      - IN: tri-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
-  # - name: tri-deploy-2
-  #   type: tripubDeploy
-  #   steps:
-  #     - IN: jatin-2
-  #     - IN: tri-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
+  - name: tri-deploy-2
+    type: tripubDeploy
+    steps:
+      - IN: jatin-2
+      - IN: tri-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+
   # - name: tri-deploy-1
   #   type: tripubDeploy
   #   steps:
