@@ -17,18 +17,18 @@ resources:
     seed:
       versionName: latest
 
-  - name: box-opts
-    type: dockerOptions
-    version:
-      publishAllPorts : true
-      labels:
-        jatin : triton
-        vishnu : tripub
-        joyent : badServer
-      dnsServers:
-        - "8.8.8.8"
-      dnsSearch:
-        - "10.10.10.10"
+  # - name: box-opts
+  #   type: dockerOptions
+  #   version:
+  #     publishAllPorts : true
+  #     labels:
+  #       jatin : triton
+  #       vishnu : tripub
+  #       joyent : badServer
+  #     dnsServers:
+  #       - "8.8.8.8"
+  #     dnsSearch:
+  #       - "10.10.10.10"
 
   # - name: nightly-4
   #   type: time
@@ -51,14 +51,14 @@ resources:
   #   pointer:
   #     region: "us-east-3"
 
-  - name: ecs-cluster
-    type: cluster
-    integration: jatin-ecs
-    pointer:
-      sourceName: "testCL"
-      region: "us-west-2"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: jatin-ecs
+  #   pointer:
+  #     sourceName: "testCL"
+  #     region: "us-west-2"
 
-  # - name: gke-cluster-1
+  # # - name: gke-cluster-1
   #   type: cluster
   #   integration: jatin-gke
   #   pointer:
