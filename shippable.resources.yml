@@ -17,18 +17,23 @@ resources:
     seed:
       versionName: latest
 
-  # - name: box-opts
-  #   type: dockerOptions
-  #   version:
-  #     publishAllPorts : true
-  #     labels:
-  #       jatin : triton
-  #       vishnu : tripub
-  #       joyent : badServer
-  #     dnsServers:
-  #       - "8.8.8.8"
-  #     dnsSearch:
-  #       - "10.10.10.10"
+  - name: box-opts
+    type: dockerOptions
+    version:
+      publishAllPorts : true
+      labels:
+        jatin : triton
+        vishnu : tripub
+        joyent : badServer
+      dnsServers:
+        - "8.8.8.8"
+      dnsSearch:
+        - "10.10.10.10"
+      logConfig:
+        type: "json-file"
+        options:
+          test: test
+          beta: beta
 
   # - name: nightly-4
   #   type: time
