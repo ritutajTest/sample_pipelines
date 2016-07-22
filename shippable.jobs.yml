@@ -5,23 +5,22 @@ jobs:
       - IN: box-nginx
       - IN: box-opts
       - IN: trigger-dv-man
-      - TASK: managed
 
-  - name: jatin-2
-    type: manifest
-    steps:
-      - IN: box-nginx
-      - IN: box-opts
-      - IN: trigger-dv-man
-      - TASK: managed
+  # - name: jatin-2
+  #   type: manifest
+  #   steps:
+  #     - IN: box-nginx
+  #     - IN: box-opts
+  #     - IN: trigger-dv-man
+  #     - TASK: managed
 
-  - name: ecs-deploy
-    type: ecsDeploy
-    steps:
-      - IN: jatin-2
-      - IN: ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: ecs-deploy
+  #   type: ecsDeploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: ecs-deploy-bg
   #   type: ecsDeploy
