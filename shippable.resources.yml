@@ -32,8 +32,7 @@ resources:
       logConfig:
         type: "json-file"
         options:
-          test: test
-          beta: beta
+          max-size: 50m
 
   # - name: nightly-4
   #   type: time
