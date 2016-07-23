@@ -34,8 +34,8 @@ resources:
         options:
           max-size: 50m
       volumesFrom:
-        - "triton-imagenew"
-        - "triton-imagenew:ro"
+        - "basedataContainer"
+        - "basedataContainer:ro"
 
   # - name: nightly-4
   #   type: time
