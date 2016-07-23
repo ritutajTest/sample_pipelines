@@ -35,6 +35,7 @@ resources:
           max-size: 50m
       volumesFrom:
         - "triton-imagenew"
+        - "triton-imagenew:ro"
 
   # - name: nightly-4
   #   type: time
