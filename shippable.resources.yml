@@ -33,6 +33,8 @@ resources:
         type: "json-file"
         options:
           max-size: 50m
+      volumesFrom:
+        - "triton-imagenew"
 
   # - name: nightly-4
   #   type: time
