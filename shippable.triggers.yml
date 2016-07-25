@@ -1,5 +1,5 @@
-triggers:
+triggers
    - name: trigger-dv-man
      type: trigger
      pointer:
-       counter: 22
+       counter: 23
