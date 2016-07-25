@@ -17,25 +17,25 @@ resources:
     seed:
       versionName: latest
 
-  - name: box-opts
-    type: dockerOptions
-    version:
-      publishAllPorts : true
-      labels:
-        jatin : triton
-        vishnu : tripub
-        joyent : badServer
-      dnsServers:
-        - "8.8.8.8"
-      dnsSearch:
-        - "10.10.10.10"
-      logConfig:
-        type: "json-file"
-        options:
-          max-size: 50m
-      volumesFrom:
-        - "basedataContainer"
-        - "basedataContainer:ro"
+  # - name: box-opts
+  #   type: dockerOptions
+  #   version:
+  #     publishAllPorts : true
+  #     labels:
+  #       jatin : triton
+  #       vishnu : tripub
+  #       joyent : badServer
+  #     dnsServers:
+  #       - "8.8.8.8"
+  #     dnsSearch:
+  #       - "10.10.10.10"
+  #     logConfig:
+  #       type: "json-file"
+  #       options:
+  #         max-size: 50m
+  #     volumesFrom:
+  #       - "basedataContainer"
+  #       - "basedataContainer:ro"
 
   # - name: nightly-4
   #   type: time
@@ -52,11 +52,11 @@ resources:
   #   seed:
   #     interval: "*/2 * * * *"
 
-  - name: tri-cluster
-    type: cluster
-    integration: jatin-triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: jatin-triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: ecs-cluster
   #   type: cluster
@@ -65,12 +65,12 @@ resources:
   #     sourceName: "testCL"
   #     region: "us-west-2"
 
-  # # - name: gke-cluster-1
-  #   type: cluster
-  #   integration: jatin-gke
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "us-east1-d"
+  - name: gke-cluster
+    type: cluster
+    integration: jatin-gke
+    pointer:
+      sourceName: "small-cluster"
+      region: "us-east1-d"
 
   # - name: ddc-cluster
   #   type: ddcCluster
