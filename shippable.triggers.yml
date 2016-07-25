@@ -1,4 +1,4 @@
-triggers
+triggers:
    - name: trigger-dv-man
      type: trigger
      pointer:
