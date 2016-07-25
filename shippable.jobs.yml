@@ -3,15 +3,14 @@ jobs:
     type: manifest
     steps:
       - IN: box-sn
-      - IN: box-opts
       - IN: trigger-dv-man
 
-  - name: jatin-2
-    type: manifest
-    steps:
-      - IN: box-nginx
-      - IN: box-opts
-      - IN: trigger-dv-man
+  # - name: jatin-2
+  #   type: manifest
+  #   steps:
+  #     - IN: box-nginx
+  #     - IN: box-opts
+  #     - IN: trigger-dv-man
 
   # - name: ecs-deploy
   #   type: ecsDeploy
@@ -29,21 +28,21 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: tri-deploy-1
-    type: tripubDeploy
-    steps:
-      - IN: jatin-1
-      - IN: tri-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: tri-deploy-1
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: jatin-1
+  #     - IN: tri-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
-  - name: tri-deploy-2
-    type: tripubDeploy
-    steps:
-      - IN: jatin-2
-      - IN: tri-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: tri-deploy-2
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: tri-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: tri-deploy-1
   #   type: tripubDeploy
@@ -54,13 +53,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: gkeDeploy
-  #   type: gkeDeploy
-  #   steps:
-  #     - IN: jD-1
-  #     - IN: gke-cluster-1
-  #     - TASK: managed
-  #       deployMethod: blueGreen
+  - name: gkeDeploy
+    type: deploy
+    steps:
+      - IN: jatin-1
+      - IN: gke-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: ddc-deploy
   #   type: ddcDeploy
