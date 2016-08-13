@@ -27,13 +27,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: tri-deploy-1
-  #   type: tripubDeploy
-  #   steps:
-  #     - IN: jatin-1
-  #     - IN: tri-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: tri-deploy-1
+    type: tripubDeploy
+    steps:
+      - IN: jatin-1
+      - IN: tri-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: tri-deploy-2
   #   type: tripubDeploy
@@ -52,21 +52,21 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: gkeDeploy
-    type: deploy
-    steps:
-      - IN: jatin-1
-      - IN: gke-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: gkeDeploy
+  #   type: deploy
+  #   steps:
+  #     - IN: jatin-1
+  #     - IN: gke-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
-  - name: gkeDeploy-bg
-    type: deploy
-    steps:
-      - IN: jatin-2
-      - IN: gke-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: gkeDeploy-bg
+  #   type: deploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: gke-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: ddc-deploy
   #   type: ddcDeploy
