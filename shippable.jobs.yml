@@ -28,7 +28,7 @@ jobs:
   #       deployMethod: blueGreen
 
   - name: tri-deploy-1
-    type: tripubDeploy
+    type: deploy
     steps:
       - IN: jatin-1
       - IN: tri-cluster
