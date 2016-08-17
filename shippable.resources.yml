@@ -1,7 +1,7 @@
 resources:
   - name: box-sn-1
     type: image
-    integration: jatin-docker
+    integration: dockerhub
     pointer:
       sourceName: "scriptnull/sample_node"
       isPull: false
@@ -10,7 +10,7 @@ resources:
 
   - name: box-nginx-1
     type: image
-    integration: jatin-docker
+    integration: dockerhub
     pointer:
       sourceName: "library/nginx"
       isPull: false
@@ -54,7 +54,7 @@ resources:
 
   - name: tri-cluster-1
     type: cluster
-    integration: jatin-triton
+    integration: triton
     pointer:
       region: "us-east-2"
 
