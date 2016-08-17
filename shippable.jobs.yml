@@ -27,13 +27,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: tri-deploy-1-1
-    type: deploy
-    steps:
-      - IN: jatin-1-1
-      - IN: tri-cluster-1
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: tri-deploy-1-1
+  #   type: deploy
+  #   steps:
+  #     - IN: jatin-1-1
+  #     - IN: tri-cluster-1
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: tri-deploy-2
   #   type: tripubDeploy
