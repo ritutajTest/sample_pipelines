@@ -69,7 +69,7 @@ jobs:
   #       deployMethod: blueGreen
 
   - name: ddc-deploy
-    type: ddcDeploy
+    type: deploy
     steps:
       - IN: rituraj-2-1
       - IN: ddc-cluster
