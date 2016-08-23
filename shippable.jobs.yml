@@ -71,7 +71,7 @@ jobs:
   - name: ddc-deploy
     type: ddcDeploy
     steps:
-      - IN: rituraj-2-2
+      - IN: rituraj-2-1
       - IN: ddc-cluster
 
   # - name: dcl-deploy
