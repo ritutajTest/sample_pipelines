@@ -72,11 +72,11 @@ resources:
   #     sourceName: "small-cluster"
   #     region: "us-east1-d"
 
-  # - name: ddc-cluster
-  #   type: ddcCluster
-  #   integration: jatin-ddc
-  #   pointer:
-  #     sourceName: "ddc-cluster"
+  - name: ddc-cluster
+    type: ddcCluster
+    integration: rrddc
+    pointer:
+      sourceName: "ddc-cluster"
 
   # - name: dcl-cluster
   #   type: dclCluster
