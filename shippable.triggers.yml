@@ -1,5 +1,5 @@
 triggers:
-   - name: trigger-dv-man-1
-     type: trigger
-     pointer:
-       counter: 44
+  - name: trigger-dv-man-1
+    type: trigger
+    version:
+      counter: 40
