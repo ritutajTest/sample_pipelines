@@ -2,4 +2,4 @@ triggers:
   - name: trigger-dv-man-1
     type: trigger
     version:
-      counter: 44
+      counter: 47
