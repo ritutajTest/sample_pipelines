@@ -68,11 +68,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: ddc-deploy
-  #   type: ddcDeploy
-  #   steps:
-  #     - IN: box-man-1
-  #     - IN: ddc-cluster
+  - name: ddc-deploy
+    type: ddcDeploy
+    steps:
+      - IN: rituraj-2-2
+      - IN: ddc-cluster
 
   # - name: dcl-deploy
   #   type: dclDeploy
