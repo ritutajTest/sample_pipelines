@@ -73,7 +73,7 @@ resources:
   #     region: "us-east1-d"
 
   - name: ddc-cluster
-    type: ddcCluster
+    type: cluster
     integration: rrddc
     pointer:
       sourceName: "ddc-cluster"
