@@ -17,20 +17,20 @@ jobs:
       - IN: rituraj-2-1
       - IN: tr1
 
-  # - name: ecs-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-1-2-secure
-  #     - IN: ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-        
-  
-  - name: real-ecsdeploy2
+  - name: ecs-deploy
     type: deploy
     steps:
       - IN: rituraj-release1-test
       - IN: ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
+        
+  
+  # - name: real-ecsdeploy2
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-release1-test
+  #     - IN: ecs-cluster
 
   # - name: ecs-deploy-bg
   #   type: ecsDeploy
