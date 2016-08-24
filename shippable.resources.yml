@@ -16,6 +16,14 @@ resources:
       isPull: false
     seed:
       versionName: latest
+      
+  - name: dv-params
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+    flags:
+      - dv
 
   # - name: box-opts
   #   type: dockerOptions
