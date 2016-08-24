@@ -28,7 +28,7 @@ jobs:
         deployMethod: upgrade
         
   
- - name: real-ecsdeploy2
+  - name: real-ecsdeploy2
     type: deploy
     steps:
       - IN: real-release1
