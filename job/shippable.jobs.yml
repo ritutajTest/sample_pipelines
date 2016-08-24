@@ -1,0 +1,96 @@
+jobs:
+  - name: rituraj-1-2-secure-1
+    type: manifest
+    steps:
+      - IN: box-sn-1
+ 
+
+  # - name: rituraj-2-1
+  #   type: manifest
+  #   steps:
+  #     - IN: box-nginx-1
+      
+  - name: rituraj-release1-test
+    type: release
+    steps:
+      - IN: real-version2
+      - IN: rituraj-1-2-secure-1
+      - IN: tr1
+
+  - name: ecs-deploy-rr
+    type: deploy
+    steps:
+      - IN: rituraj-release1-test
+      - IN: ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+        
+  
+  # - name: real-ecsdeploy2
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-release1-test
+  #     - IN: ecs-cluster
+
+  # - name: ecs-deploy-bg
+  #   type: ecsDeploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
+
+  # - name: tri-deploy-1-1
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-2-1
+  #     - IN: tri-cluster-1
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  # - name: tri-deploy-2
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: tri-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
+
+  # - name: tri-deploy-1
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: jD-1
+  #     - IN: jatin-2
+  #     - IN: tri-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
+
+  # - name: gkeDeploy
+  #   type: deploy
+  #   steps:
+  #     - IN: jatin-1
+  #     - IN: gke-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  # - name: gkeDeploy-bg
+  #   type: deploy
+  #   steps:
+  #     - IN: jatin-2
+  #     - IN: gke-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
+
+  # - name: ddc-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-2-1
+  #     - IN: ddc-cluster
+
+  # - name: dcl-deploy
+  #   type: dclDeploy
+  #   steps:
+  #     - IN: jD-1
+  #     - IN: jatin-2
+  #     - IN: dcl-cluster
+  #     - TASK: managed
