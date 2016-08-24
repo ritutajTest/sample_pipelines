@@ -12,6 +12,12 @@ jobs:
       - IN: box-nginx-1
       - IN: box-params
       - IN: trigger-dv-man-1
+      
+  - name: real-release1
+    type: release
+    steps:
+      - IN: real-version2
+      - IN: tr1
 
   - name: ecs-deploy
     type: deploy
@@ -20,6 +26,14 @@ jobs:
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
+        
+  
+ - name: real-ecsdeploy2
+    type: deploy
+    steps:
+      - IN: real-release1
+      - IN: manifest
+      - IN: ecs-cluster
 
   # - name: ecs-deploy-bg
   #   type: ecsDeploy
