@@ -20,6 +20,7 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
+        secure: xNYOBf/uyme5Ff56FZwuOJloBgyD0UJzb3KktcKk4sI8gUyzQbz4OoDLN/WlzRf32lvC51g6Voy6mbaDAL9rdNZoi61xyjuK7K2jKNvzgeKHRKUU4EEaqriaNLrComm6/Vj11UxgZ/2zd+F3Sv/dBMHWOZ65jMkpAIyGSwqSeQyckuFu3LNcckl+om6xkTvz9mzWiRJWai7AKNmZ/iq3tfWTDQjKUPti7WZEQ7r2Ya9fBQWESc778G9IY84Eq8+S4i+647Ki7M3gdah/kBRYquF7KSd+uYgI5i+BJFqqPL6ZOrw2O1pq5qlN5qh1JcXUYY+3AViX03KhnNnFWR1pqw==
     flags:
       - dv
 
