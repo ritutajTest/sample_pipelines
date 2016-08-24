@@ -1,20 +1,20 @@
 jobs:
-  # - name: rituraj-1-2-secure
-  #   type: manifest
-  #   steps:
-  #     - IN: box-sn-1
-  #     - IN: trigger-dv-man-1
-
-  - name: rituraj-2-1
+  - name: rituraj-1-2-secure
     type: manifest
     steps:
-      - IN: box-nginx-1
+      - IN: box-sn-1
+ 
+
+  # - name: rituraj-2-1
+  #   type: manifest
+  #   steps:
+  #     - IN: box-nginx-1
       
   - name: rituraj-release1-test
     type: release
     steps:
       - IN: real-version2
-      - IN: rituraj-2-1
+      - IN:rituraj-1-2-secure
       - IN: tr1
 
   - name: ecs-deploy
