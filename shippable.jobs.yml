@@ -1,5 +1,5 @@
 jobs:
-  - name: rituraj-1-2
+  - name: rituraj-1-2-secure
     type: manifest
     steps:
       - IN: box-sn-1
@@ -16,7 +16,7 @@ jobs:
   - name: ecs-deploy
     type: deploy
     steps:
-      - IN: rituraj-1-2
+      - IN: rituraj-1-2-secure
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
