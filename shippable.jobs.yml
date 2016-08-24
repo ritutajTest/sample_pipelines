@@ -16,7 +16,7 @@ jobs:
   - name: ecs-deploy
     type: deploy
     steps:
-      - IN: rituraj-2-1
+      - IN: rituraj-1-1
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
