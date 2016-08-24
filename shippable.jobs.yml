@@ -9,12 +9,12 @@ jobs:
     type: manifest
     steps:
       - IN: box-nginx-1
-      - IN: trigger-dv-man-1
       
   - name: rituraj-release1-test
     type: release
     steps:
       - IN: real-version2
+      - IN: rituraj-2-1
       - IN: tr1
 
   - name: ecs-deploy
