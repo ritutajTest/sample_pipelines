@@ -32,7 +32,6 @@ jobs:
     type: deploy
     steps:
       - IN: real-release1
-      - IN: manifest
       - IN: ecs-cluster
 
   # - name: ecs-deploy-bg
