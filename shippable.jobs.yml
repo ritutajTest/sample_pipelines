@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: box-sn-1
       - IN: trigger-dv-man-1
+      - IN: dv-params
 
   - name: rituraj-2-1
     type: manifest
