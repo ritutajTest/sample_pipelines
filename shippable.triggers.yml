@@ -3,3 +3,11 @@ triggers:
     type: trigger
     version:
       counter: 59
+      
+  - name: tr1
+    type: trigger
+    version:
+      counter: 1
+      
+      
+
