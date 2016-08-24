@@ -1,9 +1,9 @@
 jobs:
-  - name: rituraj-1-2-secure
-    type: manifest
-    steps:
-      - IN: box-sn-1
-      - IN: trigger-dv-man-1
+  # - name: rituraj-1-2-secure
+  #   type: manifest
+  #   steps:
+  #     - IN: box-sn-1
+  #     - IN: trigger-dv-man-1
 
   - name: rituraj-2-1
     type: manifest
@@ -17,13 +17,13 @@ jobs:
       - IN: rituraj-2-1
       - IN: tr1
 
-  - name: ecs-deploy
-    type: deploy
-    steps:
-      - IN: rituraj-1-2-secure
-      - IN: ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: ecs-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-1-2-secure
+  #     - IN: ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
         
   
   - name: real-ecsdeploy2
@@ -40,13 +40,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: tri-deploy-1-1
-    type: deploy
-    steps:
-      - IN: rituraj-2-1
-      - IN: tri-cluster-1
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: tri-deploy-1-1
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-2-1
+  #     - IN: tri-cluster-1
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: tri-deploy-2
   #   type: tripubDeploy
@@ -81,11 +81,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: ddc-deploy
-    type: deploy
-    steps:
-      - IN: rituraj-2-1
-      - IN: ddc-cluster
+  # - name: ddc-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-2-1
+  #     - IN: ddc-cluster
 
   # - name: dcl-deploy
   #   type: dclDeploy
