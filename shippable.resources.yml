@@ -22,8 +22,6 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-    flags:
-      - dv
       
   - name: box-params
     type: params
