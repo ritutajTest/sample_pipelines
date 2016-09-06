@@ -10,12 +10,12 @@ jobs:
     steps:
       - IN: box-nginx-1
       
-  - name: rituraj-release1-test
-    type: release
-    steps:
-      - IN: real-version2
-      - IN: rituraj-1-2-secure-1
-      - IN: tr1
+  # - name: rituraj-release1-test
+  #   type: release
+  #   steps:
+  #     - IN: real-version2
+  #     - IN: rituraj-1-2-secure-1
+  #     - IN: tr1
 
   # - name: ecs-deploy-rr
   #   type: deploy
