@@ -86,12 +86,12 @@ resources:
     pointer:
       region: "us-east-2"
 
-  - name: ecs-cluster
-    type: cluster
-    integration: rr_ecs
-    pointer:
-      sourceName: "testCL"
-      region: "us-west-2"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: rr_ecs
+  #   pointer:
+  #     sourceName: "testCL"
+  #     region: "us-west-2"
 
   # - name: gke-cluster
   #   type: cluster
