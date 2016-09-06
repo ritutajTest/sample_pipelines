@@ -17,13 +17,13 @@ jobs:
       - IN: rituraj-1-2-secure-1
       - IN: tr1
 
-  - name: ecs-deploy-rr
-    type: deploy
-    steps:
-      - IN: rituraj-release1-test
-      - IN: ecs-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: ecs-deploy-rr
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-release1-test
+  #     - IN: ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
         
   
   # - name: real-ecsdeploy2
@@ -40,13 +40,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: tri-deploy-1-1
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-2-1
-  #     - IN: tri-cluster-1
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: tri-deploy-1-1
+    type: deploy
+    steps:
+      - IN: rituraj-2-1
+      - IN: tri-cluster-1
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: tri-deploy-2
   #   type: tripubDeploy
