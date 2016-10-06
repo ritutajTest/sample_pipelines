@@ -23,6 +23,13 @@ resources:
     seed:
       versionName: "1.2.3-beta"
       
+  - name: slackNotification
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "#mybuilds"
+      
   # - name: dv-params
   #   type: params
   #   version:
