@@ -42,6 +42,10 @@ jobs:
 
   - name: tri-deploy-1-1
     type: deploy
+    on_start:
+      - NOTIFY: slackNotification
+    on_success:
+      - NOTIFY: slackNotification
     steps:
       - IN: rituraj-2-1
       - IN: tri-cluster-1
