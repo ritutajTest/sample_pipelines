@@ -1,14 +1,14 @@
 jobs:
-   - name: rituraj-2-2
-     type: manifest
-     steps:
-       - IN: box-sn-1
+  - name: rituraj-2-2
+    type: manifest
+    steps:
+      - IN: box-sn-1
  
 
-   - name: rituraj-2-1
-     type: manifest
-     steps:
-       - IN: box-nginx-1
+  - name: rituraj-2-1
+    type: manifest
+    steps:
+      - IN: box-nginx-1
       
   # - name: rituraj-release1-test
   #   type: release
@@ -54,13 +54,13 @@ jobs:
         deployMethod: upgrade
 
   - name: tri-deploy-2
-     type: deploy
-     steps:
-       - IN: rituraj-2-2
-       - IN: tri-cluster-1
-       - IN: myGitRepo
-       - TASK: managed
-         deployMethod: upgrade
+    type: deploy
+    steps:
+      - IN: rituraj-2-2
+      - IN: tri-cluster-1
+      - IN: myGitRepo
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: tri-deploy-1
   #   type: tripubDeploy
