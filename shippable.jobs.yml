@@ -50,6 +50,7 @@ jobs:
       - IN: rituraj-2-1
       - IN: tri-cluster-1
       - IN: docker-opts
+      - IN: myGitRepo
       - TASK: managed
         deployMethod: upgrade
 
