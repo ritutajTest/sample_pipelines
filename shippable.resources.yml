@@ -43,7 +43,7 @@ resources:
       sourceName: Riturajcse/sample_php
       branch: master
       
-   - name: rr-replicas
+  - name: rr-replicas
     type: replicas
     version:
       count: 2
