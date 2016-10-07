@@ -31,7 +31,7 @@ resources:
         - "#mybuilds"
         
   
-  - name: sh-docker-opts
+  - name: docker-opts
     type: dockerOptions
     version:
       memory: 200
