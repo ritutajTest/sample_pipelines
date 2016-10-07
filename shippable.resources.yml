@@ -36,6 +36,13 @@ resources:
     version:
       memory: 200
       user: "driftking1"
+   
+  - name: myGitRepo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: Riturajcse/sample_php
+      branch: master
       
   # - name: dv-params
   #   type: params
