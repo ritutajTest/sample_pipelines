@@ -34,8 +34,8 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      memory: 200
-      user: "driftking1"
+      memory: 400
+      user: "rr1"
    
   - name: myGitRepo
     type: gitRepo
