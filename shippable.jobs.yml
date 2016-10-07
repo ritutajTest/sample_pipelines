@@ -5,7 +5,7 @@ jobs:
       - IN: box-sn-1
  
 
-  - name: rituraj-2-1
+  - name: rituraj-2-1-param
     type: manifest
     steps:
       - IN: box-nginx-1
@@ -47,8 +47,9 @@ jobs:
     on_success:
       - NOTIFY: slackNotification
     steps:
-      - IN: rituraj-2-1
+      - IN: rituraj-2-1-param
       - IN: tri-cluster-1
+      - IN: rr-params
       - TASK: managed
         deployMethod: upgrade
 
