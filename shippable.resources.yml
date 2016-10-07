@@ -31,11 +31,11 @@ resources:
         - "#mybuilds"
         
   
-  - name: docker-opts
-     type: dockerOptions
-     version:
-       memory: 200
-       user: "driftking1"
+  - name: sh-docker-opts
+    type: dockerOptions
+    version:
+      memory: 200
+      user: "driftking1"
       
   # - name: dv-params
   #   type: params
