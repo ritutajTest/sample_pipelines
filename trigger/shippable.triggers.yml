@@ -2,12 +2,12 @@ triggers:
   - name: trigger-dv-man-1
     type: trigger
     version:
-      counter: 6263
+      counter: 62632
       
   - name: tr1
     type: trigger
     version:
-      counter: 2996632
+      counter: 299
       
       
 
