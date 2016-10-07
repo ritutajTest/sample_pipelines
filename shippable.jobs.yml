@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: box-sn-1
+      - IN: box-nginx-1
  
 
   - name: rituraj-2-1-param
