@@ -58,7 +58,7 @@ jobs:
     type: deploy
     steps:
       - IN: rituraj-2-1-param
-      - IN: ddc-cluster
+      - IN: gke-cluster
       - TASK: managed
         deployMethod: upgrade
 
