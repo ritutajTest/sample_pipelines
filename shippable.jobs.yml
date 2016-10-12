@@ -57,7 +57,8 @@ jobs:
   - name: tri-deploy-2
     type: deploy
     steps:
-      - IN: rituraj-2-2
+      - IN: tri-deploy-1-1
+        switch: off
       - IN: tri-cluster-1
       - IN: myGitRepo
       - IN: rr-replicas
