@@ -54,11 +54,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: tri-deploy-2
+  - name: aws-deploy-2
     type: deploy
     steps:
       - IN: rituraj-2-1-param
-      - IN: tri-cluster-1
+      - IN: aws-cluster-1
       - IN: docker-opts
       - TASK: managed
         deployMethod: upgrade
