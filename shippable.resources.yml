@@ -18,7 +18,6 @@ resources:
       versionName: latest
       
   - name: box-nginx-1
-    type: deploy
     integration: dockerhub
     pointer:
       sourceName: "library/nginx"
