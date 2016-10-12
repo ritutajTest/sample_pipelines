@@ -135,11 +135,11 @@ resources:
   #   seed:
   #     interval: "*/2 * * * *"
 
-  - name: tri-cluster-1
+  - name: aws-cluster-1
     type: cluster
-    integration: triton
+    integration: aws
     pointer:
-      region: "us-east-2"
+      region: "us-west-2"
 
   # - name: ecs-cluster
   #   type: cluster
