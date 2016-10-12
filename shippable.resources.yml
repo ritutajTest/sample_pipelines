@@ -21,7 +21,7 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      sourceName: "riturajcse/rituexm"
+      sourceName: "library/nginx"
       isPull: false
     seed:
       versionName: latest
