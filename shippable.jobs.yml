@@ -9,7 +9,7 @@ jobs:
   - name: rituraj-2-1-param
     type: manifest
     steps:
-      - IN: sample_pipelines_master
+      - IN: rr_dockerImage
       
   # - name: rituraj-release1-test
   #   type: release
