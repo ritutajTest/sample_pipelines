@@ -44,7 +44,7 @@ resources:
     type: dockerOptions
     version:
       links:
-        -""shippabledb:db""
+        -"shippabledb:db"
    
   # - name: myGitRepo
   #   type: gitRepo
