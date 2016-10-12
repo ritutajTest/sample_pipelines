@@ -139,6 +139,7 @@ resources:
     type: cluster
     integration: aws
     pointer:
+      sourceName: "testCL"
       region: "us-west-2"
 
   # - name: ecs-cluster
