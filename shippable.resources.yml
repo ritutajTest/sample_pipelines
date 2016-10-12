@@ -20,7 +20,7 @@ resources:
   - name: box-nginx-1
     integration: dockerhub
     pointer:
-      sourceName: "library/nginx"
+      sourceName: library/nginx
       isPull: false
     seed:
       versionName: latest
