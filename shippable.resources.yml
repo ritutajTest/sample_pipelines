@@ -25,15 +25,6 @@ resources:
       isPull: false
     seed:
       versionName: latest
- 
-  - name: rr_dockerImage
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "riturajcse/rituexm"
-      isPull: true
-    seed:
-      versionName: mytag
       
   
   - name: real-version2
