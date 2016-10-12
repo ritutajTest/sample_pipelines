@@ -54,7 +54,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: aws-deploy-2
+  - name: aws-deploy-21
     type: deploy
     steps:
       - IN: rituraj-2-1-param
