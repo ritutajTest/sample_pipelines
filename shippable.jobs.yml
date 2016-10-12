@@ -54,16 +54,13 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  # - name: tri-deploy-2
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-deploy-1-1
-  #       switch: off
-  #     - IN: tri-cluster-1
-  #     - IN: myGitRepo
-  #     - IN: rr-replicas
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: tri-deploy-2
+    type: deploy
+    steps:
+      - IN: rituraj-2-1-param
+        switch: off
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: tri-deploy-1
   #   type: tripubDeploy
