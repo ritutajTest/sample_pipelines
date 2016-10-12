@@ -58,7 +58,6 @@ jobs:
     type: deploy
     steps:
       - IN: rituraj-2-1-param
-        switch: off
       - TASK: managed
         deployMethod: upgrade
 
