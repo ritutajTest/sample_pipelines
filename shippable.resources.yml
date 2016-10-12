@@ -52,6 +52,8 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
+      portMappings:
+        -"80:80"
       user: "rr1"
    
   # - name: myGitRepo
