@@ -9,7 +9,7 @@ jobs:
   - name: rituraj-2-1-param
     type: manifest
     steps:
-      - IN: box-nginx-1
+      - IN: sample_pipelines
       
   # - name: rituraj-release1-test
   #   type: release
