@@ -41,7 +41,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: tri-deploy-1-1
+  - name: ddc-cluster-deploy
     type: deploy
     on_start:
       - NOTIFY: slackNotification
@@ -49,21 +49,21 @@ jobs:
       - NOTIFY: slackNotification
     steps:
       - IN: rituraj-2-1-param
-      - IN: tri-cluster-1
+      - IN: ddc-cluster
       - IN: rr-params
       - TASK: managed
         deployMethod: upgrade
 
-  - name: tri-deploy-2
-    type: deploy
-    steps:
-      - IN: tri-deploy-1-1
-        switch: off
-      - IN: tri-cluster-1
-      - IN: myGitRepo
-      - IN: rr-replicas
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: tri-deploy-2
+  #   type: deploy
+  #   steps:
+  #     - IN: tri-deploy-1-1
+  #       switch: off
+  #     - IN: tri-cluster-1
+  #     - IN: myGitRepo
+  #     - IN: rr-replicas
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: tri-deploy-1
   #   type: tripubDeploy
