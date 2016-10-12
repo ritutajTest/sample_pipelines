@@ -58,7 +58,7 @@ jobs:
     type: deploy
     steps:
       - IN: rituraj-2-1-param
-      - IN: gke-cluster
+      - IN: aws-cluster-11
       - IN: docker-opts
       - TASK: managed
         deployMethod: upgrade
