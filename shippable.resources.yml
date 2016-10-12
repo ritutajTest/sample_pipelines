@@ -50,7 +50,6 @@ resources:
         
   
   - name: docker-opts
-    type: dockeroptions
     version:
       user: "rr1"
    
