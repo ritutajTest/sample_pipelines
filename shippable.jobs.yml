@@ -41,18 +41,18 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: ddc-cluster-deploy
-    type: deploy
-    on_start:
-      - NOTIFY: slackNotification
-    on_success:
-      - NOTIFY: slackNotification
-    steps:
-      - IN: rituraj-2-1-param
-      - IN: ddc-cluster
-      - IN: rr-params
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: ddc-cluster-deploy
+  #   type: deploy
+  #   on_start:
+  #     - NOTIFY: slackNotification
+  #   on_success:
+  #     - NOTIFY: slackNotification
+  #   steps:
+  #     - IN: rituraj-2-1-param
+  #     - IN: ddc-cluster
+  #     - IN: rr-params
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   - name: tri-deploy-2
     type: deploy
