@@ -112,11 +112,11 @@ resources:
   #   seed:
   #     interval: "*/2 * * * *"
 
-  - name: tri-cluster-1
-    type: cluster
-    integration: triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster-1
+  #   type: cluster
+  #   integration: triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: ecs-cluster
   #   type: cluster
@@ -132,11 +132,11 @@ resources:
   #     sourceName: "small-cluster"
   #     region: "us-east1-d"
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: rrddc
-  #   pointer:
-  #     sourceName: "ddc-cluster"
+  - name: ddc-cluster
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName: "ddc-cluster"
 
   # - name: dcl-cluster
   #   type: dclCluster
