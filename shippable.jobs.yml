@@ -58,7 +58,7 @@ jobs:
     type: deploy
     steps:
       - IN: rituraj-2-1-param
-      - IN: aws-cluster-11
+      - IN: ddc-cluster
       - TASK: managed
         deployMethod: upgrade
 
