@@ -17,14 +17,14 @@ resources:
     seed:
       versionName: latest
       
-  - name: rr_dockerImage
+  - name: box-nginx-1
     type: image
     integration: dockerhub
     pointer:
-      sourceName: riturajcse/rituexm
-      isPull: true
+      sourceName: "library/nginx"
+      isPull: false
     seed:
-      versionName: mytag
+      versionName: latest
       
   
   - name: real-version2
@@ -64,6 +64,13 @@ resources:
         key1: "rituraj"
         key2: "hello all"
       
+
+  - name: rr-params
+    type: params
+    version:
+      params:
+        key1: "rituraj"
+        key2: "hello all"
   # - name: dv-params
   #   type: params
   #   version:
