@@ -52,12 +52,7 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      user: "rrr1"
-      
-  - name: docker-opts
-    type: dockerOptions
-    version:
-      user: "rrr2"
+      links: "testingRR"
    
   # - name: myGitRepo
   #   type: gitRepo
@@ -135,7 +130,7 @@ resources:
   #   seed:
   #     interval: "*/2 * * * *"
 
-  - name: aws-cluster-1
+  - name: aws-cluster-11
     type: cluster
     integration: aws
     pointer:
