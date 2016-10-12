@@ -45,12 +45,12 @@ resources:
     version:
       user: "rr1"
    
-  - name: myGitRepo
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: Riturajcse/sample_php
-      branch: master
+  # - name: myGitRepo
+  #   type: gitRepo
+  #   integration: github
+  #   pointer:
+  #     sourceName: Riturajcse/sample_php
+  #     branch: master
       
   - name: rr-replicas
     type: replicas
