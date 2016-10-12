@@ -145,12 +145,12 @@ resources:
   #     sourceName: "testCL"
   #     region: "us-west-2"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: jatin-gke
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "us-east1-d"
+  - name: gke-cluster
+    type: cluster
+    integration: gke
+    pointer:
+      sourceName: "small-cluster"
+      region: "us-east1-d"
 
   - name: ddc-cluster
     type: cluster
