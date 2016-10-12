@@ -52,7 +52,8 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      links: "testingRR"
+      links:
+        -""shippabledb:db""
    
   # - name: myGitRepo
   #   type: gitRepo
