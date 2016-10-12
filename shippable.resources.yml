@@ -18,6 +18,7 @@ resources:
       versionName: latest
       
   - name: box-nginx-1
+    type: image
     integration: dockerhub
     pointer:
       sourceName: library/nginx
