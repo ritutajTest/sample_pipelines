@@ -52,12 +52,12 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      user: "rr1"
+      user: "rrr1"
       
   - name: docker-opts
     type: dockerOptions
     version:
-      user: "rr2"
+      user: "rrr2"
    
   # - name: myGitRepo
   #   type: gitRepo
