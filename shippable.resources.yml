@@ -9,6 +9,7 @@ resources:
       versionName: "dc.pipeline.3"
 
   - name: box-nginx-1
+    type: image
     integration: dockerhub
     pointer:
       sourceName: "library/nginx"
