@@ -8,11 +8,20 @@ resources:
     seed:
       versionName: "dc.pipeline.3"
 
-  - name: box-nginx-1
+  - name: box-nginx-1-1
     type: image
     integration: dockerhub
     pointer:
       sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
+      
+   - name: box-nginx-1
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "riturajcse/rituexm"
       isPull: false
     seed:
       versionName: latest
