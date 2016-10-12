@@ -59,7 +59,6 @@ jobs:
     steps:
       - IN: rituraj-2-1-param
       - IN: aws-cluster-11
-      - IN: docker-opts
       - TASK: managed
         deployMethod: upgrade
 
