@@ -54,6 +54,8 @@ resources:
     version:
       portMappings:
         -"80:80"
+      portMappings:
+        -"180:180"
       user: "rr1"
    
   # - name: myGitRepo
