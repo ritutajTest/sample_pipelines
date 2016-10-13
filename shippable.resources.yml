@@ -206,10 +206,9 @@ resources:
     type: dockerOptions
     version:
       logConfig:
-        type: rrLog
+        type: "json-file"
         options:
-          key1: value1
-          key2: value2
+          max-size: 50m
    
   # - name: myGitRepo
   #   type: gitRepo
