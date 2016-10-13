@@ -22,9 +22,9 @@ resources:
     #integration: dockerhub
     pointer:
       sourceName: "riturajcse/rituexm"
-      isPull: false
+      isPull: yes
     seed:
-      versionName: latest
+      versionName: mytag
       
   
   # - name: real-version2
