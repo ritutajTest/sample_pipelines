@@ -205,7 +205,11 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      entryPoint: stringEntrypoint
+      logConfig:
+        type: rrLog
+        options:
+          key1: value1
+          key2: value2
    
   # - name: myGitRepo
   #   type: gitRepo
