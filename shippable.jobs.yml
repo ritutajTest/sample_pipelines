@@ -69,6 +69,7 @@ jobs:
       - IN: rituraj-2-2
       - IN: docker-opts
       - IN: tri-cluster
+      - IN: tr1
       - TASK: managed
         deployMethod: upgrade
 
