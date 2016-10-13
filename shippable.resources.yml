@@ -8,14 +8,14 @@ resources:
   #   seed:
   #     versionName: "dc.pipeline.3"
 
-  # - name: box-nginx-1-1
-  #   type: image
-  #   integration: dockerhub
-  #   pointer:
-  #     sourceName: "library/nginx"
-  #     isPull: false
-  #   seed:
-  #     versionName: latest
+  - name: box-nginx-1
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
       
   - name: rr_dockerImage
     type: image
@@ -291,6 +291,13 @@ resources:
     pointer:
       sourceName: "testCL"
       region: "us-west-2"
+
+
+  - name: tri-cluster
+    type: cluster
+    integration: triton
+    pointer:
+      region: "us-east-2"
 
   # - name: ecs-cluster
   #   type: cluster
