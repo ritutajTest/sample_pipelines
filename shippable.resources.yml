@@ -10,7 +10,7 @@ resources:
 
   - name: box-nginx-1
     type: image
-    integration: dockerhub
+    #integration: dockerhub
     pointer:
       sourceName: "library/nginx"
       isPull: false
@@ -19,9 +19,9 @@ resources:
       
   - name: rr_dockerImage
     type: image
-    integration: dockerhub
+    #integration: dockerhub
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "riturajcse/rituexm"
       isPull: false
     seed:
       versionName: latest
