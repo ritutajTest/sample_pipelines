@@ -35,6 +35,43 @@ resources:
   - name: slackNotification
     type: notification
     integration: slack
+    pointer:resources:
+  - name: box-sn-1
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: false
+    seed:
+      versionName: "dc.pipeline.3"
+
+  - name: box-nginx-1-1
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
+      
+  - name: rr_dockerImage
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
+      
+  
+  - name: real-version2
+    type: version
+    seed:
+      versionName: "1.2.3-beta"
+      
+  - name: slackNotification
+    type: notification
+    integration: slack
     pointer:
       recipients:
         - "#mybuilds"
@@ -45,6 +82,132 @@ resources:
     version:
       links:
         -"shippabledb:db"
+   
+  # - name: myGitRepo
+  #   type: gitRepo
+  #   integration: github
+  #   pointer:
+  #     sourceName: Riturajcse/sample_php
+  #     branch: master
+      
+  - name: rr-replicas
+    type: replicas
+    version:
+      count: 2
+
+  - name: rr-params
+    type: params
+    version:
+      params:
+        key1: "rituraj"
+        key2: "hello all"
+      
+  # - name: dv-params
+  #   type: params
+  #   version:
+  #     params:
+  #       MONGO_API_URL: "localhost:28017"
+  #       secure: xNYOBf/uyme5Ff56FZwuOJloBgyD0UJzb3KktcKk4sI8gUyzQbz4OoDLN/WlzRf32lvC51g6Voy6mbaDAL9rdNZoi61xyjuK7K2jKNvzgeKHRKUU4EEaqriaNLrComm6/Vj11UxgZ/2zd+F3Sv/dBMHWOZ65jMkpAIyGSwqSeQyckuFu3LNcckl+om6xkTvz9mzWiRJWai7AKNmZ/iq3tfWTDQjKUPti7WZEQ7r2Ya9fBQWESc778G9IY84Eq8+S4i+647Ki7M3gdah/kBRYquF7KSd+uYgI5i+BJFqqPL6ZOrw2O1pq5qlN5qh1JcXUYY+3AViX03KhnNnFWR1pqw==
+  #   flags:
+  #     - dv
+      
+  # - name: box-params
+  #   type: params
+  #   version:
+  #     params:
+  #       DB_HOST: "ds015700.mlab.com"
+  #       DB_NAME: "ayeaye"
+  #       DB_PORT: "15700"
+  #       DB_USERNAME: "aye0aye"
+  #       DB_PASSWORD: "aye0aye"
+  #       ENVIRONMENT: "test-aws"
+  #   flags:
+  #     - box
+
+  # - name: box-opts
+  #   type: dockerOptions
+  #   version:
+  #     publishAllPorts : true
+  #     labels:
+  #       jatin : triton
+  #       vishnu : tripub
+  #       joyent : badServer
+  #     dnsServers:
+  #       - "8.8.8.8"
+  #     dnsSearch:
+  #       - "10.10.10.10"
+  #     logConfig:
+  #       type: "json-file"
+  #       options:
+  #         max-size: 50m
+  #     volumesFrom:
+  #       - "basedataContainer"
+  #       - "basedataContainer:ro"
+
+  # - name: nightly-4
+  #   type: time
+  #   seed:
+  #     interval: "* 20 * * *"
+
+  # - name: daily
+  #   type: time
+  #   seed:
+  #     interval: "2 * * * *"
+
+  # - name: minutes
+  #   type: time
+  #   seed:
+  #     interval: "*/2 * * * *"
+
+  - name: aws-cluster-11
+    type: cluster
+    integration: aws
+    pointer:
+      sourceName: "testCL"
+      region: "us-west-2"
+
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: rr_ecs
+  #   pointer:
+  #     sourceName: "testCL"
+  #     region: "us-west-2"
+
+  - name: gke-cluster
+    type: cluster
+    integration: gke
+    pointer:
+      sourceName: "small-cluster"
+      region: "us-east1-d"
+
+  - name: ddc-cluster
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName: "ddc-cluster"
+
+  # - name: dcl-cluster
+  #   type: dclCluster
+  #   integration: jatin-dcl
+  #   pointer:
+  #     sourceName: "cluster-dcl"
+
+  # - name: jatin-cluster
+  #   type: cluster
+  #   integration: jatin-dcl
+  #   pointer:
+  #     sourceName: "cluster-dcl"
+
+      recipients:
+        - "#mybuilds"
+        
+  
+  - name: docker-opts
+    type: dockerOptions
+    version:
+      memory: 121
+      links:
+        - vault:vault
    
   # - name: myGitRepo
   #   type: gitRepo
