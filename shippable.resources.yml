@@ -207,7 +207,7 @@ resources:
     version:
       memory: 121
       links:
-        - vault:vault
+        - mohit_cont:rr_cont
    
   # - name: myGitRepo
   #   type: gitRepo
