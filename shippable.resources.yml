@@ -17,7 +17,7 @@ resources:
     seed:
       versionName: latest
       
-  - name: rr_dockerImage
+  - name: rr_dockerImxage
     type: image
     #integration: dockerhub
     pointer:
