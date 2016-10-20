@@ -1,4 +1,4 @@
 git status
 git add .
-git commit -m "updastesssnnnsdd ymls"
+git commit -m "updasstesssnnnsdd ymls"
 git push origin master

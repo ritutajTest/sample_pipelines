@@ -21,7 +21,7 @@ resources:
     type: image
     #integration: dockerhub
     pointer:
-      sourceName: "riturajcse/rituexm"
+      sourceName: "riturajcse/ritusexm"
       isPull: yes
     seed:
       versionName: mytag
