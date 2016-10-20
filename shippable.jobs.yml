@@ -2,7 +2,7 @@ jobs:
   - name: rituraj-2-2
     type: manifest
     steps:
-      - IN: box-nginx-1
+      - IN: bowx-nginx-1
  
 
   - name: rituraj-2-1-param
