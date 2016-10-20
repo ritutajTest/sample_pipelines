@@ -8,7 +8,7 @@ jobs:
   - name: rituraj-2ss-1-param
     type: manifest
     steps:
-      - IN: rr_dockerImage
+      - IN: rr_dosckerImage
       
   # - name: rituraj-release1-test
   #   type: release
