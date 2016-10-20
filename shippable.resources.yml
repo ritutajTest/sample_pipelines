@@ -12,7 +12,7 @@ resources:
     type: image
     #integration: dockerhub
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "librarsy/nginx"
       isPull: false
     seed:
       versionName: latest
