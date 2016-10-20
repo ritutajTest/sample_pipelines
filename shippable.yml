@@ -7,4 +7,4 @@ python:
 
 build:
   ci:
-    - python --verssion
+    - python --verssidon
