@@ -8,7 +8,7 @@ jobs:
   - name: rituraj-2-1-param
     type: manifest
     steps:
-      - IN: rr_dockerImage
+      - IN: box-nginx-1
       
   # - name: rituraj-release1-test
   #   type: release
