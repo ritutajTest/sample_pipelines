@@ -304,7 +304,7 @@ resources:
 
   - name: gke-cluster
     type: cluster
-    integration: gke
+    integration: gke-cluster
     pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
