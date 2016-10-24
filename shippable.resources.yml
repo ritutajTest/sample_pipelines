@@ -209,30 +209,6 @@ resources:
         type: "json-file"
         options:
           max-size: 50m
-
-      # "entryPoint" can be a string or an array of string
-
-      privileaged: true # May be true or false
-
-      labels:
-        key1: value1
-        key2: value2
-
-      ulimits:
-        - name: limitName # e.g. cpu
-          soft: softLimit
-          hard: hardLimit
-        - name: nofile
-          soft: 50
-          hard: 100
-
-      dnsServers:
-        - "127.0.0.1"
-
-      dnsSearch:
-        - "127.0.0.1"
-
-      user: username # For GKE, this should be the UID (a number)
    
   # - name: myGitRepo
   #   type: gitRepo
