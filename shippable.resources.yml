@@ -17,7 +17,8 @@ resources:
     seed:
       versionName: latest
       
-  - name: box-nginx-1
+  - name:
+      -box-nginx-1
     type: image
     integration: dockerhub
     pointer:
@@ -203,7 +204,7 @@ resources:
         
   
   - name: docker-opts
-    type: dockeroptions
+    type: dockerOptions
     version:
       logConfig:
         type: "json-file"
