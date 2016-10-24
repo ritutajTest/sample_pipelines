@@ -53,15 +53,15 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: aws-deploy-13
-    type: deploy
-    steps:
-      - IN: rituraj-2-1-param
-      - IN: aws-cluster-11
-      - IN: docker-opts
-      - IN: tr1
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: aws-deploy-13
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-2-1-param
+  #     - IN: aws-cluster-11
+  #     - IN: docker-opts
+  #     - IN: tr1
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   - name: tri-deploy-13
     type: deploy
