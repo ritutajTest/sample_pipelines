@@ -222,9 +222,6 @@ resources:
         - stringOne
         - stringTwo
 
-      # "cmd" can be a string or an array of strings
-      cmd: stringCommand
-
       cmd:
         - stringOne
         - stringTwo
