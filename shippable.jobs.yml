@@ -2,13 +2,13 @@ jobs:
   - name: rituraj-2-2
     type: manifest
     steps:
-      - IN: bosdx-nginx-1
+      - IN: box-nginx-1
  
 
-  - name: rituraj-2ss-1-param
+  - name: rituraj-2s-1-param
     type: manifest
     steps:
-      - IN: rr_dosckerImage
+      - IN: rr_dockerImage
       
   # - name: rituraj-release1-test
   #   type: release
