@@ -228,11 +228,6 @@ resources:
         key1: value1
         key2: value2
 
-      volumesFrom:
-        - "containerNameOne:ro" # Read-only
-        - "containerNameTwo:rw" # Read-write
-        - "containerNameThree" #Read-write
-
       ulimits:
         - name: limitName # e.g. cpu
           soft: softLimit
