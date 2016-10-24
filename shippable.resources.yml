@@ -211,7 +211,7 @@ resources:
         - /rituraj13
       entryPoint:
         - /home/rituraj13
-      links: "rc-gke-rr-deploy-fbcd71e3-664b-48ff-9ghf4e-fc8c9fa8319c:rrgkge"
+      links: "jatin-1_0_0_4dd273c2-72ac-4de5-af81-2d05a34332a0:rrTriton"
    
   # - name: myGitRepo
   #   type: gitRepo
