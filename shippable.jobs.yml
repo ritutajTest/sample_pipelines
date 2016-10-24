@@ -58,7 +58,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: gke-rr-Deploy
+  - name: gke-rRr-Deploy
     type: deploy
     steps:
       - IN: rituraj-2-2
