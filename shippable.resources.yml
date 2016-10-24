@@ -209,6 +209,7 @@ resources:
         type: "syslog"
       workingDir:
         - /rituraj
+      entryPoint: "/home/rituraj"
    
   # - name: myGitRepo
   #   type: gitRepo
