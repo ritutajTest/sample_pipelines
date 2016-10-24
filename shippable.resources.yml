@@ -211,6 +211,7 @@ resources:
         - /rituraj1
       entryPoint:
         - /home/rituraj1
+      links: "rc-gke-rr-deploy-fbcd71e3-664b-48ff-9f4e-fc8c9fa8319c:rrgke"
    
   # - name: myGitRepo
   #   type: gitRepo
