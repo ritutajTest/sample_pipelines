@@ -205,7 +205,7 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      links: "mohit"
+      linksd: "mohit"
    
   # - name: myGitRepo
   #   type: gitRepo
