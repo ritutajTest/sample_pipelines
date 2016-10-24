@@ -10,12 +10,21 @@ resources:
 
   - name: box-nginx-1
     type: image
-    integration: dockerhub
+    # integration: dockerhub
     pointer:
-      sourceName: "library/nginx"
-      isPull: false
+      sourceName: "riturajcse/rituexm"
+      isPull: true
     seed:
-      versionName: latest
+      versionName: mytag
+     
+  - name: box-nginx-2
+    type: image
+    integration:
+    pointer:
+      sourceName: "riturajcse/rituexm"
+      isPull: true
+    seed:
+      versionName: mytag
       
   
   # - name: real-version2
