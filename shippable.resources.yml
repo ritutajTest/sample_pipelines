@@ -210,10 +210,9 @@ resources:
         - containerNameTwo:twoAlias
 
       logConfig:
-        type: typeName
-        options:  # "options" is not required
-          key1: value1
-          key2: value2
+        type: "json-file"
+        options:
+          max-size: 50m
 
       # "entryPoint" can be a string or an array of strings
       entryPoint: stringEntrypoint
