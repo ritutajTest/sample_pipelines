@@ -205,12 +205,6 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      logConfig:
-        type: "syslog"
-      workingDir:
-        - /rituraj13
-      entryPoint:
-        - /home/rituraj13
       links: "jatin-1_0_0_4dd273c2-72ac-4de5-af81-2d05a34332a0:rrTriton"
    
   # - name: myGitRepo
