@@ -205,10 +205,62 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
+      links:
+        - containerNameOne:oneAlias
+        - containerNameTwo:twoAlias
+
       logConfig:
-        type: "json-file"
-        options:
-          max-size: 50m
+        type: typeName
+        options:  # "options" is not required
+          key1: value1
+          key2: value2
+
+      # "entryPoint" can be a string or an array of strings
+      entryPoint: stringEntrypoint
+
+      entryPoint:
+        - stringOne
+        - stringTwo
+
+      # "cmd" can be a string or an array of strings
+      cmd: stringCommand
+
+      cmd:
+        - stringOne
+        - stringTwo
+
+      workingDir: workingDirectoryPath
+
+      privileaged: true # May be true or false
+
+      labels:
+        key1: value1
+        key2: value2
+
+      volumesFrom:
+        - "containerNameOne:ro" # Read-only
+        - "containerNameTwo:rw" # Read-write
+        - "containerNameThree" #Read-write
+
+      ulimits:
+        - name: limitName # e.g. cpu
+          soft: softLimit
+          hard: hardLimit
+        - name: nofile
+          soft: 50
+          hard: 100
+
+      dnsServers:
+        - "127.0.0.1"
+
+      dnsSearch:
+        - "127.0.0.1"
+
+      user: username # For GKE, this should be the UID (a number)
+
+      volumes:
+        - "host:container:rw"
+        - "host:container:rw"
    
   # - name: myGitRepo
   #   type: gitRepo
