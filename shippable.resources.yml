@@ -206,13 +206,13 @@ resources:
     type: dockerOptions
     version:
       logConfig:
-        type: "json-file"
+        type: "syslog"
 
   - name: docker-opts
     type: dockerOptions
     version:
       logConfig:
-        type: "syslog"
+        type: "json-file"
    
   # - name: myGitRepo
   #   type: gitRepo
