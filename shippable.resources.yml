@@ -208,7 +208,7 @@ resources:
       logConfig:
         type: "syslog"
       cmd:
-        - "ls -a"
+        - "pwd"
    
   # - name: myGitRepo
   #   type: gitRepo
