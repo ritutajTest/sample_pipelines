@@ -208,8 +208,9 @@ resources:
       logConfig:
         type: "syslog"
       workingDir:
-        - /rituraj
-      entryPoint: "/home/rituraj"
+        - /rituraj1
+      entryPoint:
+        - /home/rituraj1
    
   # - name: myGitRepo
   #   type: gitRepo
