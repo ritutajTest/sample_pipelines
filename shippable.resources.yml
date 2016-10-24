@@ -203,7 +203,7 @@ resources:
         
   
   - name: docker-opts
-    type: dockerOptions
+    type: dockeroptions
     version:
       logConfig:
         type: "json-file"
