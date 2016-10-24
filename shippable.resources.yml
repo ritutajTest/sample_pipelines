@@ -224,7 +224,6 @@ resources:
 
       cmd:
         - stringOne
-        - stringTwo
 
       workingDir: workingDirectoryPath
 
