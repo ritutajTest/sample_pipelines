@@ -67,7 +67,6 @@ jobs:
     type: deploy
     steps:
       - IN: rituraj-2-2
-      - IN: docker-opts
       - IN: tri-cluster
       - IN: tr1
       - TASK: managed
