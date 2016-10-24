@@ -5,7 +5,7 @@ jobs:
       - IN: box-nginx-1
  
 
-  - name: rituraj-2s-1-param
+  - name: rituraj-2-1-param
     type: manifest
     steps:
       - IN: rr_dockerImage
