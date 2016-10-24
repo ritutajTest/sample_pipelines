@@ -207,7 +207,8 @@ resources:
     version:
       logConfig:
         type: "syslog"
-      workingDir: "/home"
+      workingDir:
+        - /rituraj
    
   # - name: myGitRepo
   #   type: gitRepo
