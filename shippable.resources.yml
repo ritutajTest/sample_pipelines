@@ -199,9 +199,9 @@ resources:
       logConfig:
         type: "json-file"
         options:
-          max-size: 50m
+          max-size: 40m
 
-  - name: docker-opts-2
+  - name: docker-opts
     type: dockerOptions
     version:
       logConfig:
@@ -306,12 +306,12 @@ resources:
   #     sourceName: "testCL"
   #     region: "us-west-2"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: gke
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "us-east1-d"
+  - name: gke-cluster
+    type: cluster
+    integration: gke
+    pointer:
+      sourceName: "small-cluster"
+      region: "us-east1-d"
 
   # - name: ddc-cluster
   #   type: cluster
