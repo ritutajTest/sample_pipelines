@@ -207,6 +207,7 @@ resources:
     version:
       links:
         - mohit:123
+        - mohitq:12q3
    
   # - name: myGitRepo
   #   type: gitRepo
