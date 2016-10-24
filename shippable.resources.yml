@@ -207,8 +207,7 @@ resources:
     version:
       logConfig:
         type: "syslog"
-      cmd:
-        - "pwd"
+      workingDir: "/home"
    
   # - name: myGitRepo
   #   type: gitRepo
