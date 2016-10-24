@@ -205,7 +205,7 @@ resources:
     type: dockerOptions
     version:
       logConfig:
-        type: "json-file"
+        type: "syslog"
         options:
           max-size: 50m
    
@@ -308,7 +308,7 @@ resources:
 
   - name: gke-cluster
     type: cluster
-    integration: gke-cluster
+    integration: gke
     pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
