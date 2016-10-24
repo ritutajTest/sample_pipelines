@@ -200,6 +200,14 @@ resources:
         type: "json-file"
         options:
           max-size: 50m
+
+  - name: docker-opts-2
+    type: dockerOptions
+    version:
+      logConfig:
+        type: "json-file"
+        options:
+          max-size: 50m
    
   # - name: myGitRepo
   #   type: gitRepo
