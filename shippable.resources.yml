@@ -200,21 +200,15 @@ resources:
 
       # recipients:
       #   - "#mybuilds"
-        
-  
-  - name: docker-opts
-    type: dockerOptions
-    version:
-      logConfig:
-        type: "syslog"
-      cmd: "pwd"
+
 
   - name: docker-opts
     type: dockerOptions
     version:
       logConfig:
         type: "syslog"
-      cmd: "uname -a"
+      cmd:
+        - "ls -a"
    
   # - name: myGitRepo
   #   type: gitRepo
