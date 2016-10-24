@@ -8,7 +8,7 @@ resources:
   #   seed:
   #     versionName: "dc.pipeline.3"
 
-  - name: box-nginx-1a
+  - name: box-nginx-1
     type: image
     integration: dockerhub
     pointer:
