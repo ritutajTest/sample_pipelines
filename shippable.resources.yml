@@ -207,7 +207,7 @@ resources:
     version:
       logConfig:
         type: "syslog"
-      cmd: "uname -a"
+      cmd: "pwd"
 
   - name: docker-opts
     type: dockerOptions
