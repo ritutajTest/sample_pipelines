@@ -17,7 +17,7 @@ resources:
     seed:
       versionName: latest
       
-  - name: box-nginx-1
+  - name: sample_pipelines_master1212
     type: image
     integration: dockerhub
     pointer:
