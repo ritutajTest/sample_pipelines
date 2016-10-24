@@ -205,22 +205,12 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      links:
-        - containerNameOne:oneAlias
-        - containerNameTwo:twoAlias
-
       logConfig:
         type: "json-file"
         options:
           max-size: 50m
 
-      # "entryPoint" can be a string or an array of strings
-      entryPoint: stringEntrypoint
-
-      cmd:
-        - stringOne
-
-      workingDir: workingDirectoryPath
+      # "entryPoint" can be a string or an array of string
 
       privileaged: true # May be true or false
 
@@ -243,10 +233,6 @@ resources:
         - "127.0.0.1"
 
       user: username # For GKE, this should be the UID (a number)
-
-      volumes:
-        - "host:container:rw"
-        - "host:container:rw"
    
   # - name: myGitRepo
   #   type: gitRepo
