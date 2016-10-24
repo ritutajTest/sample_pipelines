@@ -8,20 +8,20 @@ resources:
   #   seed:
   #     versionName: "dc.pipeline.3"
 
-  - name: box-ngdvffwsinx-1
+  - name: box-nginx-1
     type: image
-    #integration: dockerhub
+    integration: dockerhub
     pointer:
       sourceName: "librarsy/nginx"
       isPull: false
     seed:
       versionName: latest
       
-  - name: rr_dockerImxzage
+  - name: rr_dockerImage
     type: image
-    #integration: dockerhub
+    integration: dockerhub
     pointer:
-      sourceName: "riturajcse/ritusexm"
+      sourceName: "riturajcse/rituexm"
       isPull: yes
     seed:
       versionName: mytag
