@@ -207,12 +207,14 @@ resources:
     version:
       logConfig:
         type: "syslog"
+      cmd: "uname -a"
 
   - name: docker-opts
     type: dockerOptions
     version:
       logConfig:
-        type: "json-file"
+        type: "syslog"
+      cmd: "uname -a"
    
   # - name: myGitRepo
   #   type: gitRepo
