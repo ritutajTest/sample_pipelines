@@ -218,10 +218,6 @@ resources:
       # "entryPoint" can be a string or an array of strings
       entryPoint: stringEntrypoint
 
-      entryPoint:
-        - stringOne
-        - stringTwo
-
       cmd:
         - stringOne
 
