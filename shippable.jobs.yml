@@ -4,11 +4,6 @@ jobs:
     steps:
       - IN: box-nginx-1
  
-
-  - name: rituraj-2-1-param
-    type: manifest
-    steps:
-      - IN: box-nginx-2
       
   # - name: rituraj-release1-test
   #   type: release
@@ -67,7 +62,6 @@ jobs:
     type: deploy
     steps:
       - IN: rituraj-2-2
-      - IN: rituraj-2-1-param
       - IN: gke-cluster
       - IN: docker-opts
       - IN: tr1
