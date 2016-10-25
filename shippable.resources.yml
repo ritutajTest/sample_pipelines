@@ -21,10 +21,10 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      sourceName: "riturajcse/rituexm"
-      isPull: true
+      sourceName: "library/nginx"
+      isPull: false
     seed:
-      versionName: mytag
+      versionName: latest
       
   
   # - name: real-version2
@@ -205,9 +205,7 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      links:
-        - mohit:123
-        - mohitq:12q3
+      privileged: true
    
   # - name: myGitRepo
   #   type: gitRepo
