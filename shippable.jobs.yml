@@ -1,8 +1,13 @@
 jobs:
-  - name: rituraj-2-2
+  - name: rituraj-1-1
     type: manifest
     steps:
       - IN: box-nginx-1
+      
+  - name: rituraj-1-2
+    type: manifest
+    steps:
+      - IN: box-nginx-2
  
       
   # - name: rituraj-release1-test
@@ -58,11 +63,21 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: gke-rRr-Deploy
+  - name: gke-Deploy-1
     type: deploy
     steps:
-      - IN: rituraj-2-2
+      - IN: rituraj-1-1
       - IN: gke-cluster
+      - IN: docker-opts
+      - IN: tr1
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: tri-Deploy-1
+    type: deploy
+    steps:
+      - IN: rituraj-1-2
+      - IN: tri-cluster
       - IN: docker-opts
       - IN: tr1
       - TASK: managed
