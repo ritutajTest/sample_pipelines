@@ -205,7 +205,7 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      privileged: false
+      labels: "Rituraj:rituraj"
    
   # - name: myGitRepo
   #   type: gitRepo
