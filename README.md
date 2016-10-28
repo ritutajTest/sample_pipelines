@@ -10,5 +10,5 @@ v. Select `github` account integration
 vi. Select your forked `sample_pipelines` project  
 vii. Select branch `master`  
 
-This triggers a flow that spans across `rSync`, `versionTrigger`, `stepExec (manifestSteps)` and `stepExec (ecsDeploySteps)`. You can check out the logs of these services.  
+This triggers a flow that spans across `rSync`, `versionTrigger`, `stepExec (manifestSteps)` and `stepExec (ecsDeploySteps)`. You can check out the logs of these services.  test
 
