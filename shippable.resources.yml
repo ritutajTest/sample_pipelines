@@ -312,6 +312,10 @@ resources:
     pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
+      
+  - name: kube-cluster
+    type: cluster
+    integration: kube-cluster
 
   # - name: ddc-cluster
   #   type: cluster
