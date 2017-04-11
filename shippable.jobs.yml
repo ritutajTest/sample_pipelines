@@ -1,15 +1,35 @@
 jobs:
-  - name: rituraj-1-1
-    type: manifest
-    steps:
-      - IN: box-nginx-1
       
-  - name: rituraj-1-2
+  - name: rituraj-1-2-1
     type: manifest
     steps:
       - IN: box-nginx-2
- 
-      
+      - IN: docker-opts
+
+  - name: sample-kube-deploy-ug
+    type: deploy
+    steps:
+      - IN: rituraj-1-2-1
+      - IN: kube-deploy
+      - TASK: managed
+        deployMethod: upgrade
+       
+  - name: sample-kube-deploy-bg
+    type: deploy
+    steps:
+      - IN: rituraj-1-2-1
+      - IN: kube-deploy
+      - TASK: managed
+        deployMethod: blueGreen
+        
+  - name: sample-kube-deploy-replace
+    type: deploy
+    steps:
+      - IN: rituraj-1-2-1
+      - IN: kube-deploy
+      - TASK: managed
+        deployMethod: replace
+  
   # - name: rituraj-release1-test
   #   type: release
   #   steps:
@@ -62,16 +82,6 @@ jobs:
   #     - IN: tr1
   #     - TASK: managed
   #       deployMethod: upgrade
-
-  - name: kube-Deploy-1
-    type: deploy
-    steps:
-      - IN: rituraj-1-1
-      - IN: kube-cluster
-      #- IN: docker-opts
-      #- IN: tr1
-      - TASK: managed
-        deployMethod: upgrade
 
   # - name: gkeDeploy
   #   type: deploy
