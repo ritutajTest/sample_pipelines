@@ -1,22 +1,5 @@
 resources:
-  # - name: box-sn-1
-  #   type: image
-  #   integration: dockerhub
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: false
-  #   seed:
-  #     versionName: "dc.pipeline.3"
 
-  - name: box-nginx-1
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: latest
-     
   - name: box-nginx-2
     type: image
     integration: dockerhub
@@ -25,13 +8,46 @@ resources:
       isPull: false
     seed:
       versionName: latest
-      
-  
+
+  - name: kube-deploy
+    type: cluster
+    integration: kube-deploy
+
+  - name: docker-opts
+    type: dockerOptions
+    version:
+      memory: 51
+      deployment:
+        labels:
+          key1rr1: val1rr1
+          key2rr2: val2rr2
+          key2rr3final: val2rr3final
+
+  # - name: rr-params
+  #   type: params
+  #   version:
+  #     params:
+  #       key1: "rituraj-again"
+  #       key2: "hello all"
+        #secure: YwMRYw9Xl4f20zoGHZXQvsPBScxYsevhwdJUW0kEVnIFHZ4p9IZ3PyXMhHkMr2vkjHp8W1LZiFsC40QTZOBngKdHj5mBuOtqYDJ25AfWlxXcqtrtf9eL2BP23WqkPEW+vib61+Hw0GOL4sgsp3HTvJoMI2uUGfIiTV0/Tw9Qmo0JEeXxg04bfqbLoi9QBigpAtmqHdnPPokvRsxLl6Fwf4AG13Bfff5Ni8QqzHZtrN7UEyaB4S4CLXia9M2YngVqStUOnziNmhUNUFXOutHLiWo+oXKfu/JwA+61Hkl48G8FQGUcrDOd4Zdec/xaPYElG5TTfwhNeLzX5n4IuBWVnA==
+
+  # - name: docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     #workingDir: "/app/rr"
+  #     volumes:
+  #       - "/225/user/100:/makemeworking:ro"
+  #     portMappings:
+  #       - "85:85"
+
+
+
+
   # - name: real-version2
   #   type: version
   #   seed:
   #     versionName: "1.2.3-beta"
-      
+
   # - name: slackNotification
   #   type: notification
   #   integration: slack
@@ -202,12 +218,12 @@ resources:
       #   - "#mybuilds"
 
 
-  - name: docker-opts
-    type: dockerOptions
-    version:
-      labels: "Rituraj: 321"
-      volumesFrom:
-        - "jatin-2_0_0_0b8f5522-8562-401e-a09b-97f6418c3e14:ro" 
+  # - name: docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     labels: "Rituraj: 321"
+  #     volumesFrom:
+  #       - "jatin-2_0_0_0b8f5522-8562-401e-a09b-97f6418c3e14:ro" 
    
   # - name: myGitRepo
   #   type: gitRepo
@@ -293,11 +309,11 @@ resources:
   #     region: "us-west-2"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: ecs-cluster
   #   type: cluster
@@ -306,16 +322,14 @@ resources:
   #     sourceName: "testCL"
   #     region: "us-west-2"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gke-cluster
-    pointer:
-      sourceName: "small-cluster"
-      region: "us-east1-d"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gke-cluster
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "us-east1-d"
       
-  - name: kube-cluster
-    type: cluster
-    integration: kube-cluster
+
 
   # - name: ddc-cluster
   #   type: cluster
