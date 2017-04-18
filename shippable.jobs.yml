@@ -3,13 +3,13 @@ jobs:
     type: manifest
     steps:
       - IN: tri-nginx
-      - IN: trigger-dv-man
+      #- IN: trigger-dv-man
 
   - name: tri-deploy-1
     type: tripubDeploy
     options:
       deployMethod: blueGreen
     steps:
-      - IN: tri-man
+      #- IN: tri-man
       - IN: tri-man-2
       - IN: tri-cluster
