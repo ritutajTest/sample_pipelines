@@ -6,8 +6,8 @@ jobs:
       #- IN: trigger-dv-man
 
   - name: tri-deploy-1
-    type: tripubDeploy
-    options:
+    type: deploy
+    TASK: managed
       deployMethod: blueGreen
     steps:
       #- IN: tri-man
