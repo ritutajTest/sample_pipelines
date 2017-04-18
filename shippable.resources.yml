@@ -1,24 +1,16 @@
 resources:
   - name: tri-nginx
     type: image
-    integration: jatin-docker
+    integration: dockerhub
     pointer:
       sourceName: "library/nginx"
       isPull: false
     initialVersion:
       versionName: latest
 
-  - name: tri-sn
-    type: image
-    integration: jatin-docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: false
-    initialVersion:
-      versionName: "dc.pipeline.3"
 
   - name: tri-cluster
     type: tripubCluster
-    integration: jatin-triton
+    integration: triton-cluster
     pointer:
       region: "us-east-1"
