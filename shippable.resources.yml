@@ -5,12 +5,12 @@ resources:
     pointer:
       sourceName: "library/nginx"
       isPull: false
-    initialVersion:
+    seed:
       versionName: latest
 
 
   - name: tri-cluster
-    type: tripubCluster
+    type: cluster
     integration: triton-cluster
     pointer:
       region: "us-east-1"
