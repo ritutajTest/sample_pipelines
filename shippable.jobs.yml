@@ -1,21 +1,15 @@
 jobs:
-  - name: tri-man
-    type: manifest
-    steps:
-      - GET: tri-sn
-      - GET: trigger-dv-man
-
   - name: tri-man-2
     type: manifest
     steps:
-      - GET: tri-nginx
-      - GET: trigger-dv-man
+      - IN: tri-nginx
+      - IN: trigger-dv-man
 
   - name: tri-deploy-1
     type: tripubDeploy
     options:
       deployMethod: blueGreen
     steps:
-      - GET: tri-man
-      - GET: tri-man-2
-      - GET: tri-cluster
+      - IN: tri-man
+      - IN: tri-man-2
+      - IN: tri-cluster
