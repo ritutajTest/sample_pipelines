@@ -8,8 +8,7 @@ jobs:
   - name: tri-deploy-1
     type: deploy
     TASK: managed
-      deployMethod: blueGreen
+    deployMethod: blueGreen
     steps:
-      #- IN: tri-man
       - IN: tri-man-2
       - IN: tri-cluster
