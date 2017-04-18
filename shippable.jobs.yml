@@ -5,7 +5,7 @@ jobs:
       - IN: tri-nginx
       #- IN: trigger-dv-man
 
-  - name: tri-deploy-1
+  - name: tri-deploy-11
     type: deploy
     TASK: managed
     deployMethod: blueGreen
