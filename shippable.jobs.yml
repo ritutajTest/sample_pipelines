@@ -8,6 +8,13 @@ jobs:
     type: manifest
     steps:
       - IN: box-nginx-2
+      
+  - name: runcliscript
+    type: runCLI
+    steps:
+      - IN: myGitRepo       #gitrepo resource
+      - TASK: 
+        - script: printenv
  
       
   # - name: rituraj-release1-test
@@ -63,15 +70,6 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: kube-Deploy-1
-    type: deploy
-    steps:
-      - IN: rituraj-1-1
-      - IN: kube-cluster
-      #- IN: docker-opts
-      #- IN: tr1
-      - TASK: managed
-        deployMethod: upgrade
 
   # - name: gkeDeploy
   #   type: deploy
