@@ -7,24 +7,6 @@ resources:
   #     isPull: false
   #   seed:
   #     versionName: "dc.pipeline.3"
-
-  - name: box-nginx-1
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: latest
-     
-  - name: box-nginx-2
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: latest
       
   - name: myGitRepo
     type: gitRepo
@@ -207,12 +189,12 @@ resources:
       #   - "#mybuilds"
 
 
-  - name: docker-opts
-    type: dockerOptions
-    version:
-      labels: "Rituraj: 321"
-      volumesFrom:
-        - "jatin-2_0_0_0b8f5522-8562-401e-a09b-97f6418c3e14:ro" 
+  # - name: docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     labels: "Rituraj: 321"
+  #     volumesFrom:
+  #       - "jatin-2_0_0_0b8f5522-8562-401e-a09b-97f6418c3e14:ro" 
    
   # - name: myGitRepo
   #   type: gitRepo
