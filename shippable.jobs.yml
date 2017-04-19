@@ -9,7 +9,7 @@ jobs:
   #   steps:
   #     - IN: box-nginx-2
       
-  - name: runcliscript
+  - name: runcliscript1
     type: runCLI
     steps:
       - IN: myGitRepo       #gitrepo resource
