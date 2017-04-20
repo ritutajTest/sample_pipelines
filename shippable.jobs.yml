@@ -9,7 +9,7 @@ jobs:
   #   steps:
   #     - IN: box-nginx-2
       
-  - name: FINALruncliscript1001newtestagnFINAL
+  - name: CHKFINALruncliscript1001newtestagnFINAL
     type: runCLI
     steps:
       - IN: myGitRepo       #gitrepo resource
