@@ -13,6 +13,33 @@ jobs:
     type: runCLI
     steps:
       - IN: myGitRepo       #gitrepo resource
+      - IN: rsync_test_gitRepo
+      - TASK: 
+        - script: printenv
+
+  - name: runCli_job_for_testing
+    type: runCLI
+    steps:
+      - IN: box-nginx-1-1
+      - IN: box-nginx-1-2
+      - IN: box-nginx-1-3
+      - IN: box-nginx-1-4
+      - IN: box-nginx-1-5
+      - IN: box-nginx-1-6
+      - IN: box-nginx-1-7
+      - IN: box-nginx-1-8
+      - IN: box-nginx-1-9
+      - IN: box-nginx-1-10
+      - IN: box-nginx-1-11
+      - IN: box-nginx-1-12
+      - IN: box-nginx-1-13
+      - IN: box-nginx-1-14
+      - IN: box-nginx-1-15
+      - IN: box-nginx-1-16
+      - IN: box-nginx-1-17
+      - IN: box-nginx-1-18
+      - IN: box-nginx-1-19
+      - IN: box-nginx-1-20
       - TASK: 
         - script: printenv
  
