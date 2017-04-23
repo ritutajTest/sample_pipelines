@@ -1,5 +1,5 @@
 jobs:
-  - name: -rituraj-1-1
+  - name: rituraj-1-1@ss
     type: manifest
     steps:
       - IN: box-nginx-1-1
@@ -9,7 +9,7 @@ jobs:
   #   steps:
   #     - IN: box-nginx-2
       
-  - name: @runcliscript1001newtestagnFINAL
+  - name: runcliscript1001newtestagnFI@NAL
     type: runCLI
     #on_success: hello
     steps:
