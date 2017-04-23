@@ -11,7 +11,7 @@ jobs:
       
   - name: DONECHKFINALruncliscript1001newtestagnFINAL
     type: runCLI
-    on_success: hello
+    #on_success: hello
     steps:
       - IN: rituraj-1-1
       - TASK: 
