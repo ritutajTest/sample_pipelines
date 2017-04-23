@@ -19,7 +19,7 @@ resources:
       versionName: latest
 
   - name: myGitRepo
-    type: abraKaDabra
+    type: gitRepo
     integration: github
     pointer:
       sourceName: Riturajcse/sample_php
@@ -29,7 +29,7 @@ resources:
   #   seed:
   #     versionName: "1.2.3-beta"
   - name: rsync_test_gitRepo
-    type: shakaLakaBoomBoom
+    type: gitRepo
     integration: github
     pointer:
       sourceName: Riturajcse/sample_nodejs
