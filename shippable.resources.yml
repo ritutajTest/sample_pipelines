@@ -2,7 +2,7 @@ resources:
 
   - name: box-nginx-1-1
     type: image
-    integration: dockerhub1
+    integration: dockerhub
     pointer:
       sourceName: "library/nginx"
       isPull: false
@@ -11,7 +11,7 @@ resources:
 
   - name: myGitRepo
     type: gitRepo
-    integration: github1
+    integration: github
     pointer:
       sourceName: Riturajcse/sample_php
       branch: master
@@ -21,7 +21,7 @@ resources:
   #     versionName: "1.2.3-beta"
   - name: rsync_test_gitRepo
     type: gitRepo
-    integration: github2
+    integration: github
     pointer:
       sourceName: Riturajcse/sample_nodejs
       branches:
