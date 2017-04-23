@@ -4,8 +4,8 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      sourceName: "library/nginx"
-      isPull: false
+      # sourceName: "library/nginx"
+      # isPull: false
     seed:
       versionName: latest
    
@@ -39,6 +39,12 @@ resources:
           - newforpr
       buildOnPullRequest: true #since this is true by default
       buildOnCommit: true #since this is true by default
+
+  - name: docker-opts
+    type: dockerOptions
+    version: "hello"
+      # links:
+        #-"shippabledb:db"
 
   # - name: slackNotification
   #   type: notification
