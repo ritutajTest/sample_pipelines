@@ -46,7 +46,7 @@ resources:
       links:
         -"shippabledb:db"
 
-  - name: hello
+  - name1
 
   # - name: slackNotification
   #   type: notification
