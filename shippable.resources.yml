@@ -4,8 +4,8 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      # sourceName: "library/nginx"
-      # isPull: false
+      sourceName: "library/nginx"
+      isPull: false
     seed:
       versionName: latest
    
@@ -42,9 +42,9 @@ resources:
 
   - name: docker-opts
     type: dockerOptions
-    #version:
-      # links:
-        #-"shippabledb:db"
+    version:
+      links:
+        -"shippabledb:db"
 
   # - name: slackNotification
   #   type: notification
