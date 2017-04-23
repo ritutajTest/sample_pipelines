@@ -12,7 +12,7 @@ resources:
   #     versionName: "1.2.3-beta"
   - name: rsync_test_gitRepo
     type: gitRepo
-    integration: github1
+    integration: github
     pointer:
       sourceName: Riturajcse/sample_nodejs
       branches:
