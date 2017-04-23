@@ -43,8 +43,11 @@ resources:
   - name: docker-opts
     type: dockerOptions
     abraKaDabra:
-      #links: h@ss32212$#shhs
-        #-"shippabledb:db"
+      links:
+        -"shippabledb:db"
+    version:
+      links:
+        -"shippabledb:db"
 
 
   # - name: slackNotification
