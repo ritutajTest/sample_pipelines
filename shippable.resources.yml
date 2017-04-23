@@ -42,9 +42,6 @@ resources:
 
   - name: docker-opts
     type: dockerOptions
-    abraKaDabra:
-      links:
-        -"shippabledb:db"
     version:
       links:
         -"shippabledb:db"

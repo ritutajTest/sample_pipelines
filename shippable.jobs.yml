@@ -3,6 +3,11 @@ jobs:
     type: manifest
     steps:
       - IN: box-nginx-1-1
+
+  - name: docker-opts
+    type: manifest
+    steps:
+      - IN: box-nginx-1-1
       
   # - name: rituraj-1-2
   #   type: manifest
@@ -14,6 +19,7 @@ jobs:
     #on_success: hello
     steps:
       - IN: rituraj-1-1
+      - IN: docker-opts
       - TASK:
         - script: printenv1
   
