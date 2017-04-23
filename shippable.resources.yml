@@ -42,7 +42,7 @@ resources:
 
   - name: docker-opts
     type: dockerOptions
-    version: "hello"
+    #version:
       # links:
         #-"shippabledb:db"
 
