@@ -11,10 +11,12 @@ jobs:
       
   - name: DONECHKFINALruncliscript1001newtestagnFINAL
     type: runCLI
+    on_success: hello
     steps:
       - IN: rituraj-1-1
       - TASK: 
         - script: printenv
+  
 
   # - name: runCli_job_for_testing
   #   type: runCLI
