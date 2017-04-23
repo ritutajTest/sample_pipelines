@@ -43,7 +43,7 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      links: hshhs
+      links: h@ss32212$#shhs
         #-"shippabledb:db"
 
 
