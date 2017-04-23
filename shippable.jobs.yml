@@ -17,6 +17,10 @@ jobs:
       - TASK: 
         - script: printenv
   
+  - name: my_app_runCI      # required
+    type: runCI             # required
+    steps:                  # required
+      - OUT: runcli # at least one IN or OUT required
 
   # - name: runCli_job_for_testing
   #   type: runCLI
