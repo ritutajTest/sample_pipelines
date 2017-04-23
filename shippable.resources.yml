@@ -42,7 +42,7 @@ resources:
 
   - name: docker-opts
     type: dockerOptions
-    version:
+    abraKaDabra:
       #links: h@ss32212$#shhs
         #-"shippabledb:db"
 
