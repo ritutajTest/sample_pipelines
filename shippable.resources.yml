@@ -43,10 +43,9 @@ resources:
   - name: docker-opts
     type: dockerOptions
     version:
-      links:
-        -"shippabledb:db"
+      links: hshhs
+        #-"shippabledb:db"
 
-  - name1
 
   # - name: slackNotification
   #   type: notification
