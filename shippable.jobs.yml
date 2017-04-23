@@ -14,7 +14,8 @@ jobs:
     #on_success: hello
     steps:
       - IN: rituraj-1-1
-      - TASK: "script: printenv1"
+      - TASK:
+        - script: printenv1
   
  # at least one IN or OUT required
 
