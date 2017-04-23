@@ -15,12 +15,8 @@ jobs:
     steps:
       - IN: rituraj-1-1
       - TASK: 
-        - script: printenv
+        - script: printenv1
   
-  - name: my_app_runCI      # required
-    type: runCI             # required
-    steps:                  # required
-      - OUT: sample_nodejs_ciRepo
  # at least one IN or OUT required
 
   # - name: runCli_job_for_testing
