@@ -1,6 +1,6 @@
 jobs:
   - name: rituraj-1-1
-    type: manifesto
+    type: manifest
     steps:
       - IN: box-nginx-1-1
       
