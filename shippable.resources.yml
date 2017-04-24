@@ -2,7 +2,7 @@ resources:
 
   - name: box-nginx-1-1
     type: image
-    integration: dockerhub1
+    integration: dockerhub
     pointer:
       sourceName: "library/nginx"
       isPull: false
