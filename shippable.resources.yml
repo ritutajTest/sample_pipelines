@@ -13,8 +13,8 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      #sourceName: "library/nginx"
-      #isPull: false
+      sourceName: "library/nginx"
+      isPull: false
     seed:
       versionName: latest
 
