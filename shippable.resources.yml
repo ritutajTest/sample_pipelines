@@ -22,7 +22,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      #sourceName: Riturajcse/sample_php
+      sourceName: Riturajcse/sample_php
       branch: master
   # - name: real-version2
   #   type: version
