@@ -16,7 +16,7 @@ jobs:
       
   - name: runcli1
     type: runCLI
-    #on_success: hello
+    on_success: hello
     steps:
       - IN: myGitRepo
       - IN: [docker-opts]
