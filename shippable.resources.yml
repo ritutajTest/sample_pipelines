@@ -5,9 +5,9 @@ resources:
     integration: dockerhub
     pointer:
       sourceName: "library/nginxere"
-      isPull: tr
+      isPull: false
     seed:
-      versionName: latest
+      versionName1: latest
    
   - name: box-nginx-1-1-1
     type: image
