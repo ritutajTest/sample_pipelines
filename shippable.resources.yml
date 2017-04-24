@@ -30,14 +30,14 @@ resources:
   #     versionName: "1.2.3-beta"
   - name: rsync_test_gitRepo
     type: gitRepo
-    integration: github1
+    integration: github
     pointer:
       sourceName: Riturajcse/sample_nodejs1
       branches:
         only:
           - master
           - newforpr
-      buildOnPullRequest: true #since this is true by default
+      buildOnPulleRequest: true #since this is true by default
       buildOnCommit: true #since this is true by default
 
   - name: docker-opts
