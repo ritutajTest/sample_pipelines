@@ -11,7 +11,7 @@ resources:
    
   - name: box-nginx-1-1-1
     type: image
-    integration: dockerhub
+    integration: dockerhub1
     pointer:
       sourceName: "library/nginx"
       isPull: false
@@ -19,7 +19,7 @@ resources:
       versionName: latest
 
   - name: myGitRepo
-    type: gitRepo
+    type: gitRepos
     integration: github
     pointer:
       sourceName: Riturajcse/sample_php
@@ -30,7 +30,7 @@ resources:
   #     versionName: "1.2.3-beta"
   - name: rsync_test_gitRepo
     type: gitRepo
-    integration: github
+    integration: github1
     pointer:
       sourceName: Riturajcse/sample_nodejs
       branches:
@@ -42,9 +42,9 @@ resources:
 
   - name: docker-opts
     type: dockerOptions
-    version:
-      links:
-        -"shippabledb:db"
+    #version:
+      # links:
+      #   -"shippabledb:db"
 
 
   # - name: slackNotification
