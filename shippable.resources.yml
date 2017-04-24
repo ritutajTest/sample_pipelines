@@ -4,7 +4,7 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      sourceName: "library/nginxere"
+      sourceName: "library/nginx"
       isPull: false
     seed:
       versionName: latest
