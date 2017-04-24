@@ -19,9 +19,9 @@ jobs:
     #on_success: hello
     steps:
       - IN: myGitRepo
-      - IN: docker-opts
+      - INs: docker-opts
       - TASK:
-        - script: printenv1
+        - script: printenv
   
  # at least one IN or OUT required
 
