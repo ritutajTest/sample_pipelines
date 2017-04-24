@@ -15,8 +15,8 @@ jobs:
   #     - IN: box-nginx-2
       
   - name: runcli1
-    type: runCLI
-    on_success1:
+    #type: runCLI
+    on_success:
       - hello
     steps:
       - IN: myGitRepo
