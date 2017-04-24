@@ -1,6 +1,6 @@
 jobs:
   - name: rituraj-1-1
-    type: manifest
+    type: image
     steps:
       - IN: box-nginx-1-1-1
       - IN: runcli1
