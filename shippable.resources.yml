@@ -32,7 +32,7 @@ resources:
     type: gitRepo
     integration: github1
     pointer:
-      sourceName: Riturajcse/sample_nodejs
+      sourceName: Riturajcse/sample_nodejs1
       branches:
         only:
           - master
