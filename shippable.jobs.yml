@@ -1,9 +1,9 @@
 jobs:
   - name: rituraj-1-1
-    type: image
+    type: manifest
     steps:
-      - IN: box-nginx-1-1-1
-      - IN: runcli1
+      #- IN: box-nginx-1-1-1
+      #- IN: runcli1
 
   # - name: docker-opts-1
   #   type: manifest
