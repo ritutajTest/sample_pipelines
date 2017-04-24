@@ -16,7 +16,7 @@ jobs:
       
   - name: runcli1
     type: runCLI
-    on_success:
+    on_success1:
       - hello
     steps:
       - IN: myGitRepo
