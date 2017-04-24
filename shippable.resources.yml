@@ -34,7 +34,7 @@ resources:
     pointer:
       sourceName: Riturajcse/sample_nodejs
       branches:
-        only:
+        only1:
           - master
           - newforpr
       buildOnPullRequest: true #since this is true by default
