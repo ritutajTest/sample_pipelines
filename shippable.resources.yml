@@ -5,7 +5,7 @@ resources:
     integration: dockerhub
     pointer:
       sourceName: "library/nginxere"
-      isPull: false
+      isPull1: false
     seed:
       versionName: latest
    
@@ -33,7 +33,7 @@ resources:
     integration: github
     pointer:
       sourceName: Riturajcse/sample_nodejs
-      branchese:
+      branches:
         only:
           - master
           - newforpr
