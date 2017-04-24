@@ -1,5 +1,5 @@
 jobs:
-  - name: rituraj-1-1
+  - name: rituraj-@1-1
     type: manifest
     steps:
       - IN: box-nginx-1-1-1
