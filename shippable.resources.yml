@@ -19,7 +19,7 @@ resources:
       versionName: latest
 
   - name: myGitRepo
-    type: gitRepo
+    type: gitRepos
     integration: github
     pointer:
       sourceName: Riturajcse/sample_php
