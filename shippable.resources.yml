@@ -6,8 +6,9 @@ resources:
     pointer:
       sourceName: "library/nginxere"
       isPull: false
-    seedo:
-      versionName: latest
+    seed:
+      versionName:
+        - latest0
 
   - name: box-nginx-1-1-1
     type: image
