@@ -5,7 +5,7 @@ resources:
     integration: dockerhub
     pointer:
       sourceName: "library/nginxere"
-      isPull1: false
+      isPull: tr
     seed:
       versionName: latest
    
