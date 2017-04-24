@@ -15,11 +15,11 @@ jobs:
   #     - IN: box-nginx-2
       
   - name: runcli1
-    #type: runCLI
+    type: runCLI
     on_success:
       - hello
     steps:
-      - IN: myGitRepo
+      - IN: myGitRepo1
       - IN: docker-opts
       - TASK:
         - script: printenv
