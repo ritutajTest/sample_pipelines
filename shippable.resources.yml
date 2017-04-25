@@ -42,7 +42,7 @@ resources:
       buildOnPullRequest: true #since this is true by default
       buildOnCommit: true #since this is true by default
 
-  - name: docker-opts
+  - name: docker-opts-bt
     type: dockerOptions
     version:
       links:

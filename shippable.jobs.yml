@@ -2,7 +2,7 @@ jobs:
   - name: rituraj-1-1-bt
     type: manifest
     steps:
-      - IN: box-nginx-1-1-1
+      - IN: box-nginx-1-1-1-bt
       #- IN: runcli1
 
   # - name: docker-opts-1
@@ -20,8 +20,8 @@ jobs:
     on_success:
       - hello
     steps:
-      - IN: myGitRepo
-      - IN: docker-opts
+      - IN: myGitRepo-bt
+      - IN: docker-opts-bt
       - TASK:
         - script: printenv
   
