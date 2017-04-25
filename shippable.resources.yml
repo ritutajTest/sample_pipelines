@@ -12,7 +12,7 @@ resources:
   - name: box-nginx-1-1-1-bt
     type: image
     integration: dockerhub
-    flags: flg2-bt
+    flags: flg2
     pointer:
       sourceName: "library/nginx"
       isPull: false
@@ -22,7 +22,7 @@ resources:
   - name: myGitRepo-bt
     type: gitRepo
     integration: github
-    flags: flg1-bt
+    flags: flg1
     pointer:
       sourceName: Riturajcse/sample_php
       branch: master
