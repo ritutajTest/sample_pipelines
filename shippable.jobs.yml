@@ -20,7 +20,7 @@ jobs:
     on_success:
       - hello
     steps:
-      - IN: myGitRepo-bt
+      - IN: myGitRepo-bt-n
       - IN: docker-opts-bt
       - TASK:
         - script: printenv
