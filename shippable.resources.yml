@@ -1,6 +1,6 @@
 resources:
 
-  - name: box-nginx-1-1
+  - name: box-nginx-1-1-bt
     type: image
     integration: dockerhub
     pointer:
@@ -9,7 +9,7 @@ resources:
     seed:
       versionName: latest
 
-  - name: box-nginx-1-1-1
+  - name: box-nginx-1-1-1-bt
     type: image
     integration: dockerhub
     flags: flg2
@@ -19,7 +19,7 @@ resources:
     seed:
       versionName: latest
 
-  - name: myGitRepo
+  - name: myGitRepo-bt
     type: gitRepo
     integration: github
     flags: flg1
@@ -30,7 +30,7 @@ resources:
   #   type: version
   #   seed:
   #     versionName: "1.2.3-beta"
-  - name: rsync_test_gitRepo
+  - name: rsync_test_gitRepo-bt
     type: gitRepo
     integration: github
     pointer:
