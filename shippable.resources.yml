@@ -1,7 +1,7 @@
 resources:
 
   - name: box-nginx-1-1
-    type: image
+    type: image1
     integration: dockerhub
     pointer:
       sourceName: "library/nginx"
@@ -19,31 +19,15 @@ resources:
     seed:
       versionName: latest
 
-  - name: myGitRepo
-    type: gitRepo
-    integration: github1
-    flags: flg1
-    pointer:
-      sourceName: Riturajcse/sample_php
-      branch: master
+
   # - name: real-version2
   #   type: version
   #   seed:
   #     versionName: "1.2.3-beta"
-  - name: rsync_test_gitRepo
-    type: gitRepo1
-    integration: github
-    pointer:
-      sourceName: Riturajcse/sample_nodejs
-      branches:
-        only:
-          - master
-          - newforpr
-      buildOnPullRequest: true #since this is true by default
-      buildOnCommit: true #since this is true by default
+
 
   - name: docker-opts
-    type: dockerOptions
+    type: dockerOptions1
     version:
       links:
         -"shippabledb:db"
