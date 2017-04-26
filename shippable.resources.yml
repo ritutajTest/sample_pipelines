@@ -11,7 +11,7 @@ resources:
 
   - name: box-nginx-1-1-1
     type: image
-    integration: dockerhub
+    integration: dockerhub1
     flags: flg2
     pointer:
       sourceName: "library/nginx"
@@ -21,7 +21,7 @@ resources:
 
   - name: myGitRepo
     type: gitRepo
-    integration: github
+    integration: github1
     flags: flg1
     pointer:
       sourceName: Riturajcse/sample_php
@@ -31,7 +31,7 @@ resources:
   #   seed:
   #     versionName: "1.2.3-beta"
   - name: rsync_test_gitRepo
-    type: gitRepo
+    type: gitRepo1
     integration: github
     pointer:
       sourceName: Riturajcse/sample_nodejs
