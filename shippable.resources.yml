@@ -17,6 +17,9 @@ resources:
     type: dockerOptions
     version:
       memory: 51
+      labels:
+        myKey: myValue
+        myOtherKey: myOtherValue
       deployment:
         labels:
           key1rr1: val1rr1
