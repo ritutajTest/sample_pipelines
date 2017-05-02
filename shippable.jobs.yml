@@ -6,15 +6,15 @@ jobs:
       - IN: box-nginx-2
       - IN: docker-opts
 
-  # - name: sample-kube-deploy-ug
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-1-2-1
-  #     - IN: kube-deploy
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: sample-kube-ug
+    type: deploy
+    steps:
+      - IN: rituraj-1-2-1
+      - IN: kube-deploy
+      - TASK: managed
+        deployMethod: upgrade
        
-  - name: sample-kube-bg
+  - name: sample-kube-deploy1-bg
     type: deploy
     steps:
       - IN: rituraj-1-2-1
@@ -22,13 +22,13 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
         
-  # - name: sample-kube-deploy-replace
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-1-2-1
-  #     - IN: kube-deploy
-  #     - TASK: managed
-  #       deployMethod: replace
+  - name: sample-kube-replace
+    type: deploy
+    steps:
+      - IN: rituraj-1-2-1
+      - IN: kube-deploy
+      - TASK: managed
+        deployMethod: replace
   
   # - name: rituraj-release1-test
   #   type: release
