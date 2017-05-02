@@ -6,7 +6,7 @@ jobs:
       - IN: box-nginx-2
       - IN: docker-opts
 
-  - name: sample-kube-ug-RC
+  - name: sample-kube-ug-RC-new
     type: deploy
     steps:
       - IN: rituraj-1-2-1
