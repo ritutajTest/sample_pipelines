@@ -14,21 +14,21 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
        
-  - name: sample-kube-deploy1-bg
-    type: deploy
-    steps:
-      - IN: rituraj-1-2-1
-      - IN: kube-deploy
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: sample-kube-deploy1-bg
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-1-2-1
+  #     - IN: kube-deploy
+  #     - TASK: managed
+  #       deployMethod: blueGreen
         
-  - name: sample-kube-replace
-    type: deploy
-    steps:
-      - IN: rituraj-1-2-1
-      - IN: kube-deploy
-      - TASK: managed
-        deployMethod: replace
+  # - name: sample-kube-replace
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-1-2-1
+  #     - IN: kube-deploy
+  #     - TASK: managed
+  #       deployMethod: replace
   
   # - name: rituraj-release1-test
   #   type: release
