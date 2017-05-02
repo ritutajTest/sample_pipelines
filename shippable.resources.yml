@@ -17,9 +17,7 @@ resources:
     type: dockerOptions
     version:
       memory: 51
-      labels:
-        myKey: myValue
-        myOtherKey: myOtherValue
+      labels: "bad-label"
 
   # - name: rr-params
   #   type: params
