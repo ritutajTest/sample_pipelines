@@ -20,11 +20,6 @@ resources:
       labels:
         myKey: myValue
         myOtherKey: myOtherValue
-      deployment:
-        labels:
-          key1rr1: val1rr1
-          key2rr2: val2rr2
-          key2rr3final: val2rr3final
 
   # - name: rr-params
   #   type: params
