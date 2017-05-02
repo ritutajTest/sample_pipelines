@@ -21,6 +21,7 @@ resources:
       labels:
         myKey1: myValue
         myOtherKey1: myOtherValue
+        mykey2: myvalue3
 
   # - name: rr-params
   #   type: params
