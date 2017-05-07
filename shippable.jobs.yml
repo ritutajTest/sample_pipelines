@@ -14,13 +14,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
        
-  - name: sample-kube-deploy1-7
+  - name: sample-kube-deploy1-8
     type: deploy
     steps:
       - IN: rituraj-1-2-1
       - IN: kube-deploy
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
         
   # - name: sample-kube-replace-RC
   #   type: deploy
