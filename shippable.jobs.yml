@@ -14,7 +14,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
        
-  - name: sample-kube-deploy1-bg-RC
+  - name: sample-kube-deploy1-bg-RC-1
     type: deploy
     steps:
       - IN: rituraj-1-2-1
