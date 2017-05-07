@@ -19,9 +19,9 @@ resources:
       memory: 51
       #labels: "bad-label"
       labels:
-        myKey1: myValue
-        myOtherKey1: myOtherValue
-        mykey2: myvalue3
+        myKey11: myValue
+        myOtherKey11: myOtherValue
+        mykey12: myvalue3
 
   # - name: rr-params
   #   type: params
