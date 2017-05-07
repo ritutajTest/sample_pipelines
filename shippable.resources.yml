@@ -19,8 +19,8 @@ resources:
       memory: 51
       #labels: "bad-label"
       labels:
-        app1: nginx2
-        test: redis
+        app2: nginx4
+        test3: redis9
 
   # - name: rr-params
   #   type: params
