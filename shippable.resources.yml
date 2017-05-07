@@ -19,7 +19,7 @@ resources:
       memory: 51
       #labels: "bad-label"
       labels:
-        myKey113: myValue3
+        myKey113: myValue34
         myOtherKey113: myOtherValue3
         mykey123: myvalue33
 
