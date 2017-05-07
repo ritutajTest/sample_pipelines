@@ -19,7 +19,7 @@ resources:
       memory: 51
       #labels: "bad-label"
       labels:
-        ff: gg
+        app: nginx
 
   # - name: rr-params
   #   type: params
