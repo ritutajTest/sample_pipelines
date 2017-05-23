@@ -5,6 +5,15 @@ jobs:
     steps:
       - OUT: box-nginx-2
       - IN: docker-opts
+ 
+  - name: sn-try-sh
+    type: runSh
+    steps:
+      - OUT: box-nginx-2
+      - IN: docker-opts
+      - TASK:
+          - script: echo "hello world"
+          - script: sleep 5m
 
   # - name: sample-kube-ug-RC
   #   type: deploy
