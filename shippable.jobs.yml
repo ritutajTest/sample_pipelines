@@ -10,7 +10,7 @@ jobs:
     type: runSh
     steps:
       - OUT: box-nginx-2
-      - IN: docker-opts
+      - IN: rituraj-1-2-1
       - TASK:
           - script: echo "hello world"
           - script: sleep 5m
