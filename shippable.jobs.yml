@@ -3,7 +3,7 @@ jobs:
   - name: rituraj-1-2-1
     type: manifest
     steps:
-      - IN: box-nginx-2
+      - OUT: box-nginx-2
       - IN: docker-opts
 
   # - name: sample-kube-ug-RC
