@@ -1,7 +1,7 @@
 resources:
 
   - name: box-nginx-1-1
-    type: image1
+    type: image
     integration: dockerhub
     pointer:
       sourceName: "library/nginx"
@@ -27,7 +27,7 @@ resources:
 
 
   - name: docker-opts
-    type: dockerOptions1
+    type: dockerOptions
     version:
       links:
         -"shippabledb:db"
