@@ -11,7 +11,7 @@ resources:
 
   - name: box-nginx-1-1-1
     type: image
-    integration: dockerhub1
+    integration: dockerhub
     flags: flg2
     pointer:
       sourceName: "library/nginx"
