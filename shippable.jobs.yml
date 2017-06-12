@@ -4,6 +4,8 @@ jobs:
     steps:
       - IN: box-nginx-1-1-1
       #- IN: runcli1
+    flags:
+      - flg1
 
   # - name: docker-opts-1
   #   type: manifest
@@ -24,6 +26,9 @@ jobs:
       - IN: rituraj-1-1
       - TASK:
         - script: printenv
+    flags:
+      - flg-4
+      - absflg
   
  # at least one IN or OUT required
 
