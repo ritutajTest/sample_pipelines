@@ -29,6 +29,20 @@ jobs:
     flags:
       - flg-4
       - absflg
+      - flg-41
+      - absflg2
+      - flg-43
+      - absflg4
+      - flg-45
+      - absflg6
+      - flg-47
+      - absflg8
+      - flg-49
+      - absflg10
+      - flg-411
+      - absflg12
+      - flg-413
+      - absflg14
   
  # at least one IN or OUT required
 
