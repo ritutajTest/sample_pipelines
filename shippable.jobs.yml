@@ -14,6 +14,17 @@ jobs:
       - TASK:
           - script: echo "hello world"
           - script: sleep 1m
+ 
+ - name: runcli1-r
+    type: runCLI
+    on_success:
+      - hello
+    steps:
+      #- IN: myGitRepo
+      - IN: rituraj-1-2-1-r
+      - TASK:
+        - script: printenv
+        - script: sleep 1m
 
   # - name: sample-kube-ug-RC
   #   type: deploy
