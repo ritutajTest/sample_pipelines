@@ -16,6 +16,10 @@ jobs:
   #   type: manifest
   #   steps:
   #     - IN: box-nginx-2
+  - name: sample_nodejs_runCI
+    type: runCI
+    steps:
+      - OUT: box-nginx-1-1-1
       
   - name: runcli1
     type: runCLI
