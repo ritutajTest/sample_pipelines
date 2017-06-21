@@ -1,19 +1,19 @@
 jobs:
       
-  - name: rituraj-1-2-1
+  - name: rituraj-1-2-1-r
     type: manifest
     steps:
-      - OUT: box-nginx-2
-      - IN: docker-opts
+      - OUT: box-nginx-2-r
+      - IN: docker-opts-r
  
-  - name: sn-try-sh
+  - name: sn-try-sh-r
     type: runSh
     steps:
-      - OUT: box-nginx-2
+      - OUT: box-nginx-2-r
       #- IN: rituraj-1-2-1
       - TASK:
           - script: echo "hello world"
-          - script: sleep 5m
+          - script: sleep 1m
 
   # - name: sample-kube-ug-RC
   #   type: deploy
@@ -23,12 +23,12 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
        
-  - name: sample-kube-deploy1-8
+  - name: sample-kube-deploy1-8-r
     type: deploy
     steps:
-      - IN: rituraj-1-2-1
-      - IN: kube-deploy
-      - TASK: managed
+      - IN: rituraj-1-2-1-r
+      - IN: kube-deploy-r
+      - TASK: managed-r
         deployMethod: upgrade
         
   # - name: sample-kube-replace-RC
