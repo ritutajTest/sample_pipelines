@@ -18,6 +18,14 @@ resources:
       isPull: false
     seed:
       versionName: latest
+      
+  - name: ci-min-2-gitRepo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "Riturajcse/sample_php"
+      branch: master
+      buildOnPullRequest: true
 
 
   # - name: real-version2
