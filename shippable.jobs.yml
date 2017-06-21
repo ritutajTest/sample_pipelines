@@ -15,7 +15,7 @@ jobs:
           - script: echo "hello world"
           - script: sleep 1m
  
- - name: runcli1-r
+  - name: runcli1-r
     type: runCLI
     on_success:
       - hello
