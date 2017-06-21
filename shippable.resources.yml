@@ -1,6 +1,6 @@
 resources:
 
-  - name: box-nginx-2
+  - name: box-nginx-2-r
     type: image
     integration: dockerhub
     pointer:
@@ -9,11 +9,11 @@ resources:
     seed:
       versionName: latest
 
-  - name: kube-deploy
+  - name: kube-deploy-r
     type: cluster
     integration: kube-deploy
 
-  - name: docker-opts
+  - name: docker-opts-r
     type: dockerOptions
     version:
       memory: 51
