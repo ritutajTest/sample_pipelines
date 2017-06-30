@@ -1,10 +1,10 @@
 triggers:
-  - name: trigger-dv-man-1
+  - name: trigger-dv-man-1-poiu
     type: trigger
     version:
       counter: 64412345
       
-  - name: tr1
+  - name: tr1-poi
     type: trigger
     version:
       counter: 24412345
