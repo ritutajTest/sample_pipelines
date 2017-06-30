@@ -1,162 +1,21 @@
+
 jobs:
-  - name: rituraj-1-1
-    type: manifest
+  - name: runsh-job-pvt
+    type: runSh
+    allowPublicAccess: false
     steps:
-      - IN: box-nginx-1-1-1
-      #- IN: runcli1
-    flags:
-      - flg1
-
-  # - name: docker-opts-1
-  #   type: manifest
-  #   steps:
-  #     - IN: box-nginx-1-1
-      
-  # - name: rituraj-1-2
-  #   type: manifest
-  #   steps:
-  #     - IN: box-nginx-2
-  - name: sample_nodejs_runCI
-    type: runCI
-    steps:
-      - OUT: box-nginx-1-1-1
-      
-  - name: runcli1
-    type: runCLI
-    on_success:
-      - hello
-    steps:
-      #- IN: myGitRepo
-      - IN: rituraj-1-1
+      - IN: sample-pvt
+        showBuildStatus: true
+     # - IN: trigger01
+    #  - IN: test-trigger01
       - TASK:
-        - script: printenv
-    flags:
-      - flg-4
-      - absflg
-      - flg-41
-      - absflg2
-      - flg-43
-      - absflg4
-      - flg-45
-      - absflg6
-      - flg-47
-      - absflg8
-      - flg-49
-      - absflg10
-      - flg-411
-      - absflg12
-      - flg-413
-      - absflg14
-  
- # at least one IN or OUT required
-
-  # - name: runCli_job_for_testing
-  #   type: runCLI
-  #   steps:
-  #     - IN: box-nginx-1-1
-  #     - IN: box-nginx-1-2
-  #     - IN: box-nginx-1-3
-  #     - IN: box-nginx-1-4
-  #     - IN: box-nginx-1-5
-  #     - IN: box-nginx-1-6
-  #     - IN: box-nginx-1-7
-  #     - IN: box-nginx-1-8
-  #     - IN: box-nginx-1-9
-  #     - IN: box-nginx-1-10
-  #     - IN: box-nginx-1-11
-  #     - IN: box-nginx-1-12
-  #     - IN: box-nginx-1-13
-  #     - IN: box-nginx-1-14
-  #     - IN: box-nginx-1-15
-  #     - IN: box-nginx-1-16
-  #     - IN: box-nginx-1-17
-  #     - IN: box-nginx-1-18
-  #     - IN: box-nginx-1-19
-  #     - IN: box-nginx-1-20
-  #     - TASK: 
-  #       - script: printenv
- 
-      
-  # - name: rituraj-release1-test
-  #   type: release
-  #   steps:
-  #     - IN: real-version2
-  #     - IN: rituraj-1-2-secure-1
-  #     - IN: tr1
-
-  # - name: ecs-deploy-rr
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-release1-test
-  #     - IN: ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
-        
-  
-  # - name: real-ecsdeploy2
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-release1-test
-  #     - IN: ecs-cluster
-
-  # - name: ecs-deploy-bg
-  #   type: ecsDeploy
-  #   steps:
-  #     - IN: jatin-2
-  #     - IN: ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
-
-  # - name: ddc-cluster-deploy
-  #   type: deploy
-  #   on_start:
-  #     - NOTIFY: slackNotification
-  #   on_success:
-  #     - NOTIFY: slackNotification
-  #   steps:
-  #     - IN: rituraj-2-1-param
-  #     - IN: ddc-cluster
-  #     - IN: rr-params
-  #     - TASK: managed
-  #       deployMethod: upgrade
-
-  # - name: aws-deploy-13
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-2-1-param
-  #     - IN: aws-cluster-11
-  #     - IN: docker-opts
-  #     - IN: tr1
-  #     - TASK: managed
-  #       deployMethod: upgrade
-
-
-  # - name: gkeDeploy
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-2-2
-  #     - IN: gke-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-
-  # - name: gkeDeploy-bg
-  #   type: deploy
-  #   steps:
-  #     - IN: jatin-2
-  #     - IN: gke-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
-
-  # - name: ddc-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-2-1
-  #     - IN: ddc-cluster
-
-  # - name: dcl-deploy
-  #   type: dclDeploy
-  #   steps:
-  #     - IN: jD-1
-  #     - IN: jatin-2
-  #     - IN: dcl-cluster
-  #     - TASK: managed
+        - script: IN/sample-pvt/gitRepo/echo.sh
+    flags: job1
+    
+  - name: runcliscript-job-pvt
+    type: runCLI
+    allowPublicAccess: true
+    steps:      
+      - IN: sample-pvt
+      - TASK:
+        - script: IN/sample-pvt/gitRepo/echo.sh
