@@ -12,4 +12,16 @@ jobs:
         - script: IN/sample-pvt/gitRepo/echo.sh
     flags: job1
     
+  - name: runcli-job-pvt
+    type: runSh
+    allowPublicAccess: false
+    steps:
+      - IN: sample-pvt
+        showBuildStatus: true
+     # - IN: trigger01
+    #  - IN: test-trigger01
+      - TASK:
+        - script: IN/sample-pvt/gitRepo/echo.sh
+    flags: job1
+    
 
