@@ -43,9 +43,9 @@ jobs:
         deployMethod: upgrade
 
   - name: my-provision                                                   #required
-    - type: provision                                                  #required
+    type: provision                                                  #required
     step1s:
-      - IN: kube-locad-balancer                 #required
+      - IN: kube-locad-balancer-1                #required
       #- IN: <additional resource to be provisioned>                  #optional
         
   # - name: sample-kube-replace-RC
