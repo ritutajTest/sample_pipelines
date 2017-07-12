@@ -26,7 +26,7 @@ resources:
     type: loadBalancer                          #required
     integration: kube-deploy
     pointer:
-      sourceName: "mysource"                    #required
+      #sourceName: "mysource"                    #required
       method: application | classic | ClusterIP | ExternalName | LoadBalancer | NodePort
       #role: <string>                            #optional
       clusterName: kube-deploy-r
