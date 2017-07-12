@@ -22,6 +22,19 @@ resources:
         app2: nginx4
         test3: redis9
 
+  - name: kube-locad-balancer                              #required
+    type: loadBalancer                          #required
+    integration: kube-deploy
+    pointer:
+      sourceName: "mysource"                    #required
+      method: application | classic | ClusterIP | ExternalName | LoadBalancer | NodePort
+      #role: <string>                            #optional
+      clusterName: kube-deploy-r
+      region: us-west-2
+      #namespace: <string>
+    version:
+      externalName: <string>
+
   # - name: rr-params
   #   type: params
   #   version:
