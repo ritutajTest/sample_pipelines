@@ -41,6 +41,12 @@ jobs:
       - IN: kube-deploy-r
       - TASK: managed-r
         deployMethod: upgrade
+
+  - name: my-provision                                                   #required
+    type: provision                                                  #required
+    steps:
+      - IN: kube-locad-balancer                 #required
+      #- IN: <additional resource to be provisioned>                  #optional
         
   # - name: sample-kube-replace-RC
   #   type: deploy
