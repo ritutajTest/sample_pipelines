@@ -44,7 +44,7 @@ jobs:
 
   - name: my-provision                                                   #required
     type: provision                                                  #required
-    step1s:
+    steps:
       - IN: kube-locad-balancer-1                #required
       #- IN: <additional resource to be provisioned>                  #optional
         
