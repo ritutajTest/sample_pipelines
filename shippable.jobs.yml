@@ -29,6 +29,15 @@ jobs:
         - script: echo 'start hello'
         - script: aws ec2 describe-instances
         - script: echo 'hello'
+
+  - name: myRunShJob
+    type: runSh
+    steps:
+      - IN: awsCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: aws ec2 describe-instances
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
