@@ -26,9 +26,14 @@ jobs:
     steps:
       - IN: awsCLIConfig
       - TASK:
-        - script: echo 'start hello'
+        - script: echo 'start runCli hello'
+        - script: echo 'this runCli job name is -> ${JOB_NAME}' > myJob.txt
+        - script: cat myJob.txt
+        - script: echo 'now doing shippable_replace'
+        - script: shippable_replace myJob.txt
+        - script: cat myJob.txt
         - script: aws ec2 describe-instances
-        - script: echo 'hello'
+        - script: echo 'hello runCli'
 
   - name: myRunShJob
     type: runSh
