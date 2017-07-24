@@ -27,6 +27,7 @@ jobs:
       - IN: awsCLIConfig
       - TASK:
         - script: echo 'start runCli hello'
+        - script: which shippable_replace
         - script: echo 'this runCli job name is -> ${JOB_NAME}' > myJob.txt
         - script: cat myJob.txt
         - script: echo 'now doing shippable_replace'
@@ -41,6 +42,7 @@ jobs:
       - IN: awsCLIConfig
       - TASK:
         - script: echo 'start runSh hello'
+        - script: which shippable_replace
         - script: echo 'this job name is -> ${JOB_NAME}' > myJob.txt
         - script: cat myJob.txt
         - script: echo 'now doing shippable_replace'
