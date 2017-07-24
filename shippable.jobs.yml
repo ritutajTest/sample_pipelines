@@ -43,6 +43,7 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: which shippable_replace
+        - script: cat `which shippable_replace`
         - script: echo 'this job name is -> ${JOB_NAME}' > myJob.txt
         - script: cat myJob.txt
         - script: echo 'now doing shippable_replace'
