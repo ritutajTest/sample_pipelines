@@ -141,6 +141,24 @@ jobs:
         - script: echo 'start runSh hello'
         - script: kubectl get deployments
         - script: echo 'hello'
+
+  - name: gclRunCLIJob
+    type: runCLI
+    steps:
+      - IN: gclCLIConfig
+      - TASK:
+        - script: echo 'start runCli hello'
+        - script: gcloud compute instances list
+        - script: echo 'hello runCli'
+
+  - name: gclRunShJob
+    type: runSh
+    steps:
+      - IN: gclCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: gcloud compute instances list
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
