@@ -123,6 +123,24 @@ jobs:
         - script: echo 'start runSh hello'
         - script: docker pull 554282422391.dkr.ecr.us-west-2.amazonaws.com/sample_test:latest
         - script: echo 'hello'
+
+  - name: kubeRunCLIJob
+    type: runCLI
+    steps:
+      - IN: kubeCLIConfig
+      - TASK:
+        - script: echo 'start runCli hello'
+        - script: kubectl get deployments
+        - script: echo 'hello runCli'
+
+  - name: kubeRunShJob
+    type: runSh
+    steps:
+      - IN: kubeCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: kubectl get deployments
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
