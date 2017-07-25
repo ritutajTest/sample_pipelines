@@ -177,6 +177,24 @@ jobs:
         - script: echo 'start runSh hello'
         - script: gcloud docker -- pull gcr.io/vidya-project/ci-push-gcr:master.1
         - script: echo 'hello'
+
+  - name: gkeRunCLIJob
+    type: runCLI
+    steps:
+      - IN: gkeCLIConfig
+      - TASK:
+        - script: echo 'start runCli hello'
+        - script: gcloud container clusters list
+        - script: echo 'hello runCli'
+
+  - name: gkeRunShJob
+    type: runSh
+    steps:
+      - IN: gkeCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: gcloud container clusters list
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
