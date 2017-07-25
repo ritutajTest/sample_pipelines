@@ -59,6 +59,10 @@ resources:
     type: cliConfig
     integration: gclInt
 
+  - name: gcrCLIConfig
+    type: cliConfig
+    integration: gcrInt
+
 
   # - name: real-version2
   #   type: version
