@@ -223,7 +223,7 @@ jobs:
         - script: docker pull rituraj-docker.jfrog.io/myimg:latest
         - script: echo 'hello runCli'
 
-  - name: artifactRunCLIJob
+  - name: artifactRunSHJob
     type: runSh
     steps:
       - IN: artifactCLIConfig
