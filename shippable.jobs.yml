@@ -105,6 +105,28 @@ jobs:
         - script: echo 'start runSh hello'
         - script: docker pull quay.io/shippablequay/sample_node_01
         - script: echo 'hello'
+
+  - name: ecsRunCLIJob
+    type: runCLI
+    steps:
+      - IN: awsCLIConfig
+      - TASK:
+        - script: echo 'start runCli hello'
+        - script: docker pull busybox
+        - script: docker tag busybox:latest 554282422391.dkr.ecr.us-west-2.amazonaws.com/sample_test:latest
+        - script: docker push 554282422391.dkr.ecr.us-west-2.amazonaws.com/sample_test:latest
+        - script: echo 'hello runCli'
+
+  - name: ecsRunShJob
+    type: runSh
+    steps:
+      - IN: awsCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: docker pull busybox
+        - script: docker tag busybox:latest 554282422391.dkr.ecr.us-west-2.amazonaws.com/sample_test:latest
+        - script: docker push 554282422391.dkr.ecr.us-west-2.amazonaws.com/sample_test:latest
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
