@@ -37,6 +37,10 @@ resources:
     type: cliConfig
     integration: digiInt
 
+  - name: dockerCLIConfig
+    type: cliConfig
+    integration: dockerhub
+
 
   # - name: real-version2
   #   type: version
