@@ -33,6 +33,10 @@ resources:
     pointer:
       region: us-west-2
 
+  - name: digiCLIConfig
+    type: cliConfig
+    integration: digiInt
+
 
   # - name: real-version2
   #   type: version
