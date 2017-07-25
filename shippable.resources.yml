@@ -41,6 +41,10 @@ resources:
     type: cliConfig
     integration: dockerhub
 
+  - name: quayCLIConfig
+    type: cliConfig
+    integration: quayInt
+
 
   # - name: real-version2
   #   type: version
