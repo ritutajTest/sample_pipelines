@@ -45,6 +45,12 @@ resources:
     type: cliConfig
     integration: quayInt
 
+  - name: ecrCLIConfig
+    type: cliConfig
+    integration: ecrCliConfig
+    pointer:
+      region: us-west-2
+
 
   # - name: real-version2
   #   type: version
