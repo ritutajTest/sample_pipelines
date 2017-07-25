@@ -213,6 +213,24 @@ jobs:
         - script: echo 'start runSh hello'
         - script: gcloud container clusters list
         - script: echo 'hello'
+        
+  - name: artifactRunCLIJob
+    type: runCLI
+    steps:
+      - IN: artifactCLIConfig
+      - TASK:
+        - script: echo 'start runCli hello'
+        - script: docker pull rituraj-docker.jfrog.io/myimg:latest
+        - script: echo 'hello runCli'
+
+  - name: artifactRunCLIJob
+    type: runSh
+    steps:
+      - IN: artifactCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: docker pull rituraj-docker.jfrog.io/myimg:latest
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
