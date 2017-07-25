@@ -67,6 +67,10 @@ resources:
     type: cliConfig
     integration: gkeInt
 
+  - name: artifactCLIConfig
+    type: cliConfig
+    integration: artifactInt
+
 
   # - name: real-version2
   #   type: version
