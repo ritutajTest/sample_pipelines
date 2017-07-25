@@ -63,6 +63,10 @@ resources:
     type: cliConfig
     integration: gcrInt
 
+  - name: gkeCLIConfig
+    type: cliConfig
+    integration: gkeInt
+
 
   # - name: real-version2
   #   type: version
