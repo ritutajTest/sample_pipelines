@@ -221,7 +221,7 @@ jobs:
       - IN: tr1
       - TASK:
         - script: echo 'start runCli hello'
-        - script: docker pull rituraj-docker.jfrog.io/myimg:latest
+        - script: docker login rituraj-docker.jfrog.io
         - script: echo 'hello runCli'
 
   - name: artifactRunSHJob
