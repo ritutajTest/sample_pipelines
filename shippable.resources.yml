@@ -51,6 +51,10 @@ resources:
     pointer:
       region: us-west-2
 
+  - name: kubeCLIConfig
+    type: cliConfig
+    integration: kubeCliConfig
+
 
   # - name: real-version2
   #   type: version
