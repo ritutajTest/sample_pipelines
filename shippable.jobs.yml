@@ -87,6 +87,24 @@ jobs:
         - script: echo 'start runSh hello'
         - script: docker pull riturajcse/rituexm
         - script: echo 'hello'
+
+  - name: quayRunCLIJob
+    type: runCLI
+    steps:
+      - IN: quayCLIConfig
+      - TASK:
+        - script: echo 'start runCli hello'
+        - script: docker pull quay.io/shippablequay/sample_node_01
+        - script: echo 'hello runCli'
+
+  - name: quayRunShJob
+    type: runSh
+    steps:
+      - IN: quayCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: docker pull quay.io/shippablequay/sample_node_01
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
