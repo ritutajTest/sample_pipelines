@@ -109,7 +109,7 @@ jobs:
   - name: ecsRunCLIJob
     type: runCLI
     steps:
-      - IN: awsCLIConfig
+      - IN: ecrCLIConfig
       - TASK:
         - script: echo 'start runCli hello'
         - script: docker pull 554282422391.dkr.ecr.us-west-2.amazonaws.com/sample_test:latest
@@ -118,7 +118,7 @@ jobs:
   - name: ecsRunShJob
     type: runSh
     steps:
-      - IN: awsCLIConfig
+      - IN: ecrCLIConfig
       - TASK:
         - script: echo 'start runSh hello'
         - script: docker pull 554282422391.dkr.ecr.us-west-2.amazonaws.com/sample_test:latest
