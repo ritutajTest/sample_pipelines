@@ -218,6 +218,7 @@ jobs:
     type: runCLI
     steps:
       - IN: artifactCLIConfig
+      - IN: tr1
       - TASK:
         - script: echo 'start runCli hello'
         - script: docker pull rituraj-docker.jfrog.io/myimg:latest
@@ -227,6 +228,7 @@ jobs:
     type: runSh
     steps:
       - IN: artifactCLIConfig
+      - IN: tr1
       - TASK:
         - script: echo 'start runSh hello'
         - script: docker pull rituraj-docker.jfrog.io/myimg:latest
