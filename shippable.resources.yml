@@ -55,6 +55,10 @@ resources:
     type: cliConfig
     integration: kubeCliConfig
 
+  - name: gclCLIConfig
+    type: cliConfig
+    integration: gclInt
+
 
   # - name: real-version2
   #   type: version
