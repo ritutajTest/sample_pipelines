@@ -64,7 +64,7 @@ jobs:
         - script: echo 'now doing shippable_replace'
         - script: shippable_replace myJob.txt
         - script: cat myJob.txt
-        - script: doctl
+        - script: doctl compute droplet list
         - script: echo 'hello runCli'
 
   - name: digiRunShJob
@@ -79,7 +79,7 @@ jobs:
         - script: echo 'now doing shippable_replace'
         - script: shippable_replace myJob.txt
         - script: cat myJob.txt
-        - script: doctl
+        - script: doctl compute droplet list
         - script: echo 'hello'
   
  # at least one IN or OUT required
