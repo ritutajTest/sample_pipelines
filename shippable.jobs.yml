@@ -51,6 +51,36 @@ jobs:
         - script: cat myJob.txt
         - script: aws ec2 describe-instances
         - script: echo 'hello'
+
+  - name: digiRunCLIJob
+    type: runCLI
+    steps:
+      - IN: digiCLIConfig
+      - TASK:
+        - script: echo 'start runCli hello'
+        - script: which shippable_replace
+        - script: echo 'this runCli job name is -> ${JOB_NAME}' > myJob.txt
+        - script: cat myJob.txt
+        - script: echo 'now doing shippable_replace'
+        - script: shippable_replace myJob.txt
+        - script: cat myJob.txt
+        - script: aws ec2 describe-instances
+        - script: echo 'hello runCli'
+
+  - name: digiRunShJob
+    type: runSh
+    steps:
+      - IN: digiCLIConfig
+      - TASK:
+        - script: echo 'start runSh hello'
+        - script: which shippable_replace
+        - script: echo 'this job name is -> ${JOB_NAME}' > myJob.txt
+        - script: cat myJob.txt
+        - script: echo 'now doing shippable_replace'
+        - script: shippable_replace myJob.txt
+        - script: cat myJob.txt
+        - script: aws ec2 describe-instances
+        - script: echo 'hello'
   
  # at least one IN or OUT required
 
