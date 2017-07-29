@@ -25,7 +25,22 @@ jobs:
     type: runSh
     steps:
       - OUT: box-nginx-2-r
-      #- IN: rituraj-1-2-1
+      - IN: docker-opts-r
+      - IN: docker-opts-r-1
+      - IN: docker-opts-r-2
+      - IN: docker-opts-r-3
+      - IN: docker-opts-r-4
+      - IN: docker-opts-r-5
+      - IN: docker-opts-r-6
+      - IN: docker-opts-r-7
+      - IN: docker-opts-r-8
+      - IN: docker-opts-r-9
+      - IN: docker-opts-r-10
+      - IN: docker-opts-r-11
+      - IN: docker-opts-r-12
+      - IN: docker-opts-r-13
+      - IN: docker-opts-r-14
+      - IN: docker-opts-r-15
       - TASK:
           - script: echo "hello world"
           - script: sleep 1m
@@ -52,6 +67,23 @@ jobs:
   - name: sample-kube-deploy1-8-r
     type: deploy
     steps:
+      - OUT: box-nginx-2-r
+      - IN: docker-opts-r
+      - IN: docker-opts-r-1
+      - IN: docker-opts-r-2
+      - IN: docker-opts-r-3
+      - IN: docker-opts-r-4
+      - IN: docker-opts-r-5
+      - IN: docker-opts-r-6
+      - IN: docker-opts-r-7
+      - IN: docker-opts-r-8
+      - IN: docker-opts-r-9
+      - IN: docker-opts-r-10
+      - IN: docker-opts-r-11
+      - IN: docker-opts-r-12
+      - IN: docker-opts-r-13
+      - IN: docker-opts-r-14
+      - IN: docker-opts-r-15
       - IN: rituraj-1-2-1-r
       - IN: kube-deploy-r
       - TASK: managed-r
