@@ -21,6 +21,145 @@ resources:
       labels:
         app2: nginx4
         test3: redis9
+        
+  - name: docker-opts-r-1
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+
+  - name: docker-opts-r-2
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+  - name: docker-opts-r-3
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+   - name: docker-opts-r-4
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+  - name: docker-opts-r-5
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+
+  - name: docker-opts-r-6
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+  - name: docker-opts-r-7
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+   - name: docker-opts-r-8
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+  - name: docker-opts-r-9
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+
+  - name: docker-opts-r-10
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+  - name: docker-opts-r-11
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+   - name: docker-opts-r-12
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+  - name: docker-opts-r-13
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+
+  - name: docker-opts-r-14
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
+        
+  - name: docker-opts-r-15
+    type: dockerOptions
+    version:
+      memory: 51
+      #labels: "bad-label"
+      labels:
+        app2: nginx4
+        test3: redis9
 
   - name: kube-locad-balancer                              #required
     type: loadBalancer                          #required
