@@ -50,7 +50,7 @@ resources:
         app2: nginx4
         test3: redis9
         
-   - name: docker-opts-r-4
+  - name: docker-opts-r-4
     type: dockerOptions
     version:
       memory: 51
@@ -87,7 +87,7 @@ resources:
         app2: nginx4
         test3: redis9
         
-   - name: docker-opts-r-8
+  - name: docker-opts-r-8
     type: dockerOptions
     version:
       memory: 51
@@ -124,7 +124,7 @@ resources:
         app2: nginx4
         test3: redis9
         
-   - name: docker-opts-r-12
+  - name: docker-opts-r-12
     type: dockerOptions
     version:
       memory: 51
