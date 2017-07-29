@@ -5,6 +5,21 @@ jobs:
     steps:
       - OUT: box-nginx-2-r
       - IN: docker-opts-r
+      - IN: docker-opts-r-1
+      - IN: docker-opts-r-2
+      - IN: docker-opts-r-3
+      - IN: docker-opts-r-4
+      - IN: docker-opts-r-5
+      - IN: docker-opts-r-6
+      - IN: docker-opts-r-7
+      - IN: docker-opts-r-8
+      - IN: docker-opts-r-9
+      - IN: docker-opts-r-10
+      - IN: docker-opts-r-11
+      - IN: docker-opts-r-12
+      - IN: docker-opts-r-13
+      - IN: docker-opts-r-14
+      - IN: docker-opts-r-15
  
   - name: sn-try-sh-r
     type: runSh
