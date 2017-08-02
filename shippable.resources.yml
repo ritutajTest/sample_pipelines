@@ -27,49 +27,10 @@ resources:
       branch: master
       buildOnPullRequest: true
 
-  - name: awsCLIConfig
-    type: cliConfig
-    integration: awsInt
-    pointer:
-      region: us-west-2
-
-  - name: digiCLIConfig
-    type: cliConfig
-    integration: digiInt
 
   - name: dockerCLIConfig
     type: cliConfig
     integration: dockerhub
-
-  - name: quayCLIConfig
-    type: cliConfig
-    integration: quayInt
-
-  - name: ecrCLIConfig
-    type: cliConfig
-    integration: ecrCliConfig
-    pointer:
-      region: us-west-2
-
-  - name: kubeCLIConfig
-    type: cliConfig
-    integration: kubeCliConfig
-
-  - name: gclCLIConfig
-    type: cliConfig
-    integration: gclInt
-
-  - name: gcrCLIConfig
-    type: cliConfig
-    integration: gcrInt
-
-  - name: gkeCLIConfig
-    type: cliConfig
-    integration: gkeInt
-
-  - name: artifactCLIConfig
-    type: cliConfig
-    integration: artifactInt
 
 
   # - name: real-version2
