@@ -46,9 +46,10 @@ resources:
         -"shippabledb:db"
 
 
-  # - name: slackNotification
-  #   type: notification
-  #   integration: slack
+   - name: slackNotification
+     type: notification
+     integration: slack
+     
   #   pointer:resources:
   # - name: box-sn-1
   #   type: image
