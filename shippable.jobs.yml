@@ -24,6 +24,10 @@ jobs:
 
   - name: myRunShJob
     type: runSh
+    on_start:
+      - NOTIFY: slackNotification
+    on_success:
+      - NOTIFY: slackNotification
     steps:
       - IN: dockerCLIConfig
       #- IN:tr1
