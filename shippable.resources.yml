@@ -49,6 +49,9 @@ resources:
   - name: slackNotification
     type: notification
     integration: slack
+    pointer:
+      recipients:
+        - "#mybuilds"               #required
      
   #   pointer:resources:
   # - name: box-sn-1
