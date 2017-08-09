@@ -14,7 +14,7 @@ resources:
     integration: dockerhub
     flags: flg2
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "library/redis"
       isPull: false
     seed:
       versionName: latest
