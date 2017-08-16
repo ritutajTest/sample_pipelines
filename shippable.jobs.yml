@@ -21,10 +21,10 @@ jobs:
     #steps:
      # - OUT: box-nginx-1-1-1
       
-  - name: sample_nodejs_runCI
-    type: runCI
-    steps:
-      - OUT: box-nginx-1-1-1
+  #- name: sample_nodejs_runCI
+    #type: runCI
+    #steps:
+      #- OUT: box-nginx-1-1-1
 
   - name: myRunShJob
     type: runSh
