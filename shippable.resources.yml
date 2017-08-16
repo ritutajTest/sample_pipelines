@@ -39,6 +39,16 @@ resources:
     seed:
       versionName: latest
       
+  - name: box-nginx-rituraj-990
+    type: image
+    integration: dockerhub
+    flags: flg2
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
+      
   - name: ci-min-2-gitRepo
     type: gitRepo
     integration: github
