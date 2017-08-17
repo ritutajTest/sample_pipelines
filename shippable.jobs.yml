@@ -25,6 +25,8 @@ jobs:
     type: runCI
     steps:
       - OUT: box-nginx-1-1-1
+    flags:
+      - flgCI
 
   - name: myRunShJob
     type: runSh
