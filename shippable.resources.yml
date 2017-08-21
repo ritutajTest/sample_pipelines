@@ -71,6 +71,10 @@ resources:
   - name: dockerCLIConfig
     type: cliConfig
     integration: dockerhub
+    
+  - name: new-resource
+    type: cliConfig
+    integration: dockerhub
 
 
   # - name: real-version2
