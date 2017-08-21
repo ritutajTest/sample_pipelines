@@ -22,6 +22,14 @@ jobs:
       #- IN: runcli1
     flags:
       - flg143
+      
+  - name: new-job
+    type: manifest
+    steps:
+      - IN: box-nginx-1-1-1
+      #- IN: runcli1
+    flags:
+      - newglag
 
   # - name: docker-opts-1
   #   type: manifest
