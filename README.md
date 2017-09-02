@@ -1,4 +1,5 @@
 # sample_pipelines
+[![github open issues](https://img.shields.io/github/issues/Riturajcse/sample_pipelines.svg)](https://github.com/Riturajcse/sample_pipelines)
 
 i. Make sure your subscription has the `isNewPipeline: true`  
 ii. Sync your account (this is required to update gitlab with your subId)  
