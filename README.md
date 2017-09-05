@@ -14,3 +14,4 @@ vii. Select branch `master`
 This triggers a flow that spans across `rSync`, `versionTrigger`, `stepExec (manifestSteps)` and `stepExec (ecsDeploySteps)`. You can check out the logs of these services.  
 testing auto trigger
 1
+qw
