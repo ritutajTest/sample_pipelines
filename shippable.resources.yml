@@ -9,7 +9,7 @@ resources:
     seed:
       versionName: latest
   
-  - name: box-nginx-1-1-er3409e99ses
+  - name: box-nginx-1-1-er3409e99sesxx
     type: image
     integration: dockerhub
     pointer:
