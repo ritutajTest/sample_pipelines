@@ -48,15 +48,6 @@ resources:
     seed:
       versionName: latest
       
-  - name: box-nginx-rituraj-990
-    type: image
-    integration: dockerhub
-    flags: flg2
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: latest
       
   - name: box-nginx-rituraj-990-rr
     type: image
