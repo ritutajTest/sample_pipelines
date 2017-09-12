@@ -7,6 +7,14 @@ jobs:
     flags:
       - flg1newfla1
       
+  - name: this-is-a-brand-new-job-today
+    type: manifest
+    steps:
+      - IN: box-nginx-1-1-100
+      #- IN: runcli1
+    flags:
+      - flg1newfla1
+      
   - name: rituraj-1-1-786
     type: manifest
     steps:
