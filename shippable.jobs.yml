@@ -5,7 +5,7 @@ jobs:
       - IN: box-nginx-1-1-1
       #- IN: runcli1
     flags:
-      - flg1
+      - flg1newfla1
       
   - name: rituraj-1-1-786
     type: manifest
