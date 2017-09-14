@@ -24,6 +24,14 @@ jobs:
     flags:
       - flg143
       
+  - name: this-is-a-new-job-tdoay1234
+    type: manifest
+    steps:
+      - IN: box-nginx-1-1-1
+      #- IN: runcli1
+    flags:
+      - flg143
+      
   - name: new-job
     type: manifest
     steps:
