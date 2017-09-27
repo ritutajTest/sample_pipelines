@@ -92,10 +92,12 @@ jobs:
       - NOTIFY: slackNotification
     steps:
       - IN: jfrog-appfile
+      - IN: jFrog-cliconfig
       #- IN:tr1
       - TASK:
         - script: echo 'start runSh hello'
         - script: jfrog rt dl test-repository-local/package.json
+        - script: jfrog rt u shippable.jobs.yml test-repository-local
         - script: ls -al
 
   
