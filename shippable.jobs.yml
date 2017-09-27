@@ -69,18 +69,19 @@ jobs:
     flags:
       - flgCI1210RR321
 
-  - name: myRunShJob
+  - name: myJfrogRunShJob
     type: runSh
     on_start:
       - NOTIFY: slackNotification
     on_success:
       - NOTIFY: slackNotification
     steps:
-      - IN: dockerCLIConfig
+      - IN: jfrog-appfile
       #- IN:tr1
       - TASK:
         - script: echo 'start runSh hello'
-        - script: docker pull riturajcse/rituexm
+        - script: jfrog rt dl test-repository-local/package.json
+        - script: ls -al
 
   
  # at least one IN or OUT required
