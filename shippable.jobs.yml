@@ -68,6 +68,21 @@ jobs:
       - OUT: box-nginx-1-1-1
     flags:
       - flgCI1210RR321
+      
+  - name: jfrog-manifest
+    type: manifest
+    steps:
+      #- IN: nodecluster-params
+      - IN: jfrog-appfile
+      
+  - name: jfrog-deploy
+    type: deploy
+    steps:
+      - IN: jfrog-manifest
+      - IN: deploy-nodecluster
+      - TASK:
+        - script: echo "hello jfrog"
+        - script: jfrog rt dl test-repository-local/package.json
 
   - name: myJfrogRunShJob
     type: runSh
