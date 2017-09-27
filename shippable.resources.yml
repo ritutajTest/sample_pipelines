@@ -72,9 +72,9 @@ resources:
     type: cliConfig
     integration: dockerhub
     
-  - name: new-resource
+  - name: jFrog-cliconfig
     type: cliConfig
-    integration: dockerhub
+    integration: jfrognew
 
 
   # - name: real-version2
