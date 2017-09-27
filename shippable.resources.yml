@@ -74,7 +74,7 @@ resources:
     
   - name: jFrog-cliconfig
     type: cliConfig
-    integration: jfrog
+    integration: jfrognew
 
 
   # - name: real-version2
