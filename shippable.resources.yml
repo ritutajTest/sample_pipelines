@@ -104,6 +104,10 @@ resources:
       sourceName: test-repository-local # in the form [repository_name]/[repository_path]
     seed:
       versionName: foo # dummy starting point. the sample uses commitsha from CI to populate this field
+      
+  - name: deploy-nodecluster
+    type: cluster
+    integration: nodeCluster
      
   #   pointer:resources:
   # - name: box-sn-1
