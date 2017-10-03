@@ -97,8 +97,9 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: jfrog rt dl test-repository-local/package.json
+        - script: cp package.json newPackage.$BUILD_NUMBER.json
         - script: ls -al
-        - script: jfrog rt u shippable.jobs.yml test-repository-local
+        - script: jfrog rt u newPackage.$BUILD_NUMBER.json test-repository-local
         
 
   
