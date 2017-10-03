@@ -97,8 +97,9 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: jfrog rt dl test-repository-local/package.json
-        - script: jfrog rt u shippable.jobs.yml test-repository-local
         - script: ls -al
+        - script: jfrog rt u shippable.jobs.yml test-repository-local
+        
 
   
  # at least one IN or OUT required
