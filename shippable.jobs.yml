@@ -124,7 +124,7 @@ jobs:
       - NOTIFY: slackNotification
     steps:
       #- IN: jfrog-appfile-OLD
-      - IN: jFrog-cliconfig-OLD
+      - IN: jFrog-cliconfig_OLD
       #- IN:tr1
       - TASK:
         - script: echo 'start runSh hello jfrogOLD'
