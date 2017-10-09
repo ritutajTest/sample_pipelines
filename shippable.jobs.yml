@@ -74,6 +74,12 @@ jobs:
     steps:
       #- IN: nodecluster-params
       - IN: jfrog-appfile
+     
+  - name: jfrog-manifest-OLD
+    type: manifest
+    steps:
+      #- IN: nodecluster-params
+      - IN: jfrog-appfile-OLD
       
   - name: jfrog-deploy
     type: deploy
@@ -81,7 +87,16 @@ jobs:
       - IN: jfrog-manifest
       - IN: deploy-nodecluster
       - TASK:
-        - script: echo "hello jfrog"
+        - script: echo "hello jfrog NEW"
+        - script: jfrog rt dl test-repository-local/package.json
+        
+  - name: jfrog-deploy-OLD
+    type: deploy
+    steps:
+      - IN: jfrog-manifest-OLD
+      - IN: deploy-nodecluster
+      - TASK:
+        - script: echo "hello jfrog OLD"
         - script: jfrog rt dl test-repository-local/package.json
 
   - name: myJfrogRunShJob
@@ -95,7 +110,24 @@ jobs:
       - IN: jFrog-cliconfig
       #- IN:tr1
       - TASK:
-        - script: echo 'start runSh hello'
+        - script: echo 'start runSh hello jfrog new'
+        - script: jfrog rt dl test-repository-local/package.json
+        - script: cp package.json newPackage.$BUILD_NUMBER.json
+        - script: ls -al
+        - script: jfrog rt u newPackage.$BUILD_NUMBER.json test-repository-local
+        
+  - name: myJfrogRunShJob-OLD
+    type: runSh
+    on_start:
+      - NOTIFY: slackNotification
+    on_success:
+      - NOTIFY: slackNotification
+    steps:
+      #- IN: jfrog-appfile-OLD
+      - IN: jFrog-cliconfig_OLD
+      #- IN:tr1
+      - TASK:
+        - script: echo 'start runSh hello jfrogOLD'
         - script: jfrog rt dl test-repository-local/package.json
         - script: cp package.json newPackage.$BUILD_NUMBER.json
         - script: ls -al
