@@ -105,7 +105,7 @@ resources:
     type: file
     integration: jfrognew
     pointer:
-      sourceName: test-repository-local # in the form [repository_name]/[repository_path]
+      sourceName: test-repository-local/package.json # in the form [repository_name]/[repository_path]
     seed:
       versionName: foo # dummy starting point. the sample uses commitsha from CI to populate this field
       
@@ -113,7 +113,7 @@ resources:
     type: file
     integration: jfrogOld
     pointer:
-      sourceName: test-repository-local # in the form [repository_name]/[repository_path]
+      sourceName: test-repository-local/package.json # in the form [repository_name]/[repository_path]
     seed:
       versionName: foo # dummy starting point. the sample uses commitsha from CI to populate this field
       
