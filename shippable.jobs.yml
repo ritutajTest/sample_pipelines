@@ -124,10 +124,11 @@ jobs:
       - NOTIFY: slackNotification
     steps:
       #- IN: jfrog-appfile-OLD
-      - IN: jFrog-cliconfig-OLD
+      - IN: jfrogintold
       #- IN:tr1
       - TASK:
         - script: echo 'start runSh hello jfrogOLD'
+        - script: jfrog rt config --url JFROGINTOLD_INTEGRATION_URL --password JFROGINTOLD_INTEGRATION_PASSWORD --user JFROGINTOLD_INTEGRATION_USERNAME
         - script: jfrog rt dl test-repository-local/package.json
         - script: cp package.json newPackage.$BUILD_NUMBER.json
         - script: ls -al
