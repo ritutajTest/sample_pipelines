@@ -115,9 +115,9 @@ jobs:
         - script: printenv
         - script: jfrog rt config --url $JFROGINTNEW_INTEGRATION_URL --password $JFROGINTNEW_INTEGRATION_PASSWORD --user $JFROGINTNEW_INTEGRATION_USERNAME
         - script: jfrog rt dl test-repository-local/shippable.yml
-        - script: cp shippable.yml newPackage.$BUILD_NUMBER.shippable.yml
+        - script: cp shippable.yml newYmlTF.$BUILD_NUMBER.shippable.yml
         - script: ls -al
-        - script: jfrog rt u newPackage.$BUILD_NUMBER.shippable.yml
+        - script: jfrog rt u newYmlTF.$BUILD_NUMBER.shippable.yml test-repository-local
         
   - name: myJfrogRunShJob-OLD
     type: runSh
