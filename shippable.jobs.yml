@@ -88,16 +88,16 @@ jobs:
       - IN: deploy-nodecluster
       - TASK:
         - script: echo "hello jfrog NEW"
-        - script: jfrog rt dl test-repository-local/package.json
+        #- script: jfrog rt dl test-repository-local/package.json
         
   - name: jfrog-deploy-OLD
     type: deploy
     steps:
       - IN: jfrog-manifest-OLD
       - IN: deploy-nodecluster
-      - TASK:
-        - script: echo "hello jfrog OLD"
-        - script: jfrog rt dl test-repository-local/package.json
+      #- TASK:
+        #- script: echo "hello jfrog OLD"
+        #- script: jfrog rt dl test-repository-local/package.json
 
   - name: myJfrogRunShJob
     type: runSh
