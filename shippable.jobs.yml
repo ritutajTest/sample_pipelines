@@ -113,7 +113,7 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello jfrog new'
         - script: printenv
-        - script: jfrog rt config --url $JFROGINTOLD_INTEGRATION_URL --password $JFROGINTOLD_INTEGRATION_PASSWORD --user $JFROGINTOLD_INTEGRATION_USERNAME
+        - script: jfrog rt config --url $JJFROGINTNEW_INTEGRATION_URL --password $JFROGINTNEW_INTEGRATION_PASSWORD --user $JFROGINTNEW_INTEGRATION_USERNAME
         - script: jfrog rt dl test-repository-local/shippable.yml
         - script: cp shippable.yml newPackage.$BUILD_NUMBER.shippable.yml
         - script: ls -al
