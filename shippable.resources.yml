@@ -68,39 +68,6 @@ resources:
       buildOnPullRequest: true
 
 
-  - name: dockerCLIConfig
-    type: cliConfig
-    integration: dockerhub
-    
-  - name: jFrog-cliconfig
-    type: cliConfig
-    integration: jfrognew
-    
-  - name: jFrog-cliconfig-OLD
-    type: cliConfig
-    integration: jfrogOld
-    
-  - name: jfrogintold
-    type: integration
-    integration: jfrogOld
-    
-  - name: jfrogintnew
-    type: integration
-    integration: jfrognew
-
-
-  # - name: real-version2
-  #   type: version
-  #   seed:
-  #     versionName: "1.2.3-beta"
-
-
-  - name: docker-opts
-    type: dockerOptions
-    version:
-      links:
-        -"shippabledb:db"
-
 
   - name: slackNotification
     type: notification
@@ -108,26 +75,10 @@ resources:
     pointer:
       recipients:
         - "#mybuilds"               #required
-        
-  - name: jfrog-appfile
-    type: file
-    integration: jfrognew
-    pointer:
-      sourceName: test-repository-local/shippable.yml # in the form [repository_name]/[repository_path]
-    seed:
-      versionName: foo # dummy starting point. the sample uses commitsha from CI to populate this field
-      
-  - name: jfrog-appfile-OLD
-    type: file
-    integration: jfrogOld
-    pointer:
-      sourceName: test-repository-local/shippable.yml # in the form [repository_name]/[repository_path]
-    seed:
-      versionName: foo # dummy starting point. the sample uses commitsha from CI to populate this field
-      
-  - name: deploy-nodecluster
-    type: cluster
-    integration: nodeCluster
+       
+   - name: gclCLIConfig
+    type: cliConfig
+    integration: gclInt
      
   #   pointer:resources:
   # - name: box-sn-1
