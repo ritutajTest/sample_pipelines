@@ -8,18 +8,27 @@ resources:
       isPull: false
     seed:
       versionName: latest
+  
+  - name: box-nginx-1-1-er34s23pp
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/redis"
+      isPull: false
+    seed:
+      versionName: latest
 
   - name: box-nginx-1-1-1
     type: image
     integration: dockerhub
     flags: flg2
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "library/redis"
       isPull: false
     seed:
       versionName: latest
       
-  - name: box-nginx-1-1-1-0
+  - name: box-nginx-1-1-100
     type: image
     integration: dockerhub
     flags: flg2
@@ -29,7 +38,7 @@ resources:
     seed:
       versionName: latest
       
-  - name: box-nginx-1-1-1-0-rr
+  - name: box-nginx-1-1-100-rituraj
     type: image
     integration: dockerhub
     flags: flg2
@@ -38,8 +47,9 @@ resources:
       isPull: false
     seed:
       versionName: latest
-   
-  - name: box-nginx-rituraj
+      
+      
+  - name: box-nginx-rituraj-990-rr
     type: image
     integration: dockerhub
     flags: flg2
@@ -57,49 +67,26 @@ resources:
       branch: master
       buildOnPullRequest: true
 
-  - name: awsCLIConfig
-    type: cliConfig
-    integration: awsInt
-    pointer:
-      region: us-west-2
-
-  - name: digiCLIConfig
-    type: cliConfig
-    integration: digiInt
 
   - name: dockerCLIConfig
     type: cliConfig
     integration: dockerhub
-
-  - name: quayCLIConfig
+    
+  - name: jFrog-cliconfig
     type: cliConfig
-    integration: quayInt
-
-  - name: ecrCLIConfig
+    integration: jfrognew
+    
+  - name: jFrog-cliconfig-OLD
     type: cliConfig
-    integration: ecrCliConfig
-    pointer:
-      region: us-west-2
-
-  - name: kubeCLIConfig
-    type: cliConfig
-    integration: kubeCliConfig
-
-  - name: gclCLIConfig
-    type: cliConfig
-    integration: gclInt
-
-  - name: gcrCLIConfig
-    type: cliConfig
-    integration: gcrInt
-
-  - name: gkeCLIConfig
-    type: cliConfig
-    integration: gkeInt
-
-  - name: artifactCLIConfig
-    type: cliConfig
-    integration: artifactInt
+    integration: jfrogOld
+    
+  - name: jfrogintold
+    type: integration
+    integration: jfrogOld
+    
+  - name: jfrogintnew
+    type: integration
+    integration: jfrognew
 
 
   # - name: real-version2
@@ -115,9 +102,33 @@ resources:
         -"shippabledb:db"
 
 
-  # - name: slackNotification
-  #   type: notification
-  #   integration: slack
+  - name: slackNotification
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "#mybuilds"               #required
+        
+  - name: jfrog-appfile
+    type: file
+    integration: jfrognew
+    pointer:
+      sourceName: test-repository-local/shippable.yml # in the form [repository_name]/[repository_path]
+    seed:
+      versionName: foo # dummy starting point. the sample uses commitsha from CI to populate this field
+      
+  - name: jfrog-appfile-OLD
+    type: file
+    integration: jfrogOld
+    pointer:
+      sourceName: test-repository-local/shippable.yml # in the form [repository_name]/[repository_path]
+    seed:
+      versionName: foo # dummy starting point. the sample uses commitsha from CI to populate this field
+      
+  - name: deploy-nodecluster
+    type: cluster
+    integration: nodeCluster
+     
   #   pointer:resources:
   # - name: box-sn-1
   #   type: image
