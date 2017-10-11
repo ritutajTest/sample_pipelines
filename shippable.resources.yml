@@ -76,7 +76,7 @@ resources:
       recipients:
         - "#mybuilds"               #required
        
-   - name: gclCLIConfig
+  - name: gclCLIConfig
     type: cliConfig
     integration: gclInt
      
