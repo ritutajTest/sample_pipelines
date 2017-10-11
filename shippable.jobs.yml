@@ -130,10 +130,10 @@ jobs:
         - script: echo 'start runSh hello jfrogOLD printenv'
         #- script: printenv
         - script: jfrog rt config --url $JFROGINTOLD_INTEGRATION_URL --password $JFROGINTOLD_INTEGRATION_PASSWORD --user $JFROGINTOLD_INTEGRATION_USERNAME
-        - script: jfrog rt dl test-repository-local/package.json
-        - script: cp package.json newPackage.$BUILD_NUMBER.json
+        - script: jfrog rt dl test-repository-local/shippable.yml
+        - script: cp shippable.yml newYmlTF.$BUILD_NUMBER.shippable.yml
         - script: ls -al
-        - script: jfrog rt u newPackage.$BUILD_NUMBER.json test-repository-local
+        - script: jfrog rt u newYmlTF.$BUILD_NUMBER.shippable.yml test-repository-local
         
 
   
