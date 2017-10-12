@@ -107,13 +107,13 @@ jobs:
       - NOTIFY: slackNotification
     steps:
       - IN: jfrog-appfile
-      #- IN: jFrog-cliconfig
-      - IN: jfrogintnew
+      - IN: jFrog-cliconfig
+      #- IN: jfrogintnew
       #- IN:tr1
       - TASK:
         - script: echo 'start runSh hello jfrog new'
-        - script: printenv
-        - script: jfrog rt config --url $JFROGINTNEW_INTEGRATION_URL --password $JFROGINTNEW_INTEGRATION_PASSWORD --user $JFROGINTNEW_INTEGRATION_USERNAME
+        #- script: printenv
+        #- script: jfrog rt config --url $JFROGINTNEW_INTEGRATION_URL --password $JFROGINTNEW_INTEGRATION_PASSWORD --user $JFROGINTNEW_INTEGRATION_USERNAME
         - script: jfrog rt dl test-repository-local/shippable.yml
         - script: cp shippable.yml newYmlTF.$BUILD_NUMBER.shippable.yml
         - script: ls -al
@@ -127,12 +127,12 @@ jobs:
       - NOTIFY: slackNotification
     steps:
       #- IN: jfrog-appfile-OLD
-      - IN: jfrogintold
+      - IN: jFrog-cliconfig-OLD
       #- IN:tr1
       - TASK:
         - script: echo 'start runSh hello jfrogOLD printenv'
-        - script: printenv
-        - script: jfrog rt config --url $JFROGINTOLD_INTEGRATION_URL --password $JFROGINTOLD_INTEGRATION_PASSWORD --user $JFROGINTOLD_INTEGRATION_USERNAME
+        #- script: printenv
+        #- script: jfrog rt config --url $JFROGINTOLD_INTEGRATION_URL --password $JFROGINTOLD_INTEGRATION_PASSWORD --user $JFROGINTOLD_INTEGRATION_USERNAME
         - script: jfrog rt dl test-repository-local/shippable.yml
         - script: cp shippable.yml newYmlTF.$BUILD_NUMBER.shippable.yml
         - script: ls -al
