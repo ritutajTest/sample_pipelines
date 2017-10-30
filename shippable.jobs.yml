@@ -11,4 +11,4 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
-        - script: Done
+        - script: echo 'Done!'
