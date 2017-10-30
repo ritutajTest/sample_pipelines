@@ -10,4 +10,5 @@ jobs:
       - IN: aws_iam_int
       - TASK:
         - script: echo 'start runSh hello'
-        - printenv
+        - script: printenv
+        - script: Done
