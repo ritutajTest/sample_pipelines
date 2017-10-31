@@ -49,7 +49,7 @@ resources:
     seed:
       versionName: latest
       
-  - name: aws_iam_int
+  - name: aws_iam_int_intRes
     type: integration
     integration: aws_iam_int
 
