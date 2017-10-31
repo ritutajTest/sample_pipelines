@@ -7,9 +7,10 @@ jobs:
   - name: myRunShJob
     type: runSh
     steps:
-      - IN: aws_iam_int
+      - IN: aws_iam_int_intRes
       - TASK:
         - script: echo 'start runSh hello'
+        - script: printenv
 
   - name: app_deploy_job
     type: deploy
