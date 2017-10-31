@@ -67,3 +67,10 @@ resources:
     pointer:
       sourceName: "awstestcluster"
       region: "us-west-2"
+      
+   - name: op_cluster_old
+    type: cluster
+    integration: aws_iam_int    
+    pointer:
+      sourceName: "awstestcluster"
+      region: "us-west-2"
