@@ -51,7 +51,7 @@ resources:
       
   - name: aws_iam_int_intRes_gen
     type: integration
-    integration: aws_iam_int_gen
+    integration: aws_iam_int_gen1
 
   - name: app_image
     type: image
