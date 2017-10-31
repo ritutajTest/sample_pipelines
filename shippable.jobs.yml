@@ -7,7 +7,7 @@ jobs:
   - name: myRunShJob
     type: runSh
     steps:
-      - IN: aws_iam_int_intRes
+      - IN: aws_iam_int_intRes_gen
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
