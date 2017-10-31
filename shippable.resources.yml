@@ -63,7 +63,7 @@ resources:
 
   - name: op_cluster
     type: cluster
-    integration: aws_iam_int          
+    integration: aws_iam_int_gen        
     pointer:
       sourceName: "awstestcluster"
       region: "us-west-2"
