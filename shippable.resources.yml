@@ -22,3 +22,7 @@ resources:
   - name: kube_integration_resource
     type: integration
     integration: kubegenericNewGeneric
+    
+  - name:           my_kube_cluster
+    type:           cluster
+    integration:    kubegenericNewGeneric
