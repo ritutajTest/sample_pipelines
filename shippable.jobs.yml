@@ -2,24 +2,24 @@ jobs:
   - name: rituraj-1-1
     type: manifest
     steps:
-      - IN: app_image
+      - IN: box-nginx-1-1
 
   - name: myRunShJob
     type: runSh
     steps:
-      - IN: aws_iam_int_intRes_gen
+      - IN: kube_integration_resource
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
 
-  - name: app_deploy_job_generic
-    type: deploy
-    steps:
-      - IN: rituraj-1-1
-      - IN: op_cluster
+  # - name: app_deploy_job_generic
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-1-1
+  #     - IN: op_cluster
       
-  - name: app_deploy_job_old
-    type: deploy
-    steps:
-      - IN: rituraj-1-1
-      - IN: op_cluster_old
+  # - name: app_deploy_job_old
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-1-1
+  #     - IN: op_cluster_old
