@@ -14,12 +14,12 @@ jobs:
 
   - name: app_deploy_job_generic
     type: deploy
-      steps:
-        - IN: rituraj-1-1
-        - IN: my_kube_cluster
+    steps:
+      - IN: rituraj-1-1
+      - IN: my_kube_cluster
       
   - name: app_deploy_job_old
     type: deploy
-      steps:
-        - IN: rituraj-1-1
-        - IN: my_kube_cluster_old
+    steps:
+      - IN: rituraj-1-1
+      - IN: my_kube_cluster_old
