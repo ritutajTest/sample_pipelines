@@ -23,6 +23,10 @@ resources:
     type: integration
     integration: kubegenericNewGeneric
     
+  - name:           my_kube_cluster_old
+    type:           cluster
+    integration:    kubOld
+    
   - name:           my_kube_cluster
     type:           cluster
     integration:    kubegenericNewGeneric
