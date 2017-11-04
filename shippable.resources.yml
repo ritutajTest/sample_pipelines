@@ -25,7 +25,7 @@ resources:
     
   - name:           my_kube_cluster_old
     type:           cluster
-    integration:    kubOld
+    integration:    kubeOldInt
     
   - name:           my_kube_cluster
     type:           cluster
