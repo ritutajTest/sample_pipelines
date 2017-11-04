@@ -12,14 +12,14 @@ jobs:
         - script: echo 'start runSh hello'
         - script: printenv
 
-  # - name: app_deploy_job_generic
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-1-1
-  #     - IN: op_cluster
+  - name: app_deploy_job_generic
+    type: deploy
+      steps:
+        - IN: rituraj-1-1
+        - IN: my_kube_cluster
       
-  # - name: app_deploy_job_old
-  #   type: deploy
-  #   steps:
-  #     - IN: rituraj-1-1
-  #     - IN: op_cluster_old
+  - name: app_deploy_job_old
+    type: deploy
+      steps:
+        - IN: rituraj-1-1
+        - IN: my_kube_cluster_old
