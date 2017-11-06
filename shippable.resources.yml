@@ -32,6 +32,6 @@ resources:
     integration:    kubegenericNewGeneric
     pointer:
       bastionHost:
-        address: 1.2.3.4
-        user: shippable
+        #address: 1.2.3.4
+        #user: shippable
         #keyIntegration: my_key_integration # Can be an sshKey or pemKey subscription integration
