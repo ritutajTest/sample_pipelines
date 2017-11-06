@@ -19,9 +19,9 @@ resources:
     seed:
       versionName: latest
 
-  - name: kube_integration_resource
+  - name: kube_integration_resource_new
     type: integration
-    integration: kubegenericNewGeneric
+    integration: newGenBast
     
   - name: my_key_integration
     type: integration
