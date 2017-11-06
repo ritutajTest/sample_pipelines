@@ -7,7 +7,7 @@ jobs:
   - name: myRunShJob
     type: runSh
     steps:
-      - IN: kube_integration_resource
+      - IN: kube_integration_resource_new
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
