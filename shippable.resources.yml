@@ -4,7 +4,7 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "library/redis"
       isPull: false
     seed:
       versionName: latest
@@ -35,7 +35,7 @@ resources:
     type:           cluster
     integration:    newGenBast
     pointer:
-      bastionHost:
+      bastionHost1:
         address: 54.202.103.149
         user: ubuntu
         keyIntegration: my_key_integration # Can be an sshKey or pemKey subscription integration
