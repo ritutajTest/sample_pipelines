@@ -17,10 +17,11 @@ jobs:
     steps:
       - IN: rituraj-1-1
       - IN: my_kube_cluster
+      - IN: my_key_integration
       
   - name: app_deploy_job_old
     type: deploy
     steps:
       - IN: rituraj-1-1
       - IN: my_kube_cluster_old
-      - IN: my_key_integration
+      #- IN: my_key_integration
