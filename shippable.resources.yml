@@ -29,7 +29,7 @@ resources:
     
   - name:           my_kube_cluster_old
     type:           cluster
-    integration:    kubeOldInt
+    integration:    kubeOldMaster
     
   - name:           my_kube_cluster
     type:           cluster
