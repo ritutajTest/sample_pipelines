@@ -27,7 +27,7 @@ resources:
     type: integration
     integration: my_key_integration
     
-  - name:           my_kube_cluster_old
+  - name:           my_kube_cluster_old-1
     type:           cluster
     integration:    kubeOldMaster
     
