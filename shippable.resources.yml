@@ -33,7 +33,7 @@ resources:
     
   - name:           my_kube_cluster
     type:           cluster
-    integration:    kubegenericNewGeneric
+    integration:    newGenBast
     pointer:
       bastionHost:
         address: 1.2.3.4
