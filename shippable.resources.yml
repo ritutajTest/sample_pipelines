@@ -31,6 +31,6 @@ resources:
     type:           cluster
     integration:    kubegenericNewGeneric
     pointer:
-      bastionHost:
+      #bastionHost:
         #address: 1.2.3.4
         #keyIntegration: my_key_integration # Can be an sshKey or pemKey subscription integration
