@@ -37,5 +37,5 @@ resources:
     pointer:
       bastionHost:
         #address: 54.202.103.149
-        user: ubuntu
-        keyIntegration: my_key_integration # Can be an sshKey or pemKey subscription integration
+        #user: ubuntu
+        #keyIntegration: my_key_integration # Can be an sshKey or pemKey subscription integration
