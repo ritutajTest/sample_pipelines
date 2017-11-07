@@ -29,4 +29,4 @@ jobs:
     type: provision
     steps:
       - IN: kube-service-lb-bash
-      #- IN: my_key_integration_rt
+      - IN: my_key_integration_rt
