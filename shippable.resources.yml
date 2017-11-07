@@ -23,9 +23,9 @@ resources:
     type: integration
     integration: kubeGen
     
-  - name: my_key_integration
+  - name: my_key_integration_res
     type: integration
-    integration: my_key_integration
+    integration: my key integration
     
   - name:           my_kube_cluster_old-1-bash
     type:           cluster
@@ -38,4 +38,4 @@ resources:
       bastionHost:
         address: 54.190.195.215
         user: ubuntu
-        keyIntegration: my_key_integration # Can be an sshKey or pemKey subscription integration
+        keyIntegration: my key integration # Can be an sshKey or pemKey subscription integration
