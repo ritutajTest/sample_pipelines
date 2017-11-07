@@ -17,7 +17,7 @@ jobs:
     steps:
       - IN: rituraj-1-1
       - IN: my_kube_cluster
-      - IN: my key integration
+      - IN: my_key_integration_rt
       
   - name: app_deploy_job_old_bash
     type: deploy
