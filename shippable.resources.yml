@@ -29,7 +29,7 @@ resources:
     
   - name:           my_kube_cluster_old-1-bash
     type:           cluster
-    integration:    kubeOldBash
+    integration:    kubeOldMaster
     
   - name:           my_kube_cluster
     type:           cluster
