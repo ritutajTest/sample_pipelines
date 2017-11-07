@@ -39,3 +39,17 @@ resources:
         address: 54.190.195.215
         user: ubuntu
         keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
+
+  - name: kube-service-lb
+    type: loadBalancer
+    integration: kubeGen
+    pointer:
+      sourceName: "xyz-kube-local"
+      method: ClusterIP
+    version:
+      ports:
+        - name: kube-local-port  # Required for multiple ports, must be a DNS_LABEL
+          protocol: TCP  # Kubernetes default: TCP
+          port: 8001     # Required.
+          targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
+          # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
