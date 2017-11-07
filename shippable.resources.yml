@@ -48,7 +48,28 @@ resources:
         address: 54.190.195.215
         user: ubuntu
         keyIntegration: my_key_integration_rt
-      sourceName: "xyz-kube-local-gen-bash-old"
+      sourceName: "xyz-kube-local-gen-bash-old-11"
+      method: ClusterIP
+      clusterName: "small-cluster" # The namespace for the service
+      region: "europe-west1-b"
+      namespace: "temp-namespace-f"
+    version:
+      ports:
+        - name: kube-local-port  # Required for multiple ports, must be a DNS_LABEL
+          protocol: TCP  # Kubernetes default: TCP
+          port: 8001     # Required.
+          targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
+          # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
+
+  - name: kube-service-lb-bash-new
+    type: loadBalancer
+    integration: kubeGen
+    pointer:
+      bastionHost1:
+        address: 54.190.195.215
+        user: ubuntu
+        keyIntegration: my_key_integration_rt
+      sourceName: "xyz-kube-local-gen-bash-gen-11"
       method: ClusterIP
       clusterName: "small-cluster" # The namespace for the service
       region: "europe-west1-b"
