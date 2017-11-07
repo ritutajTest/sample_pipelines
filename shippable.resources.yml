@@ -25,7 +25,7 @@ resources:
     
   - name: my_key_integration_rt
     type: integration
-    integration: my key integration
+    integration: my_key_integration
     
   - name:           my_kube_cluster_old-1-bash
     type:           cluster
