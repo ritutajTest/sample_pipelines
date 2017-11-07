@@ -11,8 +11,8 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
-
-  - name: app_deploy_job_generic_new
+     
+  - name: app_deploy_job_generic_new_bash
     type: deploy
     steps:
       - IN: rituraj-1-1
