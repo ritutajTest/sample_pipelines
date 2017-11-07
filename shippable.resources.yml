@@ -42,7 +42,7 @@ resources:
 
   - name: kube-service-lb
     type: loadBalancer
-    integration: kubeOldMaster
+    integration: kubeGen
     pointer:
       sourceName: "xyz-kube-local"
       method: ClusterIP
