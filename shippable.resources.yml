@@ -50,6 +50,9 @@ resources:
         keyIntegration: my_key_integration_rt
       sourceName: "xyz-kube-local-gen-bash"
       method: ClusterIP
+      clusterName: "small-cluster" # The namespace for the service
+      region: "europe-west1-b"
+      namespace: "temp-namespace-f"
     version:
       ports:
         - name: kube-local-port  # Required for multiple ports, must be a DNS_LABEL
