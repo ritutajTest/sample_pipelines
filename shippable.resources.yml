@@ -40,9 +40,9 @@ resources:
         user: ubuntu
         keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
 
-  - name: kube-service-lb-bash-new
+  - name: kube-service-lb-bash-old
     type: loadBalancer
-    integration: kubeGen
+    integration: kubeOldMaster
     pointer:
       bastionHost:
         address: 54.190.195.215
