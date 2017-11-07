@@ -48,7 +48,7 @@ resources:
         address: 54.190.195.215
         user: ubuntu
         keyIntegration: my_key_integration_rt
-      sourceName: "xyz-kube-local-gen-bash-new"
+      sourceName: "xyz-kube-local-gen-bash-old"
       method: ClusterIP
       clusterName: "small-cluster" # The namespace for the service
       region: "europe-west1-b"
