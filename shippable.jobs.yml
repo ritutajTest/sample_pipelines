@@ -12,12 +12,12 @@ jobs:
         - script: echo 'start runSh hello'
         - script: printenv
 
-  #- name: app_deploy_job_generic_new
-    #type: deploy
-    #steps:
-      #- IN: rituraj-1-1
-      #- IN: my_kube_cluster
-      #- IN: my_key_integration_rt
+  - name: app_deploy_job_generic_new
+    type: deploy
+    steps:
+      - IN: rituraj-1-1
+      - IN: my_kube_cluster
+      - IN: my_key_integration_rt
       
   - name: app_deploy_job_old_bash
     type: deploy
