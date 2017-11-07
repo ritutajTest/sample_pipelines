@@ -44,7 +44,7 @@ resources:
     type: loadBalancer
     integration: kubeGen
     pointer:
-      sourceName: "xyz-kube-local"
+      sourceName: "xyz-kube-local-gen"
       method: ClusterIP
     version:
       ports:
