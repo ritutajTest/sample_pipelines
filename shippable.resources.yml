@@ -23,7 +23,7 @@ resources:
     type: integration
     integration: kubeGen
     
-  - name: my_key_integration_res
+  - name: my key integration
     type: integration
     integration: my key integration
     
