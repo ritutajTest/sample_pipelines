@@ -28,5 +28,5 @@ jobs:
   - name: deployService-2
     type: provision
     steps:
-      - IN: kube-service-lb-bash-new
+      - IN: kube-service-lb-bash-old
       - IN: my_key_integration_rt
