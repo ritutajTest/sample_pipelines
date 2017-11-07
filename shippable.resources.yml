@@ -40,7 +40,7 @@ resources:
         user: ubuntu
         keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
 
-  - name: kube-service-lb-bash
+  - name: kube-service-lb-bash-new
     type: loadBalancer
     integration: kubeGen
     pointer:
@@ -48,7 +48,7 @@ resources:
         address: 54.190.195.215
         user: ubuntu
         keyIntegration: my_key_integration_rt
-      sourceName: "xyz-kube-local-gen-bash"
+      sourceName: "xyz-kube-local-gen-bash-new"
       method: ClusterIP
       clusterName: "small-cluster" # The namespace for the service
       region: "europe-west1-b"
