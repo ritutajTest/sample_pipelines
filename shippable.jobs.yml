@@ -24,3 +24,9 @@ jobs:
     steps:
       - IN: rituraj-1-1
       - IN: my_kube_cluster_old-1-bash
+
+  - name: deployService-2
+    type: provision
+    steps:
+      - IN: kube-service-lb
+      #- IN: key_int
