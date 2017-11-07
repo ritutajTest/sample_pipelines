@@ -42,13 +42,13 @@ resources:
 
   - name: kube-service-lb-bash-old
     type: loadBalancer
-    integration: kubeOldMaster
+    integration: kubeOldBash
     pointer:
       bastionHost:
         address: 54.190.195.215
         user: ubuntu
         keyIntegration: my_key_integration_rt
-      sourceName: "xyz-kube-local-gen-bash-old-11"
+      sourceName: "xyz-kube-local-gen-bash-old-12-bash"
       method: ClusterIP
       clusterName: "small-cluster" # The namespace for the service
       region: "europe-west1-b"
@@ -65,11 +65,11 @@ resources:
     type: loadBalancer
     integration: kubeGen
     pointer:
-      bastionHost1:
+      bastionHost:
         address: 54.190.195.215
         user: ubuntu
         keyIntegration: my_key_integration_rt
-      sourceName: "xyz-kube-local-gen-bash-gen-11"
+      sourceName: "xyz-kube-local-gen-bash-gen-12-bash"
       method: ClusterIP
       clusterName: "small-cluster" # The namespace for the service
       region: "europe-west1-b"
