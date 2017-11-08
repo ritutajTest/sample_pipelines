@@ -1,35 +1,35 @@
 jobs:
-  - name: rituraj-1-1
-    type: manifest
-    steps:
-      - IN: box-nginx-1-1
+  # - name: rituraj-1-1
+  #   type: manifest
+  #   steps:
+  #     - IN: box-nginx-1-1
 
   - name: myRunShJob
     type: runSh
     steps:
-      - IN: kube_integration_resource_new
+      #- IN: kube_integration_resource_new
       - IN: kube_integration_cliConfig
       - TASK:
         - printenv
         - script: echo 'start runSh hello'
         - script: kubectl version
      
-  - name: app_deploy_job_generic_new_bash
-    type: deploy
-    steps:
-      - IN: rituraj-1-1
-      - IN: my_kube_cluster
-      - IN: my_key_integration_rt
+  # - name: app_deploy_job_generic_new_bash
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-1-1
+  #     - IN: my_kube_cluster
+  #     - IN: my_key_integration_rt
       
-  - name: app_deploy_job_old_bash
-    type: deploy
-    steps:
-      - IN: rituraj-1-1
-      - IN: my_kube_cluster_old-1-bash
+  # - name: app_deploy_job_old_bash
+  #   type: deploy
+  #   steps:
+  #     - IN: rituraj-1-1
+  #     - IN: my_kube_cluster_old-1-bash
 
-  - name: deployService-2
-    type: provision
-    steps:
-      - IN: kube-service-lb-bash-old
-      #- IN: kube-service-lb-bash-new
-      - IN: my_key_integration_rt
+  # - name: deployService-2
+  #   type: provision
+  #   steps:
+  #     - IN: kube-service-lb-bash-old
+  #     #- IN: kube-service-lb-bash-new
+  #     - IN: my_key_integration_rt
