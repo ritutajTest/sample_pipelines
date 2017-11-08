@@ -11,7 +11,7 @@ jobs:
       - IN: kube_integration_cliConfig
       - TASK:
         - script: echo 'start runSh hello'
-        #- script: sudo kubectl get deployments --kube
+        - script: kubectl get nodes
      
   - name: app_deploy_job_generic_new_bash
     type: deploy
