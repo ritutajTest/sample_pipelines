@@ -35,14 +35,14 @@ resources:
   #   type:           cluster
   #   integration:    kubeOldMaster
     
-  # - name:           my_kube_cluster
-  #   type:           cluster
-  #   integration:    kubeGen
-  #   pointer:
-  #     bastionHost:
-  #       address: 54.190.195.215
-  #       user: ubuntu
-  #       keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
+  - name:           my_kube_cluster
+    type:           cluster
+    integration:    kubeGen
+    pointer:
+     bastionHost1:
+       address: 54.190.195.215
+       user: ubuntu
+       keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
 
   # - name: kube-service-lb-bash-old
   #   type: loadBalancer
