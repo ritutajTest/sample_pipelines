@@ -1,87 +1,87 @@
 resources:
 
-  - name: box-nginx-1-1
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: latest
+  # - name: box-nginx-1-1
+  #   type: image
+  #   integration: dockerhub
+  #   pointer:
+  #     sourceName: "library/nginx"
+  #     isPull: false
+  #   seed:
+  #     versionName: latest
 
-  - name: box-nginx-1-1-1
-    type: image
-    integration: dockerhub
-    flags: flg2
-    pointer:
-      sourceName: "library/nginx"
-      isPull: false
-    seed:
-      versionName: latest
+  # - name: box-nginx-1-1-1
+  #   type: image
+  #   integration: dockerhub
+  #   flags: flg2
+  #   pointer:
+  #     sourceName: "library/nginx"
+  #     isPull: false
+  #   seed:
+  #     versionName: latest
 
-  - name: kube_integration_resource_new
-    type: integration
-    integration: kubeGen
+  # - name: kube_integration_resource_new
+  #   type: integration
+  #   integration: kubeGen
     
   - name: kube_integration_cliConfig
     type: cliConfig
     integration: kubeGen
     
-  - name: my_key_integration_rt
-    type: integration
-    integration: my key integration
+  # - name: my_key_integration_rt
+  #   type: integration
+  #   integration: my key integration
     
-  - name:           my_kube_cluster_old-1-bash
-    type:           cluster
-    integration:    kubeOldMaster
+  # - name:           my_kube_cluster_old-1-bash
+  #   type:           cluster
+  #   integration:    kubeOldMaster
     
-  - name:           my_kube_cluster
-    type:           cluster
-    integration:    kubeGen
-    pointer:
-      bastionHost:
-        address: 54.190.195.215
-        user: ubuntu
-        keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
+  # - name:           my_kube_cluster
+  #   type:           cluster
+  #   integration:    kubeGen
+  #   pointer:
+  #     bastionHost:
+  #       address: 54.190.195.215
+  #       user: ubuntu
+  #       keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
 
-  - name: kube-service-lb-bash-old
-    type: loadBalancer
-    integration: kubeOldBash
-    pointer:
-      bastionHost:
-        address: 54.190.195.215
-        user: ubuntu
-        keyIntegration: my_key_integration_rt
-      sourceName: "xyz-kube-local-gen-bash-old-13-bash"
-      method: ClusterIP
-      clusterName: "small-cluster" # The namespace for the service
-      region: "europe-west1-b"
-      namespace: "temp-namespace-f"
-    version:
-      ports:
-        - name: kube-local-port  # Required for multiple ports, must be a DNS_LABEL
-          protocol: TCP  # Kubernetes default: TCP
-          port: 8001     # Required.
-          targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
-          # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
+  # - name: kube-service-lb-bash-old
+  #   type: loadBalancer
+  #   integration: kubeOldBash
+  #   pointer:
+  #     bastionHost:
+  #       address: 54.190.195.215
+  #       user: ubuntu
+  #       keyIntegration: my_key_integration_rt
+  #     sourceName: "xyz-kube-local-gen-bash-old-13-bash"
+  #     method: ClusterIP
+  #     clusterName: "small-cluster" # The namespace for the service
+  #     region: "europe-west1-b"
+  #     namespace: "temp-namespace-f"
+  #   version:
+  #     ports:
+  #       - name: kube-local-port  # Required for multiple ports, must be a DNS_LABEL
+  #         protocol: TCP  # Kubernetes default: TCP
+  #         port: 8001     # Required.
+  #         targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
+  #         # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
 
-  - name: kube-service-lb-bash-new
-    type: loadBalancer
-    integration: kubeGen
-    pointer:
-      bastionHost:
-        address: 54.190.195.215
-        user: ubuntu
-        keyIntegration: my_key_integration_rt
-      sourceName: "xyz-kube-local-gen-bash-gen-12-bash"
-      method: ClusterIP
-      clusterName: "small-cluster" # The namespace for the service
-      region: "europe-west1-b"
-      namespace: "temp-namespace-f"
-    version:
-      ports:
-        - name: kube-local-port  # Required for multiple ports, must be a DNS_LABEL
-          protocol: TCP  # Kubernetes default: TCP
-          port: 8001     # Required.
-          targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
-          # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
+  # - name: kube-service-lb-bash-new
+  #   type: loadBalancer
+  #   integration: kubeGen
+  #   pointer:
+  #     bastionHost:
+  #       address: 54.190.195.215
+  #       user: ubuntu
+  #       keyIntegration: my_key_integration_rt
+  #     sourceName: "xyz-kube-local-gen-bash-gen-12-bash"
+  #     method: ClusterIP
+  #     clusterName: "small-cluster" # The namespace for the service
+  #     region: "europe-west1-b"
+  #     namespace: "temp-namespace-f"
+  #   version:
+  #     ports:
+  #       - name: kube-local-port  # Required for multiple ports, must be a DNS_LABEL
+  #         protocol: TCP  # Kubernetes default: TCP
+  #         port: 8001     # Required.
+  #         targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
+  #         # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
