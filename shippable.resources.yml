@@ -25,7 +25,7 @@ resources:
     
   - name: kube_integration_cliConfig
     type: cliConfig
-    integration: kubeOldMaster
+    integration: kubeGen
     
   - name: my_key_integration_rt
     type: integration
