@@ -7,9 +7,10 @@ jobs:
   - name: myRunShJob
     type: runSh
     steps:
-      #- IN: kube_integration_resource_new
+      - IN: kube_integration_resource_new
       - IN: kube_integration_cliConfig
       - TASK:
+        - printenv
         - script: echo 'start runSh hello'
         - script: kubectl version
      
