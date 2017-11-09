@@ -1,13 +1,13 @@
 resources:
 
-  # - name: box-nginx-1-1
-  #   type: image
-  #   integration: dockerhub
-  #   pointer:
-  #     sourceName: "library/nginx"
-  #     isPull: false
-  #   seed:
-  #     versionName: latest
+  - name: box-nginx-1-1
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
 
   # - name: box-nginx-1-1-1
   #   type: image
@@ -23,9 +23,9 @@ resources:
   #   type: integration
   #   integration: kubeGen
     
-  - name: kube_integration_cliConfig
-    type: cliConfig
-    integration: kubeGen
+  # - name: kube_integration_cliConfig
+  #   type: cliConfig
+  #   integration: kubeGen
     
   # - name: my_key_integration_rt
   #   type: integration
