@@ -8,6 +8,11 @@ resources:
       isPull: false
     seed:
       versionName: latest
+    
+  - name: kube_integration_cliConfig
+     type: cliConfig
+     integration: kubeGen
+    
 
   # - name: box-nginx-1-1-1
   #   type: image
@@ -22,11 +27,7 @@ resources:
   # - name: kube_integration_resource_new
   #   type: integration
   #   integration: kubeGen
-    
-  # - name: kube_integration_cliConfig
-  #   type: cliConfig
-  #   integration: kubeGen
-    
+
   # - name: my_key_integration_rt
   #   type: integration
   #   integration: my key integration
