@@ -10,8 +10,8 @@ resources:
       versionName: latest
     
   - name: kube_integration_cliConfig
-     type: cliConfig
-     integration: kubeGen
+      type: cliConfig
+      integration: kubeGen
     
 
   # - name: box-nginx-1-1-1
