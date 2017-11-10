@@ -12,7 +12,8 @@ jobs:
       - TASK:
         - printenv
         - script: echo 'start runSh hello'
-        - script: kubectl version
+        - script: sleep 1m
+        #- script: kubectl version
      
   - name: app_deploy_job_generic_new_bash
     type: deploy
