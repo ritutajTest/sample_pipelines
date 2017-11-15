@@ -3,7 +3,7 @@ jobs:
     type: runSh
     steps:
       - IN: azureKeysIntResource
-      - IN: azureCliConfig
+      - IN: azureKeysCLIConfig
       - TASK:
         - script: echo 'start runSh hello'
         #- script: printenv
