@@ -9,9 +9,9 @@ resources:
     seed:
       versionName: latest
 
-  # - name: azureKeysCLIConfig
-  #   type: cliConfig
-  #   integration: azureKeysAccInt
+  - name: azureKeysCLIConfig
+    type: cliConfig
+    integration: azureKeysAccInt
 
   - name: azureKeysIntResource
     type: integration
