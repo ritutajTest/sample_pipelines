@@ -40,7 +40,7 @@ resources:
     type:           cluster
     integration:    kubeGen
     pointer:
-     bastionHost1:
+     bastionHost:
        address: 54.200.180.214
        user: ubuntu
        keyIntegration: my_key_integration_rt # Can be an sshKey or pemKey subscription integration
