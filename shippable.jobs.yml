@@ -12,7 +12,7 @@ jobs:
       - TASK:
         - printenv
         - script: echo 'start runSh hello'
-        - script: sleep 1m
+        #- script: sleep 1m
         #- script: kubectl version
      
   - name: app_deploy_job_generic_new_bash
@@ -20,7 +20,7 @@ jobs:
     steps:
       - IN: rituraj-1-1
       - IN: my_kube_cluster
-      #- IN: my_key_integration_rt
+      - IN: my_key_integration_rt
       
   # - name: app_deploy_job_old_bash
   #   type: deploy
