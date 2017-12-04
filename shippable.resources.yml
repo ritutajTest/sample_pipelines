@@ -17,4 +17,4 @@ resources:
       branches:
         only:
           - master
-      buildOnTagPush: false
+      buildOnTagPush: true
