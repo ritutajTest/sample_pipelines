@@ -15,4 +15,4 @@ resources:
     pointer:
       sourceName: "Riturajcse/sample_php"
       branch: master
-      buildOnPullRequest: true
+      buildOnTagPush: true
