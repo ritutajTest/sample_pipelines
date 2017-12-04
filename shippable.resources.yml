@@ -16,3 +16,4 @@ resources:
       sourceName: "Riturajcse/sample_php"
       branch: master
       buildOnTagPush: true
+      buildOnRelease: true
