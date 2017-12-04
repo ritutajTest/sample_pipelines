@@ -20,4 +20,4 @@ resources:
           - hello
       tags:
         only:
-          - myTag
+          - myTag7
