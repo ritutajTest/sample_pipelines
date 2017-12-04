@@ -15,7 +15,7 @@ resources:
     pointer:
       sourceName: "Riturajcse/sample_php"
       branches:
-        only:
-          - hello
+        except:
+          - master
       buildOnTagPush: true
       buildOnRelease: true
