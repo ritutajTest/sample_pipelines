@@ -14,5 +14,5 @@ resources:
     integration: github
     pointer:
       sourceName: "Riturajcse/sample_php"
-      #branch: master
+      branch: master
       buildOnTagPush: true
