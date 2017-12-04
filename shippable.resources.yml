@@ -14,10 +14,5 @@ resources:
     integration: github
     pointer:
       sourceName: "Riturajcse/sample_php"
+      branch: master
       buildOnTagPush: true
-      branches:
-        only:
-          - hello
-      tags:
-        only:
-          - myTag7
