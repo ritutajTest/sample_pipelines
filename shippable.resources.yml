@@ -15,7 +15,10 @@ resources:
     pointer:
       sourceName: "Riturajcse/sample_php"
       branches:
-        except:
+        only:
           - master
+      tags:
+        only:
+          - myTag15
       buildOnTagPush: true
       buildOnRelease: true
