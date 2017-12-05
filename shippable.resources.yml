@@ -17,10 +17,7 @@ resources:
       branches:
         only:
           - master
-      tags:
-        only:
-          - myTag15
-      #buildOnTagPush: true
-      #buildOnRelease: true
+      buildOnTagPush: true
+      buildOnRelease: true
       buildOnPullRequest: true
       #buildOnPullRequestClose: true
