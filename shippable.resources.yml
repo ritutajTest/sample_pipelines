@@ -20,7 +20,7 @@ resources:
       tags:
         only:
           - myTag15
-      buildOnTagPush: true
-      buildOnRelease: true
-      #buildOnPullRequest: true
-      buildOnPullRequestClose: true
+      #buildOnTagPush: true
+      #buildOnRelease: true
+      buildOnPullRequest: true
+      #buildOnPullRequestClose: true
