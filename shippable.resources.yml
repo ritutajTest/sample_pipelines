@@ -14,10 +14,8 @@ resources:
     integration: github
     pointer:
       sourceName: "Riturajcse/sample_php"
-      branches:
-        only:
-          - master
+      branch: master
       buildOnTagPush: true
       buildOnRelease: true
-      buildOnPullRequest: true
+      #buildOnPullRequest: true
       #buildOnPullRequestClose: true
