@@ -20,7 +20,7 @@ resources:
           - hello
       tags:
         only:
-          - myTag000
+          - myTag0009
       buildOnTagPush: true
       buildOnRelease: true
       #buildOnPullRequest: true
