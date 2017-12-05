@@ -16,7 +16,7 @@ resources:
       sourceName: "Riturajcse/sample_php"
       branches:
         only:
-          - master
+          - hello
       tags:
         only:
           - myTag15
