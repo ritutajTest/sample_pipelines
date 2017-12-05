@@ -16,11 +16,11 @@ resources:
       sourceName: "Riturajcse/sample_php"
       branches:
         only:
-          - hello
+          - master
       tags:
         only:
           - myTag15
       buildOnTagPush: true
       buildOnRelease: true
       buildOnPullRequest: true
-      buildOnPullRequestClose: true
+      #buildOnPullRequestClose: true
