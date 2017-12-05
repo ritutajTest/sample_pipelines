@@ -16,9 +16,11 @@ resources:
       sourceName: "Riturajcse/sample_php"
       #branch: master
       branches:
-        except: hello
+        except:
+          - hello
       tags:
-        except: myTag000
+        except:
+          - myTag000
       buildOnTagPush: true
       buildOnRelease: true
       #buildOnPullRequest: true
