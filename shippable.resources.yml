@@ -22,5 +22,5 @@ resources:
           - myTag15
       buildOnTagPush: true
       buildOnRelease: true
-      buildOnPullRequest: true
-      buildOnPullRequestClose: true
+      #buildOnPullRequest: true
+      #buildOnPullRequestClose: true
