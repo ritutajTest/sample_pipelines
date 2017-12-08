@@ -4,7 +4,7 @@ jobs:
     runtime:
       architecture: x86_64
       os: CentOS_7
-      container: true
+      container: false
     flags:
       - x86-64
       - centos_7
