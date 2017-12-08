@@ -14,6 +14,6 @@ jobs:
       - TASK:
           name: shipctl-should-work
           script:
-            - export OS_VERSION=$(lsb_release -a | head -3 | tail -1 | awk '{print $2}')
-            - echo "OS_version - '$OS_VERSION'"
+            - export OS_VERSION=$(rpm --eval '%{centos_ver}')
+            - test "$OS_VERSION" == "7"
             - shipctl retry echo "it works"
