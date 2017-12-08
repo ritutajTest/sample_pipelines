@@ -15,5 +15,5 @@ jobs:
           name: shipctl-should-work
           script:
             - export OS_VERSION=$(rpm --eval '%{centos_ver}')
-            - test "$OS_VERSION" == "7"
+            - test "$OS_VERSION" == "8"
             - shipctl retry echo "it works"
