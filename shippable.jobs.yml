@@ -7,7 +7,7 @@ jobs:
       container: true
     flags:
       - x86-64
-      - centos_7
+      - centos_6
     steps:
       #- IN: x86-64-trigger
       #- IN: ubuntu-16-04-trigger
