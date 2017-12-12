@@ -3,11 +3,11 @@ jobs:
     type: runSh
     runtime:
       architecture: x86_64
-      os: CentOS_7
+      os: CentOS_6
       container: true
     flags:
       - x86-64
-      - centos_6
+      - centos_7
     steps:
       #- IN: x86-64-trigger
       #- IN: ubuntu-16-04-trigger
