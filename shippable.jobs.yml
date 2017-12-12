@@ -3,7 +3,7 @@ jobs:
     type: runSh
     runtime:
       architecture: x86_64
-      os: CentOS_7
+      os: CentOS_6
       container: true
     flags:
       - x86-64
