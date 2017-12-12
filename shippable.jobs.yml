@@ -2,7 +2,7 @@ jobs:
   - name: x86-64-centos_7-container-shipctl
     type: runSh
     runtime:
-      architecture: x86_64
+      architecture: x86_642
       os: CentOS_7
       container: true
     flags:
