@@ -8,6 +8,7 @@ jobs:
     type: runSh
     steps:
       - IN: gitRepo-resource
+        showBuildStatus: true
       - IN: rituraj-1-1
       - TASK:
         - script: echo 'start runSh hello'
