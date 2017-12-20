@@ -1,21 +1,17 @@
 jobs:
-  - name: x86-64-centos_7-container-shipctl
+  - name: x86-64-ubuntu-container-shipctl
     type: runSh
     runtime:
       architecture: x86_64
-      os: CentOS_7
+      os: Ubuntu_16.04
       container: true
     flags:
       - x86-64
-      - centos_7
+      - ubuntu16
     steps:
-      #- IN: x86-64-trigger
-      #- IN: ubuntu-16-04-trigger
       - TASK:
           name: shipctl-should-work
-          runtime:
-            container: false
           script:
-            - export OS_VERSION=$(lsb_release -a | head -3 | tail -1 | awk '{print $2}')
-            - test "$OS_VERSION" == "14.04"
+            - echo "hello"
+            - echo "hello all"
             - shipctl retry echo "it works"
