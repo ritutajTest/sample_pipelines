@@ -14,7 +14,7 @@ jobs:
         - script: echo 'start runSh hello'
         - script: printenv
     on_start:
-      script:
+      - script:
         - echo "Hello from on_start"
         - echo ":("
 
