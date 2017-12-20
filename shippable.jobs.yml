@@ -10,8 +10,8 @@ jobs:
       - ubuntu16
     steps:
       - TASK:
-          - name: shipctl-should-work
-          - script:
+          name: shipctl-should-work
+          script:
             - echo "hello"
             - echo "hello all"
             - shipctl retry echo "it works"
