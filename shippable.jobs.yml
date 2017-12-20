@@ -17,8 +17,8 @@ jobs:
             - shipctl retry echo "it works"
     on_success:
       #script:
-      - echo "Hello from on_success"
-      - echo ":)"
+      echo "Hello from on_success"
+      echo ":)"
 
     on_failure:
       script:
