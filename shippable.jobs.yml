@@ -13,4 +13,28 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
+    on_start:
+      script:
+        - echo "Hello from on_start"
+        - echo ":("
+
+    on_success:
+      script:
+        - echo "Hello from on_success"
+        - echo ":)"
+
+    on_failure:
+      script:
+        - echo "Hello from on_failure"
+        - echo ":("
+
+    on_cancel:
+      script:
+        - echo "Hello from on_cancel"
+        - echo ":("
+
+    always:
+      script:
+        - echo "Hello from always"
+        - echo ":|"
         
