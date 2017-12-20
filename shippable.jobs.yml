@@ -15,3 +15,14 @@ jobs:
             - echo "hello"
             - echo "hello all"
             - shipctl retry echo "it works"
+    on_success:
+      - script: echo "Hello from on_success"
+      - script: echo ":)"
+
+    on_failure:
+      - script: echo "Hello from on_failure"
+      - script: echo ":("
+
+    always:
+      - script: echo "Hello from always"
+      - script: echo ":|"
