@@ -33,5 +33,5 @@ jobs:
       - script: echo ":)"
 
     always:
-      - script: echo "Hello from always"
-      - script: echo ":|"
+      script: echo "Hello from always"
+      #- script: echo ":|"
