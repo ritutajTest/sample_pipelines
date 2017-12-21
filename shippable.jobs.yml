@@ -35,4 +35,4 @@ jobs:
     always:
       script:
         - echo "Hello from always123"
-      #- script: echo ":|"
+        - echo ":|"
