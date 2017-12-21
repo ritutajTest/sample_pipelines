@@ -16,26 +16,21 @@ jobs:
             - echo "hello all"
             - shipctl retry echo "it works"
     on_start:
-      script:
-        - echo "Hello from on_start123"
-        - echo ":("
+      - script: echo "Hello from on_start"
+      - script: echo ":)"
 
     on_success:
-      script:
-        - echo "Hello from on_success123"
-        - echo ":)"
+      - script: echo "Hello from on_success"
+      - script: echo ":)"
 
     on_failure:
-      script:
-        - echo "Hello from on_failure123"
-        - echo ":("
+      - script: echo "Hello from on_failure"
+      - script: echo ":("
 
     on_cancel:
-      script:
-        - echo "Hello from on_cancel123"
-        - echo ":("
+      - script: echo "Hello from on_cancel"
+      - script: echo ":)"
 
     always:
-      script:
-        - echo "Hello from always456"
-        - echo ":|"
+      - script: echo "Hello from always"
+      - script: echo ":|"
