@@ -24,8 +24,9 @@ jobs:
       - script: echo ":)"
 
     on_failure:
-      - script: echo "Hello from on_failure"
-      - script: echo ":("
+      script:
+        - echo "Hello from on_failure"
+        - echo ":("
 
     on_cancel:
       - script: echo "Hello from on_cancel"
