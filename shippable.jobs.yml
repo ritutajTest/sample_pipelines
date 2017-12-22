@@ -17,7 +17,7 @@ jobs:
       - script: echo "Hello from on_success"
       - NOTIFY:
         - slack1
-        #- slack2
+        - slack2
       #- NOTIFY: slack2
 
     on_failure:
