@@ -15,9 +15,8 @@ jobs:
         - script: printenv
     on_success:
       - script: echo "Hello from on_success"
-      - script: echo ":)"
       - NOTIFY: email
-      - NOTIFY: slack
+      #- NOTIFY: slack
 
     on_failure:
       - script: echo "Hello from on_failure"
@@ -27,7 +26,7 @@ jobs:
 
     always:
       - script: echo "Hello from always"
-      - script: echo ":|"
-      - NOTIFY: email
+      #- script: echo ":|"
+      #- NOTIFY: email
       - NOTIFY: slack
         
