@@ -23,7 +23,7 @@ resources:
       recipients:
         -  "rituraj@shippable.com"
 
-  - name: slack
+  - name: slack1
     type: notification
     integration: slack
     pointer:
