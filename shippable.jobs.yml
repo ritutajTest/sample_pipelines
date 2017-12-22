@@ -15,7 +15,8 @@ jobs:
         - script: printenv
     on_success:
       - script: echo "Hello from on_success"
-      - NOTIFY: slack1
+      - NOTIFY:
+        - slack1
         #- slack2
       #- NOTIFY: slack2
 
