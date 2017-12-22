@@ -13,28 +13,21 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
-    on_start:
-      script:
-        - echo "Hello from on_start"
-        - echo ":("
-
     on_success:
-      script:
-        - echo "Hello from on_success"
-        - echo ":)"
+      - script: echo "Hello from on_success"
+      - script: echo ":)"
+      - NOTIFY: email
+      - NOTIFY: slack
 
     on_failure:
-      script:
-        - echo "Hello from on_failure"
-        - echo ":("
-
-    on_cancel:
-      script:
-        - echo "Hello from on_cancel"
-        - echo ":("
+      - script: echo "Hello from on_failure"
+      - script: echo ":("
+      - NOTIFY: email
+      - NOTIFY: slack
 
     always:
-      script:
-        - echo "Hello from always"
-        - echo ":|"
+      - script: echo "Hello from always"
+      - script: echo ":|"
+      - NOTIFY: email
+      - NOTIFY: slack
         
