@@ -24,6 +24,6 @@ resources:
         -  "rituraj@shippable.com"
 
   - name: slack
-    type: integration
+    type: notification
     integration: slack
   
