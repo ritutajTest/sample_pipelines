@@ -16,7 +16,7 @@ jobs:
     on_success:
       - script: echo "Hello from on_success"
       - NOTIFY: email
-      #- NOTIFY: slack
+      - NOTIFY: slack
 
     on_failure:
       - script: echo "Hello from on_failure"
