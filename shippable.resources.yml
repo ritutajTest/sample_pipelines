@@ -26,4 +26,8 @@ resources:
   - name: slack
     type: notification
     integration: slack
+    pointer:
+      recipients:
+        - "#mybuilds"
+    
   
