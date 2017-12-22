@@ -33,7 +33,7 @@ resources:
  
   - name: slack2
     type: notification
-    integration: slack
+    integration: slack2
     pointer:
       recipients:
         - "@rituraj"
