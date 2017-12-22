@@ -16,7 +16,7 @@ jobs:
     on_success:
       - script: echo "Hello from on_success"
       - NOTIFY: slack1
-      - NOTIFY: email
+      - NOTIFY: slack2
 
     on_failure:
       - script: echo "Hello from on_failure"
@@ -27,6 +27,6 @@ jobs:
     always:
       - script: echo "Hello from always"
       #- script: echo ":|"
-      - NOTIFY: email
+      - NOTIFY: slack2
       - NOTIFY: slack1
         
