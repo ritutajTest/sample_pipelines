@@ -15,8 +15,10 @@ jobs:
         - script: printenv
     on_success:
       - script: echo "Hello from on_success"
-      - NOTIFY: slack1
-      - NOTIFY: slack2
+      - NOTIFY:
+        - slack1
+        - slack2
+      #- NOTIFY: slack2
 
     on_failure:
       - script: echo "Hello from on_failure"
