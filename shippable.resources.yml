@@ -15,4 +15,15 @@ resources:
     pointer:
       sourceName: "Riturajcse/sample_php"
       branch: master
+      
+  - name: email
+    type: notification
+    pointer:
+      method: email
+      recipients:
+        -  "rituraj@shippable.com"
+
+  - name: slack
+    type: integration
+    integration: slack
   
