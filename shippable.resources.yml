@@ -29,5 +29,13 @@ resources:
     pointer:
       recipients:
         - "#mybuilds"
+        
+ 
+  - name: slack2
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "@rituraj"
     
   
