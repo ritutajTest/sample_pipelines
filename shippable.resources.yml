@@ -2,3 +2,7 @@ resources:
   - name: test-artifactory-cli_new
     type: cliConfig
     integration: test-artifactory-old
+    
+  - name: test-kubernetes-cli
+    type: cliConfig
+    integration: test-kubernetes
