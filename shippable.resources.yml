@@ -6,3 +6,7 @@ resources:
   - name: test-kubernetes-cli
     type: cliConfig
     integration: test-kubernetes
+    
+  - name: test-gcloud-cli
+    type: cliConfig
+    integration: test-gcloud
