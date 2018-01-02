@@ -1,4 +1,4 @@
 resources:
-  - name: test-artifactory-cli
+  - name: test-artifactory-cli_new
     type: cliConfig
     integration: test-artifactory-old
