@@ -37,3 +37,22 @@ jobs:
             #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
             #- test "$IMG" == "drydock/microbase:master"
             - kubectl get services
+            
+            
+  - name: x86-64-ubuntu-14-04-container-gcloud-cli
+    type: runSh
+    runtime:
+      architecture: x86_64
+      os: Ubuntu_14.04
+      container: true
+    flags:
+      - x86-64
+      - ubuntu-16-04
+    steps:
+      - IN: test-gcloud-cli
+      - TASK:
+          name: should-list-gcloud-instances
+          script:
+            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
+            #- test "$IMG" == "drydock/microbase:master"
+            - gcloud compute instances list
