@@ -1,5 +1,5 @@
 jobs:
-  - name: x86-64-ubuntu-14-04-container-artifactory-cli
+  - name: x86-64-ubuntu-14-04-container-artifactory-cli_new
     type: runSh
     runtime:
       architecture: x86_64
@@ -9,7 +9,7 @@ jobs:
       - x86-64
       - ubuntu-14-04
     steps:
-      - IN: test-artifactory-cli
+      - IN: test-artifactory-cli_new
       - TASK:
           name: should-upload-file
           script:
