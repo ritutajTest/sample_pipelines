@@ -78,5 +78,23 @@ jobs:
             #- test "$IMG" == "drydock/microbase:master"
             - gcloud projects list
             - gcloud docker -- pull launcher.gcr.io/google/redis3
-            - docker tag redis3 gcr.io/push-1130/redis3:test
-            - gcloud docker -- push gcr.io/push-1130/redis3:test
+            
+
+  - name: x86-64-ubuntu-14-04-container-gke-cli
+    type: runSh
+    runtime:
+      architecture: x86_64
+      os: Ubuntu_14.04
+      container: true
+    flags:
+      - x86-64
+      - ubuntu-16-04
+    steps:
+      - IN: test-gke-cli
+      - TASK:
+          name: should-pull-docker-image
+          script:
+            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
+            #- test "$IMG" == "drydock/microbase:master"
+            - gcloud projects list
+            - gcloud container clusters list
