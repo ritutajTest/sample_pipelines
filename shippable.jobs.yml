@@ -1,13 +1,13 @@
 jobs:
-  - name: x86-64-ubuntu-14-04-container-artifactory-cli_new
+  - name: x86-64-ubuntu-16-04-container-artifactory-cli_new
     type: runSh
     runtime:
       architecture: x86_64
-      os: Ubuntu_14.04
+      os: Ubuntu_16.04
       container: true
     flags:
       - x86-64
-      - ubuntu-14-04
+      - ubuntu-16-04
     steps:
       - IN: test-artifactory-cli_new
       - TASK:
@@ -20,15 +20,15 @@ jobs:
             
             
 
-  - name: x86-64-ubuntu-14-04-container-kubernetes-cli
+  - name: x86-64-ubuntu-16-04-container-kubernetes-cli
     type: runSh
     runtime:
       architecture: x86_64
-      os: Ubuntu_14.04
+      os: Ubuntu_16.04
       container: true
     flags:
       - x86-64
-      - ubuntu-14-04
+      - ubuntu-16-04
     steps:
       - IN: test-kubernetes-cli
       - TASK:
@@ -39,11 +39,11 @@ jobs:
             - kubectl get services
             
             
-  - name: x86-64-ubuntu-14-04-container-gcloud-cli
+  - name: x86-64-ubuntu-16-04-container-gcloud-cli
     type: runSh
     runtime:
       architecture: x86_64
-      os: Ubuntu_14.04
+      os: Ubuntu_16.04
       container: true
     flags:
       - x86-64
@@ -60,11 +60,11 @@ jobs:
             - echo "$TESTGCLOUDCLI_INTEGRATION_CREDENTIALFILE_PATH"
             
 
-  - name: x86-64-ubuntu-14-04-container-gcr-cli
+  - name: x86-64-ubuntu-16-04-container-gcr-cli
     type: runSh
     runtime:
       architecture: x86_64
-      os: Ubuntu_14.04
+      os: Ubuntu_16.04
       container: true
     flags:
       - x86-64
@@ -80,11 +80,11 @@ jobs:
             - gcloud docker -- pull launcher.gcr.io/google/redis3
             
 
-  - name: x86-64-ubuntu-14-04-container-gke-cli
+  - name: x86-64-ubuntu-16-04-container-gke-cli
     type: runSh
     runtime:
       architecture: x86_64
-      os: Ubuntu_14.04
+      os: Ubuntu_16.04
       container: true
     flags:
       - x86-64
