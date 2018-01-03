@@ -10,3 +10,7 @@ resources:
   - name: test-gcloud-cli
     type: cliConfig
     integration: test-gcloud
+    
+  - name: test-gcr-cli
+    type: cliConfig
+    integration: test-gcr
