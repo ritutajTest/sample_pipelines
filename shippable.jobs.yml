@@ -76,4 +76,4 @@ jobs:
           script:
             #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
             #- test "$IMG" == "drydock/microbase:master"
-            - gcloud container images list
+            - gcloud projects list
