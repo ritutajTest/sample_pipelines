@@ -77,6 +77,6 @@ jobs:
             #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
             #- test "$IMG" == "drydock/microbase:master"
             - gcloud projects list
-            - gcloud docker --pull redis
-            - docker tag redis gcr.io/push-1130/redis:test
-            - gcloud docker -- push gcr.io/push-1130/redis:test
+            - gcloud docker -- pull launcher.gcr.io/google/redis3
+            - docker tag redis3 gcr.io/push-1130/redis3:test
+            - gcloud docker -- push gcr.io/push-1130/redis3:test
