@@ -1,20 +1,20 @@
 resources:
-  - name: test-artifactory-cli_new
+  - name: test-artifactory-cli_new_16
     type: cliConfig
     integration: test-artifactory-old
     
-  - name: test-kubernetes-cli
+  - name: test-kubernetes-cli_16
     type: cliConfig
     integration: test-kubernetes
     
-  - name: test-gcloud-cli
+  - name: test-gcloud-cli_16
     type: cliConfig
     integration: test-gcloud
     
-  - name: test-gcr-cli
+  - name: test-gcr-cli_16
     type: cliConfig
     integration: test-gcr
     
-  - name: test-gke-cli
+  - name: test-gke-cli_16
     type: cliConfig
     integration: test-gke
