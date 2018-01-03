@@ -14,3 +14,7 @@ resources:
   - name: test-gcr-cli
     type: cliConfig
     integration: test-gcr
+    
+  - name: test-gke-cli
+    type: cliConfig
+    integration: test-gke
