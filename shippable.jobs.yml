@@ -49,7 +49,7 @@ jobs:
       - TASK:
         - script:  gcloud compute instances list
         - script: echo "hello"
-        - script: echo "TESTGCLOUDCLI_1_INTEGRATION_CREDENTIALFILE_PATH"
+        - script: echo "$TESTGCLOUDCLI_1_INTEGRATION_CREDENTIALFILE_PATH"
         - script: printenv
             
 
