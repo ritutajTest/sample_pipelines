@@ -50,6 +50,7 @@ jobs:
         - script:  gcloud compute instances list
         - script: echo "hello"
         - script: echo "$TESTGCLOUDCLI1_INTEGRATION_CREDENTIALFILE_PATH"
+        - script: printenv
             
 
   - name: x86-64-ubuntu-14-04-container-gcr-cli_1
