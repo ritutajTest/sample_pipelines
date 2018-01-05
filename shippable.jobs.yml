@@ -15,8 +15,8 @@ jobs:
           #script:
             #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
             #- test "$IMG" == "drydock/microbase:master"
-          script: echo "build number is $BUILD_NUMBER" > myfile.$BUILD_NUMBER.txt
-          script: jfrog rt u myfile.$BUILD_NUMBER.txt generic-local/myfile.$BUILD_NUMBER.txt
+          - script: echo "build number is $BUILD_NUMBER" > myfile.$BUILD_NUMBER.txt
+          - script: jfrog rt u myfile.$BUILD_NUMBER.txt generic-local/myfile.$BUILD_NUMBER.txt
             
             
 
