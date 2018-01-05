@@ -1,5 +1,5 @@
 jobs:
-  - name: x86-64-ubuntu-14-04-container-artifactory-cli_new
+  - name: x86-64-ubuntu-14-04-container-artifactory-cli_new_1
     type: runSh
     runtime:
       architecture: x86_64
@@ -9,7 +9,7 @@ jobs:
       - x86-64
       - ubuntu-14-04
     steps:
-      - IN: test-artifactory-cli_new
+      - IN: test-artifactory-cli_new_1
       - TASK:
           name: should-upload-file
           #script:
@@ -20,7 +20,7 @@ jobs:
             
             
 
-  - name: x86-64-ubuntu-14-04-container-kubernetes-cli
+  - name: x86-64-ubuntu-14-04-container-kubernetes-cli_1
     type: runSh
     runtime:
       architecture: x86_64
@@ -30,7 +30,7 @@ jobs:
       - x86-64
       - ubuntu-14-04
     steps:
-      - IN: test-kubernetes-cli
+      - IN: test-kubernetes-cli_1
       - TASK:
           name: should-list-kubernete-services
           script:
@@ -39,7 +39,7 @@ jobs:
             - kubectl get services
             
             
-  - name: x86-64-ubuntu-14-04-container-gcloud-cli
+  - name: x86-64-ubuntu-14-04-container-gcloud-cli_1
     type: runSh
     runtime:
       architecture: x86_64
@@ -49,7 +49,7 @@ jobs:
       - x86-64
       - ubuntu-16-04
     steps:
-      - IN: test-gcloud-cli
+      - IN: test-gcloud-cli_1
       - TASK:
           name: should-list-gcloud-instances
           script:
@@ -60,7 +60,7 @@ jobs:
             - echo "$TESTGCLOUDCLI_INTEGRATION_CREDENTIALFILE_PATH"
             
 
-  - name: x86-64-ubuntu-14-04-container-gcr-cli
+  - name: x86-64-ubuntu-14-04-container-gcr-cli_1
     type: runSh
     runtime:
       architecture: x86_64
@@ -70,7 +70,7 @@ jobs:
       - x86-64
       - ubuntu-16-04
     steps:
-      - IN: test-gcr-cli
+      - IN: test-gcr-cli_1
       - TASK:
           name: should-pull-docker-image
           script:
@@ -80,7 +80,7 @@ jobs:
             - gcloud docker -- pull launcher.gcr.io/google/redis3
             
 
-  - name: x86-64-ubuntu-14-04-container-gke-cli
+  - name: x86-64-ubuntu-14-04-container-gke-cli_1
     type: runSh
     runtime:
       architecture: x86_64
@@ -90,7 +90,7 @@ jobs:
       - x86-64
       - ubuntu-16-04
     steps:
-      - IN: test-gke-cli
+      - IN: test-gke-cli_1
       - TASK:
           name: should-pull-docker-image
           script:
