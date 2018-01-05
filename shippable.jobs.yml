@@ -35,7 +35,7 @@ jobs:
             - kubectl get services
             
             
-  - name: x86-64-ubuntu-14-04-container-gcloud-cli_1
+  - name: x86-64-ubuntu-14-04-container-gcloud-cli-1
     type: runSh
     runtime:
       architecture: x86_64
@@ -47,13 +47,9 @@ jobs:
     steps:
       - IN: test-gcloud-cli_1
       - TASK:
-          name: should-list-gcloud-instances
-          script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
-            - gcloud compute instances list
-            - echo "hello"
-            - echo "$TESTGCLOUDCLI_INTEGRATION_CREDENTIALFILE_PATH"
+        - script:  gcloud compute instances list
+        - script: echo "hello"
+        - script: echo "$TESTGCLOUDCLI1_INTEGRATION_CREDENTIALFILE_PATH"
             
 
   - name: x86-64-ubuntu-14-04-container-gcr-cli_1
@@ -68,12 +64,8 @@ jobs:
     steps:
       - IN: test-gcr-cli_1
       - TASK:
-          name: should-pull-docker-image
-          script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
-            - gcloud projects list
-            - gcloud docker -- pull launcher.gcr.io/google/redis3
+        - script: gcloud projects list
+        - script: gcloud docker -- pull launcher.gcr.io/google/redis3
             
 
   - name: x86-64-ubuntu-14-04-container-gke-cli_1
@@ -88,9 +80,5 @@ jobs:
     steps:
       - IN: test-gke-cli_1
       - TASK:
-          name: should-pull-docker-image
-          script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
-            - gcloud projects list
-            - gcloud container clusters list
+        - script: gcloud projects list
+        - script: gcloud container clusters list
