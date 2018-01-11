@@ -3,7 +3,7 @@ jobs:
     type: runSh
     runtime:
       architecture: x86_64
-      os: Ubuntu_14.04
+      os: Ubuntu_16.04
       container: true
     flags:
       - x86-64
