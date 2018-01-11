@@ -1,45 +1,5 @@
-jobs:
-  - name: x86-64-ubuntu-14-04-container-artifactory-cli_new
-    type: runSh
-    runtime:
-      architecture: x86_64
-      os: Ubuntu_14.04
-      container: true
-    flags:
-      - x86-64
-      - ubuntu-14-04
-    steps:
-      - IN: test-artifactory-cli_new
-      - TASK:
-          name: should-upload-file
-          #script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
-          script: echo "build number is $BUILD_NUMBER" > myfile.$BUILD_NUMBER.txt
-          script: jfrog rt u myfile.$BUILD_NUMBER.txt generic-local/myfile.$BUILD_NUMBER.txt
-            
-            
-
-  - name: x86-64-ubuntu-14-04-container-kubernetes-cli
-    type: runSh
-    runtime:
-      architecture: x86_64
-      os: Ubuntu_14.04
-      container: true
-    flags:
-      - x86-64
-      - ubuntu-14-04
-    steps:
-      - IN: test-kubernetes-cli
-      - TASK:
-          name: should-list-kubernete-services
-          script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
-            - kubectl get services
-            
-            
-  - name: x86-64-ubuntu-14-04-container-gcloud-cli
+jobs:           
+  - name: x86-64-ubuntu-14-04-container-gcloud-cli-new-td
     type: runSh
     runtime:
       architecture: x86_64
@@ -53,48 +13,7 @@ jobs:
       - TASK:
           name: should-list-gcloud-instances
           script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
             - gcloud compute instances list
             - echo "hello"
             - echo "$TESTGCLOUDCLI_INTEGRATION_CREDENTIALFILE_PATH"
             
-
-  - name: x86-64-ubuntu-14-04-container-gcr-cli
-    type: runSh
-    runtime:
-      architecture: x86_64
-      os: Ubuntu_14.04
-      container: true
-    flags:
-      - x86-64
-      - ubuntu-16-04
-    steps:
-      - IN: test-gcr-cli
-      - TASK:
-          name: should-pull-docker-image
-          script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
-            - gcloud projects list
-            - gcloud docker -- pull launcher.gcr.io/google/redis3
-            
-
-  - name: x86-64-ubuntu-14-04-container-gke-cli
-    type: runSh
-    runtime:
-      architecture: x86_64
-      os: Ubuntu_14.04
-      container: true
-    flags:
-      - x86-64
-      - ubuntu-16-04
-    steps:
-      - IN: test-gke-cli
-      - TASK:
-          name: should-pull-docker-image
-          script:
-            #- export IMG=$(docker inspect --format='{{.Config.Image}}' reqExec.$BUILD_JOB_ID.0)
-            #- test "$IMG" == "drydock/microbase:master"
-            - gcloud projects list
-            - gcloud container clusters list
