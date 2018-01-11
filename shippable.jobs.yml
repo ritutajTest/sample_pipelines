@@ -1,10 +1,6 @@
 jobs:           
   - name: x86-64-ubuntu-14-04-container-gcloud-cli-new-td
     type: runSh
-    runtime:
-      architecture: x86_64
-      os: Ubuntu_16.04
-      container: true
     flags:
       - x86-64
       - ubuntu-16-04
