@@ -15,20 +15,20 @@ jobs:
         - script: printenv
     on_success:
       - script: echo "Hello from on_success"
-      - NOTIFY:
-        - slack1
-        - slack2
-      #- NOTIFY: slack2
-
     on_failure:
       - script: echo "Hello from on_failure"
       - script: echo ":("
-      - NOTIFY: email
-      - NOTIFY: slack1
-
     always:
       - script: echo "Hello from always"
-      #- script: echo ":|"
-      - NOTIFY: slack2
-      - NOTIFY: slack1
+      - script: echo ":|"
+      
+  - name: runSh-job-2
+    type: runSh
+    steps:
+      - IN: gitRepo-resource
+        showBuildStatus: true
+      - IN: rituraj-1-1
+      - TASK:
+        - script: echo 'start runSh hello 2'
+        - script: printenv
         
