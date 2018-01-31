@@ -22,20 +22,5 @@ resources:
       method: email
       recipients:
         -  "rituraj@shippable.com"
-
-  - name: slack1
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "#mybuilds"
-        
- 
-  - name: slack2
-    type: notification
-    integration: slack2
-    pointer:
-      recipients:
-        - "@rituraj"
     
   
