@@ -9,5 +9,18 @@ jobs:
     steps:
       - OUT: gitRepo-resource
         replicate: sample_php_ciRepo
+        
+  - name: sample_php_runSh
+    type: runSh
+    steps:
+      - IN: gitRepo-resource-1
+      - OUT: gitRepo-resource-1
+        replicate: sample_nodejs_ciRepo
+        
+  - name: deploy_gitRepo
+    type: deploy
+    steps:
+      - IN: gitRepo-resource-1
+      - IN: kubeCluster
       
         
