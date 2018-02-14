@@ -23,7 +23,7 @@ resources:
       sourceName: "Riturajcse/sample_nodejs"
       branch: master
       
-  - name: kube-deploy
+  - name: kubeCluster
     type: cluster
     integration: kube-deploy
       
