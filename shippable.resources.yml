@@ -23,6 +23,10 @@ resources:
       sourceName: "Riturajcse/sample_nodejs"
       branch: master
       
+  - name: kube-deploy
+    type: cluster
+    integration: kube-deploy
+      
   - name: email
     type: notification
     pointer:
