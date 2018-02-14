@@ -16,6 +16,13 @@ resources:
       sourceName: "Riturajcse/sample_php"
       branch: master
       
+  - name: gitRepo-resource-1
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "Riturajcse/sample_nodejs"
+      branch: master
+      
   - name: email
     type: notification
     pointer:
