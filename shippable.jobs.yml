@@ -19,7 +19,7 @@ jobs:
       - script: echo "Hello from on_failure"
       - script: echo ":("
     always:
-      - script: echo "Hello from always"
+      - script: echo "Hello from always1"
       - script: echo ":|"
       
   - name: runSh-job-2
