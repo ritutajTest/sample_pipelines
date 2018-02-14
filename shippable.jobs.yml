@@ -7,28 +7,10 @@ jobs:
   - name: runSh-job
     type: runSh
     steps:
-      - IN: gitRepo-resource
-        showBuildStatus: true
       - IN: rituraj-1-1
       - TASK:
-        - script: echo 'start runSh hello'
-        - script: printenv
-    on_success:
-      - script: echo "Hello from on_success"
-    on_failure:
-      - script: echo "Hello from on_failure"
-      - script: echo ":("
-    always:
-      - script: echo "Hello from always1"
-      - script: echo ":|"
+        - script: echo 'start runSh hello new'
+      - OUT: gitRepo-resource
+        replicate: sample_php_ciRepo
       
-  - name: runSh-job-2
-    type: runSh
-    steps:
-      - IN: gitRepo-resource
-        showBuildStatus: true
-      - IN: rituraj-1-1
-      - TASK:
-        - script: echo 'start runSh hello 2'
-        - script: printenv
         
