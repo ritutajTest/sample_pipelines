@@ -22,5 +22,7 @@ jobs:
     steps:
       - IN: gitRepo-resource-1
       - IN: kubeCluster
+      - TASK:
+        - script: echo "hello world"
       
         
