@@ -4,13 +4,9 @@ jobs:
     steps:
       - IN: box-nginx-1-1
         
-  - name: runSh-job
-    type: runSh
+  - name: sample_php_runCI
+    type: runCI
     steps:
-      - IN: rituraj-1-1
-      - IN: gitRepo-resource
-      - TASK:
-        - script: echo 'start runSh hello new'
       - OUT: gitRepo-resource
         replicate: sample_php_ciRepo
       
