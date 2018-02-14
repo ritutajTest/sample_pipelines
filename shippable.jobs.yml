@@ -8,6 +8,7 @@ jobs:
     type: runSh
     steps:
       - IN: rituraj-1-1
+      - IN: gitRepo-resource
       - TASK:
         - script: echo 'start runSh hello new'
       - OUT: gitRepo-resource
