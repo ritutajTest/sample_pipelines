@@ -3,7 +3,7 @@ jobs:
   - name: runSh-job
     type: runSh
     steps:
-        showBuildStatus: true
+      showBuildStatus: true
       - TASK:
         - script: docker run "drydock/c7all:master" "/c7all/services/service_test.sh"
 
