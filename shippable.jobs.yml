@@ -1,34 +1,11 @@
 jobs:
-  - name: rituraj-1-1
-    type: manifest
-    steps:
-      - IN: box-nginx-1-1
         
   - name: runSh-job
     type: runSh
     steps:
-      - IN: gitRepo-resource
         showBuildStatus: true
-      - IN: rituraj-1-1
       - TASK:
-        - script: echo 'start runSh hello'
-        - script: printenv
-    on_success:
-      - script: echo "Hello from on_success"
-    on_failure:
-      - script: echo "Hello from on_failure"
-      - script: echo ":("
-    always:
-      - script: echo "Hello from always"
-      - script: echo ":|"
-      
-  - name: runSh-job-2
-    type: runSh
-    steps:
-      - IN: gitRepo-resource
-        showBuildStatus: true
-      - IN: rituraj-1-1
-      - TASK:
-        - script: echo 'start runSh hello 2'
-        - script: printenv
+        - script: docker run "drydock/c7all:master" "/c7all/services/service_test.sh"
+
+   
         
