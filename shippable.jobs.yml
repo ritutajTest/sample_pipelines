@@ -4,9 +4,9 @@ jobs:
     type: runSh
     steps:
         showBuildStatus: true
-      - TASK:
-        - script: echo 'start runSh hello 2'
-        - script: docker run "drydock/c7all:master" "/c7all/services/service_test.sh"
+        - TASK:
+          - script: echo 'start runSh hello 2'
+          - script: docker run "drydock/c7all:master" "/c7all/services/service_test.sh"
         
 
    
