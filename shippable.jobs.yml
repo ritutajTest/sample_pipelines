@@ -12,7 +12,7 @@ jobs:
           name: check-openjdk8
           runtime:
             options:
-              imageName: "drydock/c7javall:master"
+              imageName: "drydock/c7javall"
               imageTag: master
           script:
             - shipctl jdk set openjdk8
