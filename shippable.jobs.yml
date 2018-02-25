@@ -39,8 +39,7 @@ jobs:
               imageName: "drydock/c7javall"
               imageTag: master
           script:
-            - echo "alternatives --set java /usr/lib/jvm/java-9-openjdk-9.0.0.163-1.el7.centos.x86_64/bin/java 
-            - openjdk-amd64/jre/bin/java"
+            - echo "alternatives --set java /usr/lib/jvm/java-9-openjdk-9.0.0.163-1.el7.centos.x86_64/bin/java"
             - alternatives --set java /usr/lib/jvm/java-9-openjdk-9.0.0.163-1.el7.centos.x86_64/bin/java 
             - printf "\n"
             - java -version
