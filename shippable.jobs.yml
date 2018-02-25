@@ -3,16 +3,20 @@ jobs:
     type: runSh
     allowPublicAccess: true
     runtime:
-      nodePool: custom__x86_64__Ubuntu_16_04
+      nodePool: x8664u14dynamic
       container: true
     flags:
       - drydock
     steps:
       - TASK:
-          name: check-openjdk8
+          name: check-java-4.8.7
           runtime:
             options:
               imageName: "drydock/c7javall"
               imageTag: master
           script:
-            - shipctl jdk set openjdk8
+            - echo "alternatives --set java /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.161-2.6.12.0.el7_4.x86_64/jre/bin/java"
+            - alternatives --set java /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.161-2.6.12.0.el7_4.x86_64/jre/bin/java
+            - printf "\n"
+            - java -version
+            - printf "\n"
