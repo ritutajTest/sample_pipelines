@@ -9,10 +9,10 @@ jobs:
       - drydock
     steps:
       - TASK:
-          name: check-java-4.8.7
+          name: check-openjdk8
           runtime:
             options:
-              imageName: "drydock/c7javall"
+              imageName: "drydock/c7javall:master"
               imageTag: master
           script:
             - shipctl jdk set openjdk8
