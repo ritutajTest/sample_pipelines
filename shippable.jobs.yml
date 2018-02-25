@@ -3,7 +3,7 @@ jobs:
     type: runSh
     allowPublicAccess: true
     runtime:
-      nodePool: x8664u14dynamic
+      nodePool: custom__x86_64__Ubuntu_16_04
       container: true
     flags:
       - drydock
