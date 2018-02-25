@@ -1,9 +1,18 @@
-jobs:           
-  - name: drydockTest
+jobs:
+  - name: x86-64-c7-drydock-c7odall
     type: runSh
+    allowPublicAccess: true
+    runtime:
+      nodePool: custom__x86_64__Ubuntu_16_04
+      container: true
+    flags:
+      - drydock
     steps:
-      - IN: test-gcloud-cli
       - TASK:
-          name: should-list-gcloud-instances
+          name: check-java-4.8.7
+          runtime:
+            options:
+              imageName: "drydock/c7javall"
+              imageTag: master
           script:
-            - docker run "drydock/c7all:master" "/c7all/services/service_test.sh"
+            - shipctl jdk set openjdk8
