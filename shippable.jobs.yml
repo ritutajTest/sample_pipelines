@@ -3,8 +3,5 @@ jobs:
     type: runSh
     steps:
       - TASK:
-          name: shipctl-should-work
-          script:
-            - echo "hello"
-            - echo "hello all"
-            - shipctl retry echo "it works"
+        - script: echo "hello"
+        - script: "hello all"
