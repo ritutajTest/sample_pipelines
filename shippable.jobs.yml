@@ -1,13 +1,6 @@
 jobs:
   - name: x86-64-ubuntu-container-shipctl
     type: runSh
-    runtime:
-      architecture: x86_64
-      os: Ubuntu_16.04
-      container: true
-    flags:
-      - x86-64
-      - ubuntu16
     steps:
       - TASK:
           name: shipctl-should-work
@@ -15,27 +8,3 @@ jobs:
             - echo "hello"
             - echo "hello all"
             - shipctl retry echo "it works"
-    on_start:
-      script:
-        - echo "Hello from on_start"
-        - echo ":("
-
-    on_success:
-      script:
-        - echo "Hello from on_success"
-        - echo ":)"
-
-    on_failure:
-      script:
-        - echo "Hello from on_failure"
-        - echo ":("
-
-    on_cancel:
-      script:
-        - echo "Hello from on_cancel"
-        - echo ":("
-
-    always:
-      script:
-        - echo "Hello from always321"
-        - echo ":|"
