@@ -2,6 +2,28 @@ jobs:
   - name: x86-64-ubuntu-container-shipctl
     type: runSh
     steps:
+      - IN: box-nginx-1
+      - IN: box-nginx-2
       - TASK:
         - script: echo "hello"
         - script: echo "hello all"
+
+
+resources:
+  - name: box-nginx-1
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
+
+  - name: box-nginx-2
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
