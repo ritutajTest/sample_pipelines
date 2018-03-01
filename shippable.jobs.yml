@@ -8,6 +8,14 @@ jobs:
         - script: echo "hello"
         - script: echo "hello all"
 
+  - name: x86-64-ubuntu-container-shipctl-2
+    type: runSh
+    steps:
+      - IN: box-nginx-2
+      - TASK:
+        - script: echo "hello"
+        - script: echo "hello all"
+
   - name: sample_nodejs_runCI
     type: runCI
     steps:
