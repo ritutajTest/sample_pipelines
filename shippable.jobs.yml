@@ -8,6 +8,12 @@ jobs:
         - script: echo "hello"
         - script: echo "hello all"
 
+  - name: sample_nodejs_runCI
+    type: runCI
+    steps:
+      - OUT: box-nginx-1
+      - OUT: box-nginx-2
+
 
 resources:
   - name: box-nginx-1
