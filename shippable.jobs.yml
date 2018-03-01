@@ -4,4 +4,4 @@ jobs:
     steps:
       - TASK:
         - script: echo "hello"
-        - script: "hello all"
+        - script: echo "hello all"
