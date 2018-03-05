@@ -15,7 +15,7 @@ jobs:
         - script: echo "hello"
         - script: echo "hello all"
 
-  - name: sample_nodejs_runCI
+  - name: sample_php_runCI
     type: runCI
     steps:
       - OUT: box-nginx-1
