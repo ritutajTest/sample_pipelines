@@ -16,13 +16,13 @@ jobs:
       - IN: gitRepo-resource-1
       - TASK:
         - script: echo "hello world"
-      - OUT: gitRepo-resource-1
+      - OUT: gitRepo-resource-2
         replicate: sample_nodejs_ciRepo
         
   - name: deploy_gitRepo
     type: deploy
     steps:
-      - IN: gitRepo-resource-1
+      - IN: gitRepo-resource-2
       - IN: kubeCluster
       
         
