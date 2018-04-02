@@ -23,6 +23,13 @@ resources:
       sourceName: "Riturajcse/sample_nodejs"
       branch: master
       
+  - name: gitRepo-resource-2
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "Riturajcse/sample_nodejs"
+      branch: master
+      
   - name: kubeCluster
     type: cluster
     integration: kube-deploy
