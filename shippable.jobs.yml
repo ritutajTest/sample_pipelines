@@ -9,7 +9,7 @@ jobs:
     steps:
       - OUT: gitRepo-resource
         replicate: sample_php_ciRepo
-        replicateOnPullRequest: trur
+        replicateOnPullRequest: true
         
   - name: sample_php_runSh
     type: runSh
