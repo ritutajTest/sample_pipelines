@@ -11,7 +11,7 @@ jobs:
         replicate: sample_php_ciRepo
         replicateOnPullRequest: true
         
-  - name: sample_php_runSh
+  - name: sample_nodejs_runSh
     type: runSh
     steps:
       - IN: sample_nodejs_runCI
