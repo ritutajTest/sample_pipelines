@@ -22,6 +22,11 @@ resources:
     pointer:
       sourceName: "Riturajcse/sample_nodejs"
       branch: master
+      buildOnCommit: true
+      buildOnPullRequest: true
+      buildOnPullRequestClose: true
+      buildOnRelease: true
+      buildOnTagPush: true
       
   - name: gitRepo-resource-2
     type: gitRepo
