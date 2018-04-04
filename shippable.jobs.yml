@@ -25,7 +25,7 @@ jobs:
       - TASK:
         - script: echo "hello world"
       - OUT: gitRepo-resource-2
-        replicate: sample_nodejs_ciRepo
+        replicate: gitRepo-resource-1
         replicateOnPullRequest: true
         
   - name: deploy_gitRepo
