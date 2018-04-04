@@ -20,7 +20,8 @@ jobs:
         
   - name: sample_nodejs_runSh
     type: runSh
-    steps:
+    steps: 
+      - IN: sample_nodejs_runCI
       - TASK:
         - script: echo "hello world"
       - OUT: gitRepo-resource-2
