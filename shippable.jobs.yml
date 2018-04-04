@@ -14,14 +14,14 @@ jobs:
   - name: sample_nodejs_runCI
     type: runCI
     steps:
-      - OUT: sample_nodejs_runSh
-        #replicate: sample_nodejs_ciRepo
-        #replicateOnPullRequest: true
+      - OUT: gitRepo-resource-1
+        replicate: sample_nodejs_ciRepo
+        replicateOnPullRequest: true
         
   - name: sample_nodejs_runSh
     type: runSh
     steps: 
-      - IN: sample_nodejs_runCI
+      - IN: gitRepo-resource-1
       - TASK:
         - script: echo "hello world"
       - OUT: gitRepo-resource-2
