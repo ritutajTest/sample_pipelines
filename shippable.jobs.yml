@@ -16,7 +16,7 @@ jobs:
     steps:
       - OUT: gitRepo-resource-1
         replicate: sample_nodejs_ciRepo
-        replicateOnPullRequest: true
+        replicateOnPullRequest: false
         
   - name: sample_nodejs_runSh
     type: runSh
@@ -26,7 +26,7 @@ jobs:
         - script: echo "hello world"
       - OUT: gitRepo-resource-2
         replicate: gitRepo-resource-1
-        replicateOnPullRequest: true
+        replicateOnPullRequest: false
         
   - name: deploy_gitRepo
     type: deploy
