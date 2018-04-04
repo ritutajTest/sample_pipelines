@@ -9,7 +9,7 @@ jobs:
     steps:
       - OUT: gitRepo-resource
         replicate: sample_php_ciRepo
-        replicateOnPullRequest: false
+        replicateOnPullRequest: true
         
   - name: sample_php_runSh
     type: runSh
@@ -19,7 +19,7 @@ jobs:
         - script: echo "hello world"
       - OUT: gitRepo-resource-2
         replicate: sample_nodejs_ciRepo
-        replicateOnPullRequest: false
+        replicateOnPullRequest: true
         
   - name: deploy_gitRepo
     type: deploy
