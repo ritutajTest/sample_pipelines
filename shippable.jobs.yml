@@ -6,6 +6,8 @@ jobs:
         
   - name: runSh-job-array
     type: runSh
+    runtime:
+      nodePool: default_cluster 
     on_start:
       - script: echo "Hello from on_start array"
     steps:
