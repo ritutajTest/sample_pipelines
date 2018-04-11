@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: box-nginx-1-1
         
-  - name: runSh-job
+  - name: runSh-job-array
     type: runSh
     steps:
       - IN: gitRepo-resource
@@ -25,13 +25,25 @@ jobs:
       - script: echo "Hello from always"
       - script: echo ":|"
       
-  #- name: runSh-job-2
-    #type: runSh
-    #steps:
-      #- IN: gitRepo-resource
-        #showBuildStatus: true
-      #- IN: rituraj-1-1
-      #- TASK:
-        #- script: echo 'start runSh hello 2'
-        #- script: printenv
+  - name: runSh-job-obj
+    type: runSh
+    steps:
+      - IN: gitRepo-resource
+        showBuildStatus: true
+      - IN: rituraj-1-1
+      - TASK:
+        - script: echo 'start runSh hello 2'
+        - script: printenv
+     on_success:
+      script:
+        - echo "hello SUCCESS"
+        - echo ":)"
+    on_failure:
+      script:
+        - echo "hello FAILURE"
+        - echo ":("
+    always:
+      script:
+        - echo "hello ALWAYS"
+        - echo ":|"
         
