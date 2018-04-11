@@ -6,6 +6,8 @@ jobs:
         
   - name: runSh-job-array
     type: runSh
+    on_start:
+      - script: echo "Hello from on_start array"
     steps:
       - IN: gitRepo-resource
         showBuildStatus: true
@@ -15,9 +17,8 @@ jobs:
         - script: printenv
     on_success:
       - script: echo "Hello from on_success array"
-    #on_success:
-      #script:
-        #- echo "SUCCESS object"
+    on_cancel:
+      - script: echo "Hello from on_cancel array"
     on_failure:
       - script: echo "Hello from on_failure"
       - script: echo ":("
@@ -27,6 +28,10 @@ jobs:
       
   - name: runSh-job-obj
     type: runSh
+    on_start:
+      script:
+        - echo "hello START"
+        - echo ":)"
     steps:
       - IN: gitRepo-resource
         showBuildStatus: true
@@ -37,6 +42,10 @@ jobs:
     on_success:
       script:
         - echo "hello SUCCESS"
+        - echo ":)"
+    on_cancel:
+      script:
+        - echo "hello CANCEL"
         - echo ":)"
     on_failure:
       script:
