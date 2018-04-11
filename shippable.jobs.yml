@@ -25,13 +25,13 @@ jobs:
       - script: echo "Hello from always"
       - script: echo ":|"
       
-  - name: runSh-job-2
-    type: runSh
-    steps:
-      - IN: gitRepo-resource
-        showBuildStatus: true
-      - IN: rituraj-1-1
-      - TASK:
-        - script: echo 'start runSh hello 2'
-        - script: printenv
+  #- name: runSh-job-2
+    #type: runSh
+    #steps:
+      #- IN: gitRepo-resource
+        #showBuildStatus: true
+      #- IN: rituraj-1-1
+      #- TASK:
+        #- script: echo 'start runSh hello 2'
+        #- script: printenv
         
