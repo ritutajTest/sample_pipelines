@@ -1,6 +1,6 @@
 resources:
 
-  - name: box-nginx-1-1
+  - name: box-nginx-1-1-obj
     type: image
     integration: dockerhub
     pointer:
@@ -9,14 +9,14 @@ resources:
     seed:
       versionName: latest
       
-  - name: gitRepo-resource
+  - name: gitRepo-resource-obj
     type: gitRepo
     integration: github
     pointer:
       sourceName: "Riturajcse/sample_php"
       branch: master
       
-  - name: email
+  - name: email-obj
     type: notification
     pointer:
       method: email
