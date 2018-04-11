@@ -34,7 +34,7 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello 2'
         - script: printenv
-     on_success:
+    on_success:
       script:
         - echo "hello SUCCESS"
         - echo ":)"
