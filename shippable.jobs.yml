@@ -14,16 +14,16 @@ jobs:
       - IN: rituraj-1-1
       - TASK:
         - script: echo 'start runSh hello'
-        - script: printenv
+        - script: printenv32
     on_success:
-      - script: echo "Hello from on_success array"
+      - script: echo "Hello from on_success array n"
     on_cancel:
       - script: echo "Hello from on_cancel array"
     on_failure:
       - script: echo "Hello from on_failure"
       - script: echo ":("
     always:
-      - script: echo "Hello from always"
+      - script: echo "Hello from always n"
       - script: echo ":|"
       
   - name: runSh-job-obj
@@ -41,7 +41,7 @@ jobs:
         - script: printenv
     on_success:
       script:
-        - echo "hello SUCCESS"
+        - echo "hello SUCCESS n"
         - echo ":)"
     on_cancel:
       script:
@@ -53,6 +53,6 @@ jobs:
         - echo ":("
     always:
       script:
-        - echo "hello ALWAYS"
+        - echo "hello ALWAYS n"
         - echo ":|"
         
