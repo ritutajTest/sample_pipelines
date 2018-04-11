@@ -13,11 +13,11 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
-    #on_success:
-      #- script: echo "Hello from on_success"
     on_success:
-      script:
-        - echo "SUCCESS docs"
+      - script: echo "Hello from on_success array"
+    #on_success:
+      #script:
+        #- echo "SUCCESS object"
     on_failure:
       - script: echo "Hello from on_failure"
       - script: echo ":("
