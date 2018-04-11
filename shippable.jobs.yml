@@ -7,9 +7,9 @@ jobs:
   - name: runSh-job-obj
     type: runSh
     steps:
-      - IN: gitRepo-resource
+      - IN: gitRepo-resource-obj
         showBuildStatus: true
-      - IN: rituraj-1-1
+      - IN: rituraj-1-1-obj
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
