@@ -14,16 +14,17 @@ jobs:
         - script: echo 'start runSh hello'
         - script: printenv
     on_success:
-      - script: echo "Hello from on_success array"
-    #on_success:
-      #script:
-        #- echo "SUCCESS object"
+      script:
+        - echo "hello SUCCESS"
+        - echo ":)"
     on_failure:
-      - script: echo "Hello from on_failure"
-      - script: echo ":("
+      script:
+        - echo "hello FAILURE"
+        - echo ":("
     always:
-      - script: echo "Hello from always"
-      - script: echo ":|"
+      script:
+        - echo "hello ALWAYS"
+        - echo ":|"
       
   #- name: runSh-job-2
     #type: runSh
