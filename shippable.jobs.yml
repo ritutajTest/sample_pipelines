@@ -6,9 +6,9 @@ jobs:
         
   - name: runSh-job-array
     type: runCLI
-    runtime:
-      nodePool: default_cluster
-      container: "hello world"
+    #runtime:
+      #nodePool: default_cluster
+      #container: "hello world"
     on_start:
       - script: echo "Hello from on_start array"
     steps:
