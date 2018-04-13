@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: box-nginx-1-1
         
-  - name: runSh-job-array
+  - name: runSh-job-array-cli
     type: runCLI
     #runtime:
       #nodePool: default_cluster
