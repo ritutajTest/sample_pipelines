@@ -5,7 +5,7 @@ jobs:
       - IN: box-nginx-1-1
         
   - name: runSh-job-array
-    type: runSh
+    type: runCLI
     runtime:
       nodePool: default_cluster
       container: "hello world"
