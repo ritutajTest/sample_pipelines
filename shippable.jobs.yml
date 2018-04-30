@@ -9,4 +9,5 @@ jobs:
     bump: major
     steps:
       - IN: manifest-job
+      - IN: version-resource
 
