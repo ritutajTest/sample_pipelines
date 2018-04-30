@@ -1,5 +1,6 @@
 jobs:
   - name: manifest-job
+    type: manifest
     steps:
       - IN: box-nginx-1
       
