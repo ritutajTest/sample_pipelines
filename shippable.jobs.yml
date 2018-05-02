@@ -5,6 +5,14 @@ jobs:
     steps:
       - TASK:
         - script: echo "hello"
+        - script: echo $(shipctl bump_version 5.1.2 major)
+        - script: echo $(shipctl bump_version 5.1.2 minor)
+        - script: echo $(shipctl bump_version 5.1.2 patch)
+        - script: echo $(shipctl bump_version v5.1.2 major)
+        - script: echo $(shipctl bump_version v5.1.2 minor)
+        - script: echo $(shipctl bump_version v5.1.2 patch)
+        - script: echo $(shipctl bump_version v5.1.2 patch1)
+        - script: echo $(shipctl bump_version v5.1.2x patch)
 
    
         
