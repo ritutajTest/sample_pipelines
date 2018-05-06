@@ -5,6 +5,7 @@ jobs:
     steps:
       - TASK:
         - script: echo "hello"
+        - script: echo $(shipctl get_resource_name hello_major)
         - script: echo $(shipctl bump_version 5.1.2 major)
         - script: echo $(shipctl bump_version 5.1.2 minor)
         - script: echo $(shipctl bump_version 5.1.2 patch)
