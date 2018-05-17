@@ -9,7 +9,12 @@ resources:
     seed:
       versionName: latest
       
-  - name: myHook6
+  - name: myHook7
     type: webhook
     versionTemplate:
       webhookKey: correct_horse-battery.stapler hello world
+      
+  - name: myHook8
+    type: webhook
+    versionTemplate:
+      webhookKey: correct_horse-battery.stapler
