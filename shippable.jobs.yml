@@ -4,10 +4,11 @@ jobs:
     steps:
       - IN: box-nginx-1
       
-  - name: release-job
-    type: release
-    bump: final
+  - name: runSh-job
+    type: runSh
     steps:
       - IN: manifest-job
-      - IN: version-resource
+      - IN: myHook
+    script:
+      - echo "hello"
 
