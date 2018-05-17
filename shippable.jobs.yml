@@ -9,6 +9,6 @@ jobs:
     steps:
       - IN: manifest-job
       - IN: myHook
-    script:
-      - echo "hello"
+      - TASK:
+        - script: echo "hello"
 
