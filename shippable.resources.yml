@@ -6,8 +6,6 @@ resources:
     pointer:
       sourceName: "library/nginx"
       isPull: false
-    seed:
-      versionName: latest
       
   - name: version-resource
     type: version
