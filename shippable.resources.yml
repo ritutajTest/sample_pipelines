@@ -4,7 +4,7 @@ resources:
     type: image
     integration: dockerhub
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "library/redis"
       isPull: false
     seed:
       versionName: "latest"
