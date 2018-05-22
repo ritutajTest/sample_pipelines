@@ -6,7 +6,7 @@ jobs:
       
   - name: release-job
     type: release
-    bump: rc
+    #bump: rc
     steps:
       - IN: manifest-job-1
       #- IN: version-resource
