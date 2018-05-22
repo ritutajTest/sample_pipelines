@@ -12,4 +12,4 @@ resources:
   - name: version-resource
     type: version
     versionTemplate:
-      versionName: "v1.1.1-beta.2.rc.3"
+      versionName: "v1.1.1-rc.3"
