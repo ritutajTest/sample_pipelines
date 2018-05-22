@@ -1,13 +1,13 @@
 jobs:
-  - name: manifest-job
+  - name: manifest-job-1
     type: manifest
     steps:
-      - IN: box-nginx-1
+      - IN: box-nginx-2
       
   - name: release-job
     type: release
     bump: rc
     steps:
-      - IN: manifest-job
+      - IN: manifest-job-1
       - IN: version-resource
 
