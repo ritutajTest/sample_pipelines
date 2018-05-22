@@ -1,6 +1,6 @@
 resources:
 
-  - name: box-nginx-1
+  - name: box-nginx-2
     type: image
     integration: dockerhub
     pointer:
