@@ -9,5 +9,5 @@ jobs:
     bump: rc
     steps:
       - IN: manifest-job-1
-      - IN: version-resource
+      #- IN: version-resource
 
